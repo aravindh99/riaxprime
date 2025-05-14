@@ -59,6 +59,76 @@
 
 		<link rel="stylesheet" href="assets/css/style.css">
 
+		<style>
+			/* Video overlay styles */
+			.video-background {
+				position: relative;
+				width: 100%;
+				height: 100vh;
+				overflow: hidden;
+			}
+			.video-background video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.video-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				opacity: 1;
+				transition: opacity 0.3s ease;
+			}
+			.video-overlay:hover {
+				opacity: 1;
+			}
+			.overlay-content {
+				color: white;
+				text-align: center;
+				padding: 20px;
+			}
+			.overlay-content h2 {
+				font-size: 4em;
+				margin-bottom: 20px;
+				font-weight: 600;
+				color: white;
+				min-height: 1.2em;
+			}
+			.overlay-content p {
+				font-size: 2em;
+				margin: 0;
+				min-height: 1.2em;
+			}
+
+			/* Header navigation styles */
+			.navbar-nav {
+				margin-left: 50px !important;
+			}
+			.navbar-nav > li > a {
+				font-size: 18px !important;
+				padding: 20px 25px !important;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.navbar-nav > li.active > a,
+			.navbar-nav > li > a:hover {
+				color: #007bff !important;
+			}
+			.navbar {
+				padding: 15px 0;
+			}
+			.navbar-header {
+				margin-right: 30px;
+			}
+		</style>
+
 	</head>
 	<body>
 		<div class="main-container">
@@ -149,12 +219,12 @@
 			      <source src="assets/videos/background.mp4" type="video/mp4">
 			      Your browser does not support the video tag.
 			    </video>
-			    <!-- <div class="overlay">
-			      <div class="content">
-			        <h2>We provide best</h2>
-			        <p>Construction solutions</p>
+			    <div class="video-overlay">
+			      <div class="overlay-content">
+			        <h2 id="typing-heading"></h2>
+			        <p id="typing-subtext"></p>
 			      </div>
-			    </div> -->
+			    </div>
 			  </div>
 			</section>
 
@@ -188,17 +258,15 @@
 
             <section class="t-pad80 sm-b-pad80">
                 <div class="container">
-                    <div class="row" style="">
+                    <div class="row" style="align-items: center;">
                         <div class="col-md-6">
-                            <h2 class="title t-left">Welcome to <span>riaxprimes</span> - Your Trusted Manpower Supply Partner in Dubai</h2>
-                            <p>At RiaxPrime, we take pride in being one of Dubai’s most reliable manpower supply providers. With a strong reputation for excellence and a consistent record of success, we are dedicated to fulfilling your staffing needs with efficiency and precision. We deliver qualified and experienced manpower solutions to businesses across a wide range of industries, whether for short-term projects or long-term engagements.
-
-							</p>
+                            <h2 class="title t-left" style="font-size: 2.5em; line-height: 1.3; margin-bottom: 20px;">Welcome to <span>riaxprimes</span> - Your Trusted Manpower Supply Partner in Dubai</h2>
+                            <p style="font-size: 1.2em; line-height: 1.6;">At RiaxPrime, we take pride in being one of Dubai's most reliable manpower supply providers. With a strong reputation for excellence and a consistent record of success, we are dedicated to fulfilling your staffing needs with efficiency and precision. We deliver qualified and experienced manpower solutions to businesses across a wide range of industries, whether for short-term projects or long-term engagements.</p>
                         </div>
-
                         <div class="col-md-6">
-<img src="assets/images/other/worker-1.jpg" alt="worker" class="img-responsive">                  </div>
+                            <img src="assets/images/other/worker-1.jpg" alt="worker" class="img-responsive" style="max-height: 400px; width: auto; margin: 0 auto; display: block;">
                         </div>
+                    </div>
                 </div>
             </section>
 
@@ -224,10 +292,10 @@
 <p>At RiaxPrime, we make sure our staff are equipped with the necessary tools, training, and resources to grow their capabilities and adapt to the ever-evolving demands of our clients. With a team of over 800 professionals, we are always focused on understanding your objectives and exceeding your expectations. Our workforce is guided and monitored by highly trained and competent managers and supervisors, ensuring quality outcomes at every stage.</p>
 <br><br>
 <h3 class="title t-left">Construction Manpower Supply in Dubai</h3>
-<p>Timely completion of any construction project relies heavily on a trustworthy and dependable labor force. Delays or missed deadlines can harm a company’s reputation. That’s why both workforce provisioning and construction progress must align within the set timeline for seamless execution.</p>
+<p>Timely completion of any construction project relies heavily on a trustworthy and dependable labor force. Delays or missed deadlines can harm a company's reputation. That's why both workforce provisioning and construction progress must align within the set timeline for seamless execution.</p>
 <p>At RiaxPrime, a leading construction manpower provider in Dubai, we supply skilled laborers based on your specific requirements. Our thorough recruitment and screening processes ensure that only well-experienced and dedicated professionals are selected. You can count on us for reliable and top-quality manpower support.</p>
-<p>Kick off your construction work with a capable team by your side. With trained and experienced workers, you can build faster and aim higher. Whether you need manpower for a short-term task or long-term project, we’re here to support your growth with the right personnel.</p>
-<p>We are committed to delivering consistent and reliable construction labor solutions across the UAE. Our dedication to quality service has helped us become one of the trusted names in <strong>Dubai’s construction workforce supply industry</strong>. Reach out to us today to discuss your upcoming project needs in the UAE.
+<p>Kick off your construction work with a capable team by your side. With trained and experienced workers, you can build faster and aim higher. Whether you need manpower for a short-term task or long-term project, we're here to support your growth with the right personnel.</p>
+<p>We are committed to delivering consistent and reliable construction labor solutions across the UAE. Our dedication to quality service has helped us become one of the trusted names in <strong>Dubai's construction workforce supply industry</strong>. Reach out to us today to discuss your upcoming project needs in the UAE.
 
 	.</p>
 <br><br>
@@ -320,7 +388,7 @@
 		<div class="row">
 			<div class="col-md-12 center-d">
 				<h2 class="title t-center">Our <span>Services</span></h2>
-				<p>At RiaxPrime, we recognize that having the right workforce is crucial to the success of your projects. That’s why we deliver a wide array of services tailored to meet the needs of different industries and job functions. Below is an overview of the key services we offer:</p>
+				<p>At RiaxPrime, we recognize that having the right workforce is crucial to the success of your projects. That's why we deliver a wide array of services tailored to meet the needs of different industries and job functions. Below is an overview of the key services we offer:</p>
 				
 			</div>
 			
@@ -635,7 +703,7 @@
 			<div class="col-md-12">
 				<h2 class="title">Why Choose riaxprimes?</h2>
 				<ul>
-<li><strong>Consistency and Excellence: </strong>We are committed to delivering reliable and high-quality <strong>manpower supply in Dubai</strong>, ensuring that you receive skilled and capable workers for your projects. Our in-depth understanding of client needs and challenges allows us to offer tailored solutions that exceed expectations.</li> <li><strong>Time and Cost Efficiency: </strong>Rather than spending days searching for skilled labor, turn to RiaxPrime, a trusted <strong>manpower supply company in UAE</strong>. We save you valuable time and money by providing the right workforce in Dubai to meet your business requirements.</li> <li><strong>Industry Expertise: </strong>With experience in supplying manpower across various sectors, we possess valuable insights into labor staffing and job market trends. As a dedicated manpower provider, we stay updated on the latest industry developments and customer demands. Our workforce is trained to align with your expectations and make informed decisions that positively impact your operations.</li> <li><strong>Flexible Pricing: </strong>We offer competitive rates for qualified labor, with options for hourly or monthly packages based on mutual agreement. We believe in transparent and realistic negotiations, ensuring that both parties are aligned on expectations for a fair and beneficial arrangement.</li> <li><strong>Diverse Workforce Solutions: </strong>Different companies have different needs. Some may require long-term staff, while others need temporary support. Our team of experts from the <strong>manpower supply companies in UAE</strong> is ready to provide personnel tailored to your specific project requirements.</li> <li><strong>Skilled and Trained Workers: </strong>We have a rigorous selection process to ensure that we provide skilled and qualified workers. Our thorough background checks and assessments guarantee that we deliver reliable workers who can complete your tasks effectively. With our services, you save time, reduce costs, and maintain focus on your core business activities.</li> <li><strong>Health and Safety Compliance: </strong>Our workforce is trained and certified in accordance with industry standards. We emphasize the importance of adhering to health and safety protocols, ensuring that workers are aware of safe work practices and committed to maintaining a zero-harm environment. We comply with UAE government regulations on health, safety, and the environment to protect the well-being of our employees.</li> <li><strong>Customer Satisfaction: </strong>Your satisfaction is our priority. We strive to exceed your expectations by offering exceptional support and service throughout our partnership. We’re here to provide the right manpower when you need it, ensuring the success of your projects.</li>
+<li><strong>Consistency and Excellence: </strong>We are committed to delivering reliable and high-quality <strong>manpower supply in Dubai</strong>, ensuring that you receive skilled and capable workers for your projects. Our in-depth understanding of client needs and challenges allows us to offer tailored solutions that exceed expectations.</li> <li><strong>Time and Cost Efficiency: </strong>Rather than spending days searching for skilled labor, turn to RiaxPrime, a trusted <strong>manpower supply company in UAE</strong>. We save you valuable time and money by providing the right workforce in Dubai to meet your business requirements.</li> <li><strong>Industry Expertise: </strong>With experience in supplying manpower across various sectors, we possess valuable insights into labor staffing and job market trends. As a dedicated manpower provider, we stay updated on the latest industry developments and customer demands. Our workforce is trained to align with your expectations and make informed decisions that positively impact your operations.</li> <li><strong>Flexible Pricing: </strong>We offer competitive rates for qualified labor, with options for hourly or monthly packages based on mutual agreement. We believe in transparent and realistic negotiations, ensuring that both parties are aligned on expectations for a fair and beneficial arrangement.</li> <li><strong>Diverse Workforce Solutions: </strong>Different companies have different needs. Some may require long-term staff, while others need temporary support. Our team of experts from the <strong>manpower supply companies in UAE</strong> is ready to provide personnel tailored to your specific project requirements.</li> <li><strong>Skilled and Trained Workers: </strong>We have a rigorous selection process to ensure that we provide skilled and qualified workers. Our thorough background checks and assessments guarantee that we deliver reliable workers who can complete your tasks effectively. With our services, you save time, reduce costs, and maintain focus on your core business activities.</li> <li><strong>Health and Safety Compliance: </strong>Our workforce is trained and certified in accordance with industry standards. We emphasize the importance of adhering to health and safety protocols, ensuring that workers are aware of safe work practices and committed to maintaining a zero-harm environment. We comply with UAE government regulations on health, safety, and the environment to protect the well-being of our employees.</li> <li><strong>Customer Satisfaction: </strong>Your satisfaction is our priority. We strive to exceed your expectations by offering exceptional support and service throughout our partnership. We're here to provide the right manpower when you need it, ensuring the success of your projects.</li>
 </ul>
 			</div>
 			
@@ -795,18 +863,49 @@ United arab emirates.</p>								<p><i class="fa fa-envelope"></i>info</p>
 
 		<script src="assets/js/itl_script.js"></script>
 
-<script>
-    let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
+		<script>
+			// Typing animation
+			const heading = "Welcome to RiaxPrime";
+			const subtext = "Your Trusted Partner in Manpower Solutions";
+			let headingIndex = 0;
+			let subtextIndex = 0;
+			const headingElement = document.getElementById('typing-heading');
+			const subtextElement = document.getElementById('typing-subtext');
 
-function changeSlide() {
-  slides[currentIndex].classList.remove('fade');
-  currentIndex = (currentIndex + 1) % slides.length;
-  slides[currentIndex].classList.add('fade');
-}
+			function typeHeading() {
+				if (headingIndex < heading.length) {
+					headingElement.textContent += heading.charAt(headingIndex);
+					headingIndex++;
+					setTimeout(typeHeading, 100);
+				} else {
+					setTimeout(typeSubtext, 500);
+				}
+			}
 
-setInterval(changeSlide, 3000);
-</script>
+			function typeSubtext() {
+				if (subtextIndex < subtext.length) {
+					subtextElement.textContent += subtext.charAt(subtextIndex);
+					subtextIndex++;
+					setTimeout(typeSubtext, 100);
+				}
+			}
+
+			// Start the animation when the page loads
+			window.addEventListener('load', typeHeading);
+		</script>
+
+		<script>
+			let currentIndex = 0;
+			const slides = document.querySelectorAll('.slide');
+
+			function changeSlide() {
+				slides[currentIndex].classList.remove('fade');
+				currentIndex = (currentIndex + 1) % slides.length;
+				slides[currentIndex].classList.add('fade');
+			}
+
+			setInterval(changeSlide, 3000);
+		</script>
 
 	</body>
 
