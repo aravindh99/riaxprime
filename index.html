@@ -195,6 +195,245 @@
 			.download-float i {
 				margin-top: 5px;
 			}
+
+			@keyframes rotate {
+				from {
+					transform: rotate(-45deg);
+				}
+				to {
+					transform: rotate(315deg);
+				}
+			}
+
+			.diamond-icon {
+				transform: rotate(-45deg);
+				color: white;
+				font-size: 1.8em;
+				animation: rotate 10s linear infinite;
+			}
+
+			.diamond-item {
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background: #411b1d;
+				transform: rotate(45deg);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all 0.3s ease;
+			}
+
+			.diamond-item:hover {
+				background: #e0c3a3;
+				transform: rotate(45deg) scale(1.1);
+			}
+
+			.diamond-item:hover .diamond-icon {
+				animation: rotate 5s linear infinite;
+			}
+
+			.work-policy {
+				padding: 2rem;
+				background: #ffffff;
+				border-radius: 10px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			.section-heading {
+				color: #333;
+				font-size: 1.8rem;
+				margin-bottom: 1.5rem;
+				font-weight: 600;
+				text-align: center;
+			}
+
+			.policy-content {
+				position: relative;
+			}
+
+			.policy-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.policy-list li {
+				padding: 0.8rem 0;
+				border-bottom: 1px solid #eee;
+				color: #555;
+				font-size: 1.1rem;
+				line-height: 1.5;
+			}
+
+			.policy-list li:last-child {
+				border-bottom: none;
+			}
+
+			.policy-percentage {
+				text-align: center;
+				margin-top: 2rem;
+			}
+
+			.percentage {
+				display: inline-block;
+				font-size: 2.5rem;
+				font-weight: bold;
+				color: #007bff;
+				background: #f8f9fa;
+				padding: 0.5rem 2rem;
+				border-radius: 50px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			.policy-points {
+				padding: 20px 0;
+			}
+
+			.policy-item {
+				display: flex;
+				align-items: center;
+				margin-bottom: 25px;
+				padding: 20px;
+				background: #f8f9fa;
+				border-radius: 10px;
+				transition: all 0.3s ease;
+			}
+
+			.policy-item:hover {
+				transform: translateX(10px);
+				background: #e9ecef;
+			}
+
+			.policy-icon {
+				width: 60px;
+				height: 60px;
+				background: #411b1d;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 25px;
+				flex-shrink: 0;
+				transition: all 0.3s ease;
+			}
+
+			.policy-icon i {
+				color: white;
+				font-size: 28px;
+				animation: jump 2s ease-in-out infinite;
+			}
+
+			.policy-text {
+				color: #555;
+				font-size: 1.4rem;
+				line-height: 1.6;
+				font-weight: 500;
+			}
+
+			.success-bar {
+				background: #411b1d;
+				padding: 15px 25px;
+				border-radius: 50px;
+				margin-top: 30px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.success-text {
+				font-size: 1em;
+				font-weight: 500;
+			}
+
+			.success-value {
+				font-size: 1.2em;
+				font-weight: bold;
+			}
+
+			@media (max-width: 768px) {
+				.policy-item {
+					flex-direction: column;
+					text-align: center;
+				}
+				
+				.policy-icon {
+					margin: 0 auto 15px;
+				}
+				
+				.success-bar {
+					flex-direction: column;
+					text-align: center;
+					padding: 15px;
+				}
+				
+				.success-value {
+					margin-top: 10px;
+				}
+			}
+
+			@keyframes jump {
+				0%, 100% {
+					transform: translateY(0);
+				}
+				50% {
+					transform: translateY(-10px);
+				}
+			}
+
+			.policy-item:hover .policy-icon {
+				background: #e0c3a3;
+				transform: scale(1.1);
+			}
+
+			.policy-item:hover .policy-icon i {
+				animation: jump 1s ease-in-out infinite;
+			}
+
+			.section-container {
+				background: #fff;
+				border-radius: 15px;
+				box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+				padding: 30px;
+				height: 100%;
+				min-height: 600px;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.work-policy {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.work-policy .container-fluid {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.work-policy .row {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.policy-points {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				padding: 20px 0;
+			}
+
+			.policy-item {
+				margin-bottom: 30px;
+			}
+
+			.policy-item:last-child {
+				margin-bottom: 0;
+			}
 		</style>
 
 	</head>
@@ -440,91 +679,394 @@
 	</div> -->
 </section>
 	
-		<section class="pad80 service-sec bg-color">
-			<div class="linkage-flex-row">
-				<div class="linkage-infographic-container">
-					<img src="2.png" alt="Infographic" class="linkage-infographic-img">
+		<section class="pad80" style="background-color: #9b9494;">
+			<div class="container-fluid" style="max-width: 100%; padding: 0 50px;">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="section-container">
+							<section class="service-sec; background-color: #ffffff;" >
+								<div class="container-fluid" style="padding: 0;">
+									<div class="row">
+										<div class="col-md-12 bg-color: #ffffff">
+											<h2 class="title t-center" style="color: #411b1d;">Linkage</h2>
+										</div>
+									</div>
+									
+									<!-- Diamond Layout -->
+									<div class="row">
+										<div class="col-md-12">
+											<div class="diamond-layout">
+												<div class="diamond-item top">
+													<div class="diamond-icon">
+														<i class="fa fa-cogs"></i>
+													</div>
+													<h4 style="color: #666;">Technical Services</h4>
+												</div>
+												<div class="diamond-item left">
+													<div class="diamond-icon">
+														<i class="fa fa-graduation-cap"></i>
+													</div>
+													<h4 style="color: #666;">Training</h4>
+												</div>
+												<div class="diamond-item right">
+													<div class="diamond-icon">
+														<i class="fa fa-users"></i>
+													</div>
+													<h4 style="color: #666;">Manpower Supply</h4>
+												</div>
+												<div class="diamond-item bottom">
+													<div class="diamond-icon">
+														<i class="fa fa-file-text"></i>
+													</div>
+													<h4 style="color: #666;">Contract Works</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Three Boxes -->
+									<div class="row service-boxes">
+										<div class="col-md-4">
+											<div class="service-box">
+												<h4 style="color: #666;">Technical Services<br></h4>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="service-box">
+												<h4 style="color: #666;">Work Order Contracts<br></h4>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="service-box">
+												<h4 style="color: #666;">Manpower Recruitment and Supply</h4>
+											</div>
+										</div>
+									</div>
+
+									<!-- Success Bar -->
+									<div class="row">
+										<div class="col-md-12">
+											<div class="success-bar">
+												<span class="success-text" style="color: #fff;">Success Ratio and Customer Satisfaction</span>
+												<span class="success-value" style="color: #fff;">99%</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="section-container">
+							<div class="work-policy">
+								<div class="container-fluid" style="padding: 0;">
+									<div class="row">
+										<div class="col-md-12">
+											<h2 class="title t-center" style="color: #411b1d;">Work Policy</h2>
+										</div>
+									</div>
+									
+									<!-- Policy Points with Icons -->
+									<div class="row">
+										<div class="col-md-12">
+											<div class="policy-points">
+												<div class="policy-item">
+													<div class="policy-icon">
+														<i class="fa fa-check-circle"></i>
+													</div>
+													<div class="policy-text">
+														Acquire the Client needs, Analysing the requirements to achieve the output expected
+													</div>
+												</div>
+												<div class="policy-item">
+													<div class="policy-icon">
+														<i class="fa fa-lightbulb-o"></i>
+													</div>
+													<div class="policy-text">
+														Creating comprehensive and descriptions that include innovative ideas and client's desire
+													</div>
+												</div>
+												<div class="policy-item">
+													<div class="policy-icon">
+														<i class="fa fa-smile-o"></i>
+													</div>
+													<div class="policy-text">
+														Ensuring client satisfaction in all aspects regularly to reflect evolving the future business needs
+													</div>
+												</div>
+												<div class="policy-item">
+													<div class="policy-icon">
+														<i class="fa fa-cogs"></i>
+													</div>
+													<div class="policy-text">
+														Working methods with related to Client requirements and needs
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Success Bar -->
+									<div class="row">
+										<div class="col-md-12">
+											<div class="success-bar">
+												<span class="success-text" style="color: #fff;">Success Ratio and Customer Satisfaction</span>
+												<span class="success-value" style="color: #fff;">99%</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="linkage-infographic-container">
-					<img src="3.png" alt="Work Policy" class="linkage-infographic-img">
+
+				<!-- Second Row -->
+				<div class="row" style="margin-top: 50px;">
+					<!-- Section 3 -->
+					<div class="col-md-6">
+						<div class="section-container">
+							<!-- Space for third section -->
+						</div>
+					</div>
+					<!-- Section 4 -->
+					<div class="col-md-6">
+						<div class="section-container">
+							<!-- Space for fourth section -->
+						</div>
+					</div>
+				</div>
+
+				<!-- Third Row -->
+				<div class="row" style="margin-top: 50px;">
+					<!-- Section 5 -->
+					<div class="col-md-6">
+						<div class="section-container">
+							<!-- Space for fifth section -->
+						</div>
+					</div>
+					<!-- Section 6 -->
+					<div class="col-md-6">
+						<div class="section-container">
+							<!-- Space for sixth section -->
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="linkage-flex-row">
-				<div class="linkage-infographic-container">
-					<img src="4.png" alt="Prime Strategy" class="linkage-infographic-img">
-				</div>
-				<div class="linkage-infographic-container">
-					<img src="5.png" alt="Working Strategy" class="linkage-infographic-img">
-				</div>
-			</div>
-			<div class="linkage-flex-row">
-				<div class="linkage-infographic-container">
-					<img src="6.png" alt="Strategy 6" class="linkage-infographic-img">
-				</div>
-				<div class="linkage-infographic-container">
-					<img src="7.png" alt="Strategy 7" class="linkage-infographic-img">
-				</div>
-			</div>
+
 			<style>
-				.linkage-flex-row {
+				.section-container {
+					background: #fff;
+					border-radius: 15px;
+					box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+					padding: 30px;
+					height: 100%;
+					min-height: 600px;
 					display: flex;
-					justify-content: center;
-					align-items: stretch;
-					gap: 40px;
-					flex-wrap: wrap;
-					width: 100%;
-					max-width: 1400px;
-					margin: 0 auto 48px auto;
+					flex-direction: column;
 				}
-				.linkage-infographic-container {
+
+				.work-policy {
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+				}
+
+				.work-policy .container-fluid {
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+				}
+
+				.work-policy .row {
+					flex: 1;
+					display: flex;
+					flex-direction: column;
+				}
+
+				.policy-points {
+					flex: 1;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					padding: 20px 0;
+				}
+
+				.policy-item {
+					margin-bottom: 30px;
+				}
+
+				.policy-item:last-child {
+					margin-bottom: 0;
+				}
+
+				.diamond-layout {
+					background: #fff;
+					position: relative;
+					width: 250px;
+					height: 250px;
+					margin: 30px auto;
+				}
+
+				.diamond-item {
+					position: absolute;
+					width: 100px;
+					height: 100px;
+					background: #411b1d;
+					transform: rotate(45deg);
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					transition: all 0.3s ease;
+				}
+
+				.diamond-item:hover {
+					background: #e0c3a3;
+					transform: rotate(45deg) scale(1.1);
+				}
+
+				.diamond-item:hover .diamond-icon {
+					animation: rotate 5s linear infinite;
+				}
+
+				.diamond-icon {
+					transform: rotate(-45deg);
+					color: white;
+					font-size: 1.8em;
+					animation: rotate 10s linear infinite;
+				}
+
+				.diamond-item h4 {
+					position: absolute;
+					font-weight: bold;
+					white-space: nowrap;
+					transform: rotate(-45deg);
+					font-size: 0.9em;
+				}
+
+				.diamond-item.top {
+					top: 0;
+					left: 50%;
+					transform: translateX(-50%) rotate(45deg);
+				}
+
+				.diamond-item.left {
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%) rotate(45deg);
+				}
+
+				.diamond-item.right {
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%) rotate(45deg);
+				}
+
+				.diamond-item.bottom {
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%) rotate(45deg);
+				}
+
+				.diamond-item.top h4 {
+					top: -70px;
+					left: 90%;
+					transform: translateX(-50%) rotate(-45deg);
+				}
+
+				.diamond-item.left h4 {
+					left: -80px;
+					top: 50%;
+					transform: translateY(-50%) rotate(-45deg);
+				}
+
+				.diamond-item.right h4 {
+					right: -120px;
+					top: 50%;
+					transform: translateY(-50%) rotate(-45deg);
+				}
+
+				.diamond-item.bottom h4 {
+					bottom: -70px;
+					left: 20%;
+					transform: translateX(-50%) rotate(-45deg);
+				}
+
+				.service-boxes {
+					margin-top: 50px;
+				}
+
+				.service-box {
 					background: #fff;
-					border-radius: 32px;
-					box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-					min-width: 400px;
-					max-width: 650px;
-					padding: 40px;
-					flex: 1 1 500px;
+					padding: 20px;
+					text-align: center;
+					border-radius: 10px;
+					box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+					transition: all 0.3s ease;
 				}
-				.linkage-infographic-img {
-					width: 100%;
-					max-width: 500px;
-					height: auto;
-					display: block;
-					border-radius: 16px;
-					box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+
+				.service-box:hover {
+					transform: translateY(-5px);
+					box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 				}
-				@media (max-width: 1400px) {
-					.linkage-flex-row {
-						max-width: 98vw;
+
+				.service-box h4 {
+					margin: 0;
+					font-weight: 600;
+					font-size: 0.9em;
+				}
+
+				.success-bar {
+					background: #411b1d;
+					padding: 15px 25px;
+					border-radius: 50px;
+					margin-top: 30px;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+				.success-text {
+					font-size: 1em;
+					font-weight: 500;
+				}
+
+				.success-value {
+					font-size: 1.2em;
+					font-weight: bold;
+				}
+
+				@media (max-width: 768px) {
+					.section-container {
+						margin-bottom: 30px;
 					}
-					.linkage-infographic-container {
-						max-width: 95vw;
-						min-width: 0;
+					
+					.diamond-layout {
+						width: 200px;
+						height: 200px;
 					}
-				}
-				@media (max-width: 1000px) {
-					.linkage-flex-row {
+
+					.diamond-item {
+						width: 80px;
+						height: 80px;
+					}
+
+					.diamond-icon {
+						font-size: 1.5em;
+					}
+
+					.service-box {
+						margin-bottom: 20px;
+					}
+
+					.success-bar {
 						flex-direction: column;
-						align-items: center;
-						gap: 24px;
+						text-align: center;
+						padding: 15px;
 					}
-					.linkage-infographic-container {
-						max-width: 98vw;
-						min-width: 0;
-						padding: 24px;
-					}
-				}
-				@media (max-width: 600px) {
-					.linkage-infographic-container {
-						padding: 10px 2px;
-						min-height: 120px;
-					}
-					.linkage-infographic-img {
-						width: 160px;
-						max-width: 100%;
+
+					.success-value {
+						margin-top: 10px;
 					}
 				}
 			</style>
@@ -821,7 +1363,7 @@
 			height: 100%;
 		}
 		.factor-box h3 {
-			color: #411b1d;
+			color: #f7f1f2;
 			margin-bottom: 15px;
 			font-size: 24px;
 		}
