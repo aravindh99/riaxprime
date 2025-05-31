@@ -110,6 +110,27 @@
 				color: #eeebeb;
 			}
 
+			@media (max-widtch: 768px) {
+				.overlay-content h2 {
+					font-size: 2.5em;
+					margin-bottom: 15px;
+				}
+				.overlay-content p {
+					font-size: 1.5em;
+				}
+				
+			}
+			@media (max-width: 480px) {
+    .overlay-content h2 {
+        font-size: 2em;    /* Even smaller for very small devices */
+        margin-bottom: 10px;
+    }
+    
+    .overlay-content p {
+        font-size: 1.2em;  /* Even smaller for very small devices */
+    }
+}
+
 			/* Header navigation styles */
 			.navbar-nav {
 				margin-left: 50px !important;
@@ -1325,72 +1346,46 @@
 			<!-- header start -->
 
 			<header id="header" class="header">
-
+				
+				
+				
+				
 				<div class="container">
-				    <div class="row">
-				        <div class="col-md-12">
-				            <div class="top-bar">
-				                <div class="tp-ct">
-				                    <ul>
-				                        <li><i class="fa fa-phone"></i>971 - 504 305 417 </li>
-				                        <li><i class="fa fa-envelope"></i>riaxprime@outlook.com</li>
-				                    </ul>
-				                </div>
-				            </div>
-				            
-				        </div>
-				    </div>
 					<div class="row">
-
-					<nav class="navbar">
-						<div class="col-md-3">
-
-						<div class="navbar-header">
-
-							<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
-
-								<span class="sr-only">Toggle navigation</span>
-
-								<span class="icon-bar"></span>
-
-								<span class="icon-bar"></span>
-
-								<span class="icon-bar"></span>
-
-							</button>
-
-							<a class="navbar-brand" href="index.html">
-								<div class="logo-container" style="display: flex; align-items: center; justify-content: center;">
-									<img src="assets/images/logo/logo.png" alt="Builder Logo" style="width: auto; height: auto;">
+						<!-- Top Bar and Navbar in a single row -->
+						<div class="logo-container" style="position: absolute; top: 0; left: 400px; z-index: 1000;">
+							<img src="assets/images/logo/logo.png" alt="Builder Logo" style="width: 100px; height: 100px;">
+						</div>
+						
+			
+						<div class="col-md-9">
+							<!-- Top Bar Content -->
+							<div class="top-bar">
+								<div class="tp-ct">
+									<ul>
+										<li><i class="fa fa-phone"></i>971 - 504 305 417 </li>
+										<li><i class="fa fa-envelope"></i>riaxprime@outlook.com</li>
+									</ul>
 								</div>
-							</a>
-
+							</div>
+			
+							<!-- Navbar -->
+							<nav class="navbar">
+								<div class="collapse navbar-collapse js-navbar-collapse">
+									<ul class="nav navbar-nav">
+										<li class="active dropdown"><a href="index.html">Home</a></li>
+										<li class="dropdown"><a href="about_us.html">About</a></li>
+										<li class="dropdown"><a href="services.html">Services</a></li>
+										<li class="dropdown"><a href="project.html">Project</a></li>
+										<li class="dropdown"><a href="contact.html">Contact us</a></li>
+									</ul>
+								</div>
+							</nav>
 						</div>
 					</div>
-                        <div class="col-md-9">
-						<div class="collapse navbar-collapse js-navbar-collapse">
-
-							<ul class="nav navbar-nav">
-
-								<li class="active dropdown"><a href="index.html">Home</a></li>
-
-								<li class="dropdown"><a href="about_us.html">About</a></li>
-
-								<li class="dropdown"><a href="services.html">Services</a></li>
-
-                                <li class="dropdown"><a href="project.html">Project</a></li>
-
-                                <li class="dropdown"><a href="contact.html">Contact us</a></li>
-
-							</ul>
-						</div><!-- /.nav-collapse -->
-					</div>
-
-					</nav>
-
 				</div>
-			</div>
-			</header> <!-- /header -->
+			</header>
+
 
 			<!-- header end -->
 
@@ -1884,13 +1879,12 @@
 										</div>
 									</div>
 								</div>
+								<div style="width: 200px; height: 200px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+									<img src="assets/images/feature-imges/colour.png" style="max-width: 100%; max-height: 100%;">
+								  </div>
 							</div>
-							<br><br><br><br><br><br><br><br>
-							<div class="transition-animation">
-								<div class="dot"></div>
-								<div class="dot"></div>
-								<div class="dot"></div>
-							  </div>
+							
+							
 						</div>
 					</div>
 				</div>
@@ -2636,7 +2630,7 @@
 								<div class="img-wrap">
 									<img src="assets/images/feature-imges/feature-image-1.jpg" alt="" class="img-responsive">									
 								</div>
-								<h4><a href="index.html#">Mep Contracting</a></h4>								
+								<h4><a href="index.html#">civil contracting</a></h4>								
 							</div> <!-- /.feature-img -->
 						</div> <!-- /.col -->
 
@@ -2645,7 +2639,7 @@
 								<div class="img-wrap">
 									<img src="assets/images/feature-imges/feature-image-2.jpg" alt="" class="img-responsive">									
 								</div>
-								<h4><a href="index.html#">Civil Contracting</a></h4>								
+								<h4><a href="index.html#">Cleaning Services</a></h4>								
 							</div> <!-- /.feature-img -->
 						</div> <!-- /.col -->
 
@@ -2654,7 +2648,7 @@
 								<div class="img-wrap">
 									<img src="assets/images/feature-imges/feature-image-3.jpg" alt="" class="img-responsive">									
 								</div>
-								<h4><a href="index.html#">Steel Fixing Contracting</a></h4>							
+								<h4><a href="index.html#">Electrical & Plumbing Contracting</a></h4>							
 							</div> <!-- /.feature-img -->
 						</div> <!-- /.col -->
 						<div class="col-md-4">
@@ -2662,7 +2656,7 @@
 								<div class="img-wrap">
 									<img src="assets/images/feature-imges/feature-image-4.jpg" alt="" class="img-responsive">									
 								</div>
-								<h4><a href="index.html#">Electrical & Plumbing Contracting</a></h4>								
+								<h4><a href="index.html#">Mason</a></h4>								
 							</div> <!-- /.feature-img -->
 						</div> <!-- /.col -->
 
@@ -2671,7 +2665,7 @@
 								<div class="img-wrap">
 									<img src="assets/images/feature-imges/feature-image-5.jpg" alt="" class="img-responsive">									
 								</div>
-								<h4><a href="index.html#">Shuttering Contracting</a></h4>								
+								<h4><a href="index.html#">Mep contracting</a></h4>								
 							</div> <!-- /.feature-img -->
 						</div> <!-- /.col -->
 
@@ -2680,7 +2674,7 @@
 								<div class="img-wrap">
 									<img src="assets/images/feature-imges/feature-image-6.jpg" alt="" class="img-responsive">
 								</div>
-								<h4><a href="index.html#">Mason Works</a></h4>
+								<h4><a href="index.html#">Shuttering contracting</a></h4>
 							</div> <!-- /.feature-img -->
 						</div> <!-- /.col -->
                         
@@ -2692,14 +2686,14 @@
 								<h4><a href="index.html#">Landscape Works</a></h4>
 							</div> 
 						</div> <!-- /.col -->
-                         <div class="col-md-4">
+                         <!-- <div class="col-md-4">
 							<div class="feature-img">
 								<div class="img-wrap">
 									<img src="assets/images/feature-imges/cleaning.jpg" alt="" class="img-responsive">
 								</div>
 								<h4><a href="index.html#">Cleaning Services</a></h4>
 							</div> 
-						</div> <!-- /.col -->
+						</div>  -->
 						 <!-- /.col -->
 
 
@@ -3065,7 +3059,7 @@
 
 								<div class="t-center">
 
-								<p>Copyright &copy; <script type="text/javascript"> document.write(new Date().getFullYear());</script> riaxprime All Rights Reserved</p>
+									<p>Copyright &copy; <script type="text/javascript"> document.write(new Date().getFullYear());</script> riaxprime LLC All Rights Reserved</p>
 
 								</div>
 
