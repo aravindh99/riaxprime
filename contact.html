@@ -59,10 +59,11 @@
 		<style>
 			/* Header navigation styles */
 			.navbar-nav {
-				margin-left: 50px !important;
+				margin-left: auto !important;  /* Change from margin-left: 50px to margin-left: auto */
+				display: flex;
+				justify-content: flex-end;     /* Add this to align items to the right */
 			}
 			.navbar-nav > li > a {
-				font-family: 'Mangal', sans-serif;
 				font-size: 18px !important;
 				padding: 20px 25px !important;
 				font-weight: 500;
@@ -80,6 +81,8 @@
 			}
 			.navbar {
 				padding: 15px 0;
+				display: flex;
+				justify-content: flex-end;
 			}
 			.navbar-header {
 				margin-right: 30px;
@@ -165,57 +168,45 @@
 			
 			<!-- header start -->
 			<header id="header" class="header">
-				<div class="container">
-				    <div class="row">
-				        <div class="col-md-12">
-				            <div class="top-bar">
-				                <div class="tp-ct">
-				                    <ul>
-				                        <li><i class="fa fa-phone"></i>971 - 504 305 417</li>
-				                        <li><i class="fa fa-envelope"></i> riaxprime@gmail.com</li>
-				                    </ul>
-				                    
-				                </div>
-				                
-				            </div>
-				            
-				        </div>
-				    </div>
-				    <div class="row">
-					<nav class="navbar">
-					    <div class="col-md-3">
-						<div class="navbar-header">
-							<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="index.html">
-								<div class="logo">
-									 <img src="assets/images/logo/logo.png" alt="Builder Logo">
-								</div>
-							</a>
+				
+				
+				
+				
+				<div style="display: flex; justify-content: flex-end;">
+					<div class="row">
+						<!-- Top Bar and Navbar in a single row -->
+						<div class="logo-container" style="position: fixed; top: 0; left: 100px; z-index: 1000;">
+							<img src="assets/images/logo/logo.png" alt="Builder Logo" style="width: 100px; height: 100px;">
 						</div>
-						</div>
-						<div class="col-md-9">
-
-						<div class="collapse navbar-collapse js-navbar-collapse">
-							<ul class="nav navbar-nav">
-								<li class="dropdown"><a href="index.html">Home</a></li>
-								<li class="dropdown"><a href="about_us.html">About</a></li>
-								<li class="dropdown"><a href="services.html">Services</a></li>
-                                <li class="dropdown"><a href="project.html">Project</a></li>
-                                	
-                                 <li class="active dropdown"><a href="contact.html">Contact us</a></li>
-								
-							</ul>
 						
-						</div><!-- /.nav-collapse -->
+			
+						<div class="col-md-9">
+							<!-- Top Bar Content -->
+							<div class="top-bar">
+								<div class="tp-ct">
+									<ul>
+										<li><i class="fa fa-phone"></i>971 - 504 305 417 </li>
+										<li><i class="fa fa-envelope"></i>riaxprime@outlook.com</li>
+									</ul>
+								</div>
+							</div>
+			
+							<!-- Navbar -->
+							<nav class="navbar">
+								<div class="collapse navbar-collapse js-navbar-collapse">
+									<ul class="nav navbar-nav">
+										<li class="active dropdown"><a href="index.html">Home</a></li>
+										<li class="dropdown"><a href="about_us.html">About</a></li>
+										<li class="dropdown"><a href="services.html">Services</a></li>
+										<li class="dropdown"><a href="project.html">Project</a></li>
+										<li class="dropdown"><a href="contact.html" style="white-space: nowrap;">Contact us</a></li>
+
+									</ul>
+								</div>
+							</nav>
 						</div>
-					</nav>
+					</div>
 				</div>
-            </div>
 			</header> <!-- /header -->
 			<!-- header end -->
 

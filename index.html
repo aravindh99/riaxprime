@@ -133,7 +133,9 @@
 
 			/* Header navigation styles */
 			.navbar-nav {
-				margin-left: 50px !important;
+				margin-left: auto !important;  /* Change from margin-left: 50px to margin-left: auto */
+				display: flex;
+				justify-content: flex-end;     /* Add this to align items to the right */
 			}
 			.navbar-nav > li > a {
 				font-size: 18px !important;
@@ -153,6 +155,8 @@
 			}
 			.navbar {
 				padding: 15px 0;
+				display: flex;
+				justify-content: flex-end;
 			}
 			.navbar-header {
 				margin-right: 30px;
@@ -707,167 +711,6 @@
 				transform: translateX(100%);
 			}
 
-			.working-strategy {
-				height: 100%;
-				display: flex;
-				flex-direction: column;
-			}
-
-			.working-strategy .strategy-section {
-				padding: 10px;
-				height: 100%;
-			}
-
-			.working-strategy .value-grid {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				gap: 15px;
-				padding: 5px;
-			}
-
-			.working-strategy .value-item {
-				background: #f8f9fa;
-				border-radius: 10px;
-				padding: 15px;
-				text-align: center;
-				transition: all 0.3s ease;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				position: relative;
-				animation: floatSideways 3s ease-in-out infinite;
-			}
-
-			.working-strategy .value-item:nth-child(2n) {
-				animation-delay: 0.5s;
-			}
-
-			.working-strategy .value-item:nth-child(3n) {
-				animation-delay: 1s;
-			}
-
-			.working-strategy .value-item:nth-child(4n) {
-				animation-delay: 1.5s;
-			}
-
-			.working-strategy .value-item:hover {
-				animation-play-state: paused;
-				transform: translateY(-5px);
-				box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-				background: #e9ecef;
-			}
-
-			.working-strategy .value-icon {
-				width: 50px;
-				height: 50px;
-				background: #411b1d;
-				border-radius: 50%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				margin-bottom: 10px;
-				position: relative;
-				transition: all 0.3s ease;
-			}
-
-			.working-strategy .value-icon i {
-				color: white;
-				font-size: 20px;
-				transition: all 0.3s ease;
-			}
-
-			.working-strategy .value-item:hover .value-icon {
-				background: #e0c3a3;
-			}
-
-			.working-strategy-diagram {
-				width: 100%;
-				margin: 0 auto;
-				padding: 10px 0 0 0;
-			}
-			.working-strategy-diagram .title {
-				margin-bottom: 30px;
-			}
-			.ws-row {
-				display: flex;
-				align-items: center;
-				margin-bottom: 0;
-				gap: 10px;
-			}
-			.ws-label {
-				min-width: 170px;
-				font-weight: bold;
-				font-size: 1.1em;
-				display: flex;
-				align-items: center;
-				padding: 10px 15px;
-				border-radius: 8px;
-				margin-right: 10px;
-				background: #f5f5f5;
-			}
-			.ws-label-financial { background: #b6e2c6; color: #25603b; }
-			.ws-label-customer { background: #b6d8f2; color: #25608a; }
-			.ws-label-internal { background: #ffe1a8; color: #a67c00; }
-			.ws-label-people { background: #ffb6a8; color: #a63c00; }
-
-			.ws-box {
-				flex: 1;
-				text-align: center;
-				padding: 15px 10px;
-				border-radius: 8px;
-				font-weight: 500;
-				font-size: 1.05em;
-				margin: 5px 5px 5px 0;
-				min-width: 120px;
-			}
-			.ws-box-financial { background: #b6e2c6; color: #25603b; }
-			.ws-box-customer { background: #b6d8f2; color: #25608a; }
-			.ws-box-internal { background: #ffe1a8; color: #a67c00; }
-			.ws-box-people { background: #ffb6a8; color: #a63c00; }
-			.ws-box-wide { min-width: 200px; }
-
-			.ws-arrow-row {
-				display: flex;
-				align-items: center;
-				height: 20px;
-				margin-left: 180px;
-				margin-bottom: -10px;
-				gap: 10px;
-			}
-			.ws-arrow {
-				flex: 1;
-				height: 20px;
-				position: relative;
-			}
-			.ws-arrow:after {
-				content: '';
-				display: block;
-				margin: 0 auto;
-				width: 0;
-				height: 0;
-				border-left: 8px solid transparent;
-				border-right: 8px solid transparent;
-				border-top: 12px solid #bbb;
-				position: absolute;
-				left: 50%;
-				top: 0;
-				transform: translateX(-50%);
-			}
-			@media (max-width: 900px) {
-				.ws-label { min-width: 120px; font-size: 0.95em; }
-				.ws-box { min-width: 80px; font-size: 0.95em; }
-				.ws-box-wide { min-width: 120px; }
-				.ws-arrow-row { margin-left: 130px; }
-			}
-			@media (max-width: 600px) {
-				.working-strategy-diagram { padding: 0; }
-				.ws-row, .ws-arrow-row { flex-direction: column; align-items: flex-start; }
-				.ws-label { margin-bottom: 5px; }
-				.ws-arrow-row { margin-left: 0; }
-				.ws-arrow { width: 100%; height: 20px; }
-				.ws-arrow:after { left: 10px; top: 0; transform: none; }
-			}
 
 			.manpower-procedure {
 				width: 100%;
@@ -1350,10 +1193,10 @@
 				
 				
 				
-				<div class="container">
+				<div style="display: flex; justify-content: flex-end;">
 					<div class="row">
 						<!-- Top Bar and Navbar in a single row -->
-						<div class="logo-container" style="position: absolute; top: 0; left: 400px; z-index: 1000;">
+						<div class="logo-container" style="position: fixed; top: 0; left: 100px; z-index: 1000;">
 							<img src="assets/images/logo/logo.png" alt="Builder Logo" style="width: 100px; height: 100px;">
 						</div>
 						
@@ -1377,7 +1220,8 @@
 										<li class="dropdown"><a href="about_us.html">About</a></li>
 										<li class="dropdown"><a href="services.html">Services</a></li>
 										<li class="dropdown"><a href="project.html">Project</a></li>
-										<li class="dropdown"><a href="contact.html">Contact us</a></li>
+										<li class="dropdown"><a href="contact.html" style="white-space: nowrap;">Contact us</a></li>
+
 									</ul>
 								</div>
 							</nav>
@@ -1501,59 +1345,7 @@
 						
 					
 					<section class="pad80">
-	<!-- <div class="container">
-		<div class="row">
-		    <div class="vision-rw"> -->
-			
-				<!-- <div class="vision-col">
-					<h4>Our Mission</h4>
-					<p>Riax Prime's mission is to deliver innovative, reliable,
-						and sustainable technical solutions that meet the
-						evolving needs of businesses and communities in
-						UAE. We are committed to excellence in service
-						delivery, leveraging advanced technologies and a
-						skilled
-						workforce
-						to
-						enhance
-						infrastructure,
-						efficiency, and customer satisfaction across all
-						sectors.</p><p>We also offers unbiased, comprehensive, genuine,
-							ethical
-							and
-							quality
-							manpower services.
-							growth
-							through
-							professional
-							technical
-							and
-							We aim to support the city's
-							smart
-							solutions,
-							sustainable
-							practices and exceptional customer care.</p>
-								</div> -->
-				
-			
-			
-				<!-- <div class="vision-col">
-					<h4>Our Vision</h4>
-					<p>Our Vision is To lead the transformation of technical
-						services in the UAE through innovation, sustainability,
-						and smart solutions that support a resilient, digitally
-						advanced, and customer-centric infrastructure. To
-						provide high-quality, cost-effective technical services
-						in UAE by embracing innovation, ensuring safety, and
-						delivering excellence in every project.</p>
-
-
-				</div> -->
-			<!-- </div>
-			
-		</div>
-		
-	</div> -->
+	
 </section>
 	
 		<section class="pad80" style="background-color: #9b9494;">
@@ -1784,42 +1576,18 @@
 					<!-- Section 4 -->
 					<div class="col-md-6">
 						<div class="section-container">
-							<div class="working-strategy-diagram">
-								<h2 class="title t-center" style="color: #411b1d;">Working Strategy</h2>
-								<div class="ws-row ws-row-financial">
-									<div class="ws-label ws-label-financial"><i class="fa fa-money"></i> FINANCIAL RESULT</div>
-									<div class="ws-box ws-box-financial">Reduce Costs</div>
-									<div class="ws-box ws-box-financial">Productivity Growth</div>
-									<div class="ws-box ws-box-financial">Financial Stability</div>
+							<div class="container-fluid" style="padding: 0;">
+								<div class="row">
+									<div class="col-md-12">
+										<h2 class="title t-center" style="color: #411b1d;">Working Strategy</h2>
+									</div>
 								</div>
-								<div class="ws-arrow-row">
-									<div class="ws-arrow"></div>
-									<div class="ws-arrow"></div>
-									<div class="ws-arrow"></div>
-								</div>
-								<div class="ws-row ws-row-customer">
-									<div class="ws-label ws-label-customer"><i class="fa fa-users"></i> CUSTOMER RESULT</div>
-									<div class="ws-box ws-box-customer">Renewal Customers</div>
-									<div class="ws-box ws-box-customer">Service Attributes</div>
-									<div class="ws-box ws-box-customer">Quality</div>
-								</div>
-								<div class="ws-arrow-row">
-									<div class="ws-arrow"></div>
-									<div class="ws-arrow"></div>
-								</div>
-								<div class="ws-row ws-row-internal">
-									<div class="ws-label ws-label-internal"><i class="fa fa-cogs"></i> INTERNAL PROCESS</div>
-									<div class="ws-box ws-box-internal ws-box-wide">Improve Cost Control</div>
-									<div class="ws-box ws-box-internal ws-box-wide">Project Management</div>
-								</div>
-								<div class="ws-arrow-row">
-									<div class="ws-arrow"></div>
-								</div>
-								<div class="ws-row ws-row-people">
-									<div class="ws-label ws-label-people"><i class="fa fa-user"></i> PEOPLE & LEARNING</div>
-									<div class="ws-box ws-box-people">Hire Quality Employees</div>
-									<div class="ws-box ws-box-people">Employee Training</div>
-									<div class="ws-box ws-box-people">Teamwork</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="img-container" style="text-align: center; padding: 20px;">
+											<img src="assets/ws.png" alt="Working Strategy" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -2250,167 +2018,8 @@
 					}
 				}
 
-				.working-strategy {
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-				}
-
-				.working-strategy .strategy-section {
-					padding: 10px;
-					height: 100%;
-				}
-
-				.working-strategy .value-grid {
-					display: grid;
-					grid-template-columns: repeat(2, 1fr);
-					gap: 15px;
-					padding: 5px;
-				}
-
-				.working-strategy .value-item {
-					background: #f8f9fa;
-					border-radius: 10px;
-					padding: 15px;
-					text-align: center;
-					transition: all 0.3s ease;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					position: relative;
-					animation: floatSideways 3s ease-in-out infinite;
-				}
-
-				.working-strategy .value-item:nth-child(2n) {
-					animation-delay: 0.5s;
-				}
-
-				.working-strategy .value-item:nth-child(3n) {
-					animation-delay: 1s;
-				}
-
-				.working-strategy .value-item:nth-child(4n) {
-					animation-delay: 1.5s;
-				}
-
-				.working-strategy .value-item:hover {
-					animation-play-state: paused;
-					transform: translateY(-5px);
-					box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-					background: #e9ecef;
-				}
-
-				.working-strategy .value-icon {
-					width: 50px;
-					height: 50px;
-					background: #411b1d;
-					border-radius: 50%;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					margin-bottom: 10px;
-					position: relative;
-					transition: all 0.3s ease;
-				}
-
-				.working-strategy .value-icon i {
-					color: white;
-					font-size: 20px;
-					transition: all 0.3s ease;
-				}
-
-				.working-strategy .value-item:hover .value-icon {
-					background: #e0c3a3;
-				}
-
-				.working-strategy-diagram {
-					width: 100%;
-					margin: 0 auto;
-					padding: 10px 0 0 0;
-				}
-				.working-strategy-diagram .title {
-					margin-bottom: 30px;
-				}
-				.ws-row {
-					display: flex;
-					align-items: center;
-					margin-bottom: 0;
-					gap: 10px;
-				}
-				.ws-label {
-					min-width: 170px;
-					font-weight: bold;
-					font-size: 1.1em;
-					display: flex;
-					align-items: center;
-					padding: 10px 15px;
-					border-radius: 8px;
-					margin-right: 10px;
-					background: #f5f5f5;
-				}
-				.ws-label-financial { background: #b6e2c6; color: #25603b; }
-				.ws-label-customer { background: #b6d8f2; color: #25608a; }
-				.ws-label-internal { background: #ffe1a8; color: #a67c00; }
-				.ws-label-people { background: #ffb6a8; color: #a63c00; }
-
-				.ws-box {
-					flex: 1;
-					text-align: center;
-					padding: 15px 10px;
-					border-radius: 8px;
-					font-weight: 500;
-					font-size: 1.05em;
-					margin: 5px 5px 5px 0;
-					min-width: 120px;
-				}
-				.ws-box-financial { background: #b6e2c6; color: #25603b; }
-				.ws-box-customer { background: #b6d8f2; color: #25608a; }
-				.ws-box-internal { background: #ffe1a8; color: #a67c00; }
-				.ws-box-people { background: #ffb6a8; color: #a63c00; }
-				.ws-box-wide { min-width: 200px; }
-
-				.ws-arrow-row {
-					display: flex;
-					align-items: center;
-					height: 20px;
-					margin-left: 180px;
-					margin-bottom: -10px;
-					gap: 10px;
-				}
-				.ws-arrow {
-					flex: 1;
-					height: 20px;
-					position: relative;
-				}
-				.ws-arrow:after {
-					content: '';
-					display: block;
-					margin: 0 auto;
-					width: 0;
-					height: 0;
-					border-left: 8px solid transparent;
-					border-right: 8px solid transparent;
-					border-top: 12px solid #bbb;
-					position: absolute;
-					left: 50%;
-					top: 0;
-					transform: translateX(-50%);
-				}
-				@media (max-width: 900px) {
-					.ws-label { min-width: 120px; font-size: 0.95em; }
-					.ws-box { min-width: 80px; font-size: 0.95em; }
-					.ws-box-wide { min-width: 120px; }
-					.ws-arrow-row { margin-left: 130px; }
-				}
-				@media (max-width: 600px) {
-					.working-strategy-diagram { padding: 0; }
-					.ws-row, .ws-arrow-row { flex-direction: column; align-items: flex-start; }
-					.ws-label { margin-bottom: 5px; }
-					.ws-arrow-row { margin-left: 0; }
-					.ws-arrow { width: 100%; height: 20px; }
-					.ws-arrow:after { left: 10px; top: 0; transform: none; }
-				}
+				
+				
 
 				.manpower-procedure {
 					width: 100%;
@@ -2761,7 +2370,7 @@
 						<div class="col-md-4">
 							<div class="feature-img">
 								<div class="img-wrap">
-									<img src="assets/images/feature-imges/feature-image-14.jpg" alt="" class="img-responsive">
+									<img src="assets/images/feature-imges/feature-image-14.jpg" alt="" class="img-responsive">									
 								</div>
 								<h4><a href="index.html#">Electrician</a></h4>
 							</div> <!-- /.feature-img -->
@@ -2934,18 +2543,18 @@
 			<div class="col-md-12">
 				<h2 class="title">Why Choose riaxprime?</h2>
 				<ul>
-					<li><b> Solution for all your Technical Needs.</b></li>
-					<li><b>7+ years of Ethical, Quality and Trust Service.</b></li>
-					<li><b>Representing over 200+ satisfied customers across UAE.</b></li>
-					<li><b>Skilled engineers & certified, Trained Technicians.</b></li>
-					<li><b>Prior and Personalized Attention for every Customer.</b></li>
-					<li><b>Project Assessment and Assistance.</b></li>
-					<li><b>Own Sourcing of Manpower - Supply and Recruitment</b></li>
-					<li><b>Compliance with UAE & international standards</b></li>
-					<li><b>Well developed Preparation and Execution</b></li>
-					<li><b>Good Success Ratio- Tailored to your project and budget</b></li>
-					<li><b>Outstanding Achievement in Global Level.</b></li>
-				</ul>
+					<li style="margin-bottom: 20px;"><b>Solution for all your Technical Needs.</b></li>
+					<li style="margin-bottom: 20px;"><b>7+ years of Ethical, Quality and Trust Service.</b></li>
+					<li style="margin-bottom: 20px;"><b>Representing over 200+ satisfied customers across UAE.</b></li>
+					<li style="margin-bottom: 20px;"><b>Skilled engineers & certified, Trained Technicians.</b></li>
+					<li style="margin-bottom: 20px;"><b>Prior and Personalized Attention for every Customer.</b></li>
+					<li style="margin-bottom: 20px;"><b>Project Assessment and Assistance.</b></li>
+					<li style="margin-bottom: 20px;"><b>Own Sourcing of Manpower - Supply and Recruitment</b></li>
+					<li style="margin-bottom: 20px;"><b>Compliance with UAE & international standards</b></li>
+					<li style="margin-bottom: 20px;"><b>Well developed Preparation and Execution</b></li>
+					<li style="margin-bottom: 20px;"><b>Good Success Ratio - Tailored to your project and budget</b></li>
+					<li style="margin-bottom: 20px;"><b>Outstanding Achievement in Global Level.</b></li>
+				  </ul>
 			</div>
 			
 		</div>
