@@ -60,6 +60,9 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 
 		<style>
+			body {
+				font-family: 'Mangal', sans-serif;
+			}
 			/* Video overlay styles */
 			.video-background {
 				position: relative;
@@ -434,6 +437,754 @@
 			.policy-item:last-child {
 				margin-bottom: 0;
 			}
+
+			.service-sec {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.service-sec .container-fluid {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.service-sec .row {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.diamond-layout {
+				background: #fff;
+				position: relative;
+				width: 250px;
+				height: 250px;
+				margin: 40px auto;
+				flex: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.service-boxes {
+				margin: 40px 0;
+			}
+
+			.service-box {
+				background: #fff;
+				padding: 25px;
+				text-align: center;
+				border-radius: 10px;
+				box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+				transition: all 0.3s ease;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.service-box h4 {
+				margin: 0;
+				font-weight: 600;
+				font-size: 1.2rem;
+			}
+
+			.success-bar {
+				margin-top: auto;
+				padding: 20px 30px;
+			}
+
+			.prime-strategy {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.strategy-content {
+				padding: 20px;
+				text-align: center;
+				flex: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.strategy-image {
+				max-width: 100%;
+				height: auto;
+				border-radius: 10px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+
+			.prime-strategy {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.strategy-section {
+				padding: 10px;
+				height: 100%;
+			}
+
+			.strategy-subtitle {
+				color: #411b1d;
+				font-size: 1.8rem;
+				text-align: center;
+				margin-bottom: 30px;
+				font-weight: 600;
+			}
+
+			.value-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 15px;
+				padding: 5px;
+			}
+
+			@keyframes floatSideways {
+				0% {
+					transform: translateX(0);
+				}
+				50% {
+					transform: translateX(10px);
+				}
+				100% {
+					transform: translateX(0);
+				}
+			}
+
+			.value-item {
+				background: #f8f9fa;
+				border-radius: 10px;
+				padding: 15px;
+				text-align: center;
+				transition: all 0.3s ease;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				animation: floatSideways 3s ease-in-out infinite;
+			}
+
+			.value-item:nth-child(2n) {
+				animation-delay: 0.5s;
+			}
+
+			.value-item:nth-child(3n) {
+				animation-delay: 1s;
+			}
+
+			.value-item:nth-child(4n) {
+				animation-delay: 1.5s;
+			}
+
+			.value-item:hover {
+				animation-play-state: paused;
+				transform: translateY(-5px);
+				box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+				background: #e9ecef;
+			}
+
+			.value-icon {
+				width: 50px;
+				height: 50px;
+				background: #411b1d;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 10px;
+				position: relative;
+				transition: all 0.3s ease;
+			}
+
+			.value-icon i {
+				color: white;
+				font-size: 20px;
+				transition: all 0.3s ease;
+			}
+
+			.value-item h4 {
+				color: #333;
+				font-size: 1.1rem;
+				font-weight: 600;
+				margin: 0;
+			}
+
+			@media (max-width: 768px) {
+				.value-grid {
+					grid-template-columns: 1fr;
+				}
+				
+				.value-item {
+					margin-bottom: 10px;
+				}
+			}
+
+			@keyframes bounce {
+				0%, 100% {
+					transform: scale(1);
+				}
+				50% {
+					transform: scale(1.1);
+				}
+			}
+
+			@keyframes glow {
+				0% {
+					box-shadow: 0 0 5px rgba(65, 27, 29, 0.2);
+				}
+				50% {
+					box-shadow: 0 0 20px rgba(65, 27, 29, 0.4);
+				}
+				100% {
+					box-shadow: 0 0 5px rgba(65, 27, 29, 0.2);
+				}
+			}
+
+			@keyframes slideIn {
+				0% {
+					transform: translateX(-100%);
+					opacity: 0;
+				}
+				100% {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+
+			.value-item:hover .value-icon {
+				background: #e0c3a3;
+			}
+
+			.value-item:hover .value-icon i {
+				animation: bounce 1s ease infinite;
+			}
+
+			.value-item::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					45deg,
+					transparent,
+					rgba(255, 255, 255, 0.1),
+					transparent
+				);
+				transform: translateX(-100%);
+				transition: 0.5s;
+			}
+
+			.value-item:hover::after {
+				transform: translateX(100%);
+			}
+
+			.working-strategy {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.working-strategy .strategy-section {
+				padding: 10px;
+				height: 100%;
+			}
+
+			.working-strategy .value-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 15px;
+				padding: 5px;
+			}
+
+			.working-strategy .value-item {
+				background: #f8f9fa;
+				border-radius: 10px;
+				padding: 15px;
+				text-align: center;
+				transition: all 0.3s ease;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				animation: floatSideways 3s ease-in-out infinite;
+			}
+
+			.working-strategy .value-item:nth-child(2n) {
+				animation-delay: 0.5s;
+			}
+
+			.working-strategy .value-item:nth-child(3n) {
+				animation-delay: 1s;
+			}
+
+			.working-strategy .value-item:nth-child(4n) {
+				animation-delay: 1.5s;
+			}
+
+			.working-strategy .value-item:hover {
+				animation-play-state: paused;
+				transform: translateY(-5px);
+				box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+				background: #e9ecef;
+			}
+
+			.working-strategy .value-icon {
+				width: 50px;
+				height: 50px;
+				background: #411b1d;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 10px;
+				position: relative;
+				transition: all 0.3s ease;
+			}
+
+			.working-strategy .value-icon i {
+				color: white;
+				font-size: 20px;
+				transition: all 0.3s ease;
+			}
+
+			.working-strategy .value-item:hover .value-icon {
+				background: #e0c3a3;
+			}
+
+			.working-strategy-diagram {
+				width: 100%;
+				margin: 0 auto;
+				padding: 10px 0 0 0;
+			}
+			.working-strategy-diagram .title {
+				margin-bottom: 30px;
+			}
+			.ws-row {
+				display: flex;
+				align-items: center;
+				margin-bottom: 0;
+				gap: 10px;
+			}
+			.ws-label {
+				min-width: 170px;
+				font-weight: bold;
+				font-size: 1.1em;
+				display: flex;
+				align-items: center;
+				padding: 10px 15px;
+				border-radius: 8px;
+				margin-right: 10px;
+				background: #f5f5f5;
+			}
+			.ws-label-financial { background: #b6e2c6; color: #25603b; }
+			.ws-label-customer { background: #b6d8f2; color: #25608a; }
+			.ws-label-internal { background: #ffe1a8; color: #a67c00; }
+			.ws-label-people { background: #ffb6a8; color: #a63c00; }
+
+			.ws-box {
+				flex: 1;
+				text-align: center;
+				padding: 15px 10px;
+				border-radius: 8px;
+				font-weight: 500;
+				font-size: 1.05em;
+				margin: 5px 5px 5px 0;
+				min-width: 120px;
+			}
+			.ws-box-financial { background: #b6e2c6; color: #25603b; }
+			.ws-box-customer { background: #b6d8f2; color: #25608a; }
+			.ws-box-internal { background: #ffe1a8; color: #a67c00; }
+			.ws-box-people { background: #ffb6a8; color: #a63c00; }
+			.ws-box-wide { min-width: 200px; }
+
+			.ws-arrow-row {
+				display: flex;
+				align-items: center;
+				height: 20px;
+				margin-left: 180px;
+				margin-bottom: -10px;
+				gap: 10px;
+			}
+			.ws-arrow {
+				flex: 1;
+				height: 20px;
+				position: relative;
+			}
+			.ws-arrow:after {
+				content: '';
+				display: block;
+				margin: 0 auto;
+				width: 0;
+				height: 0;
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				border-top: 12px solid #bbb;
+				position: absolute;
+				left: 50%;
+				top: 0;
+				transform: translateX(-50%);
+			}
+			@media (max-width: 900px) {
+				.ws-label { min-width: 120px; font-size: 0.95em; }
+				.ws-box { min-width: 80px; font-size: 0.95em; }
+				.ws-box-wide { min-width: 120px; }
+				.ws-arrow-row { margin-left: 130px; }
+			}
+			@media (max-width: 600px) {
+				.working-strategy-diagram { padding: 0; }
+				.ws-row, .ws-arrow-row { flex-direction: column; align-items: flex-start; }
+				.ws-label { margin-bottom: 5px; }
+				.ws-arrow-row { margin-left: 0; }
+				.ws-arrow { width: 100%; height: 20px; }
+				.ws-arrow:after { left: 10px; top: 0; transform: none; }
+			}
+
+			.manpower-procedure {
+				width: 100%;
+				margin: 0 auto;
+				padding: 10px 0 0 0;
+			}
+			.manpower-procedure .title {
+				margin-bottom: 30px;
+			}
+			.procedure-steps {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: center;
+				align-items: center;
+				margin-top: 20px;
+			}
+			.procedure-step {
+				background: #f5f5f5;
+				color: #411b1d;
+				border-radius: 30px;
+				padding: 12px 28px;
+				font-size: 1.08em;
+				font-weight: 500;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+				transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+				cursor: pointer;
+				border: 2px solid #e0c3a3;
+				margin-bottom: 5px;
+				position: relative;
+				z-index: 1;
+			}
+			.procedure-step:hover {
+				background: #e0c3a3;
+				color: #fff;
+				box-shadow: 0 4px 16px rgba(65,27,29,0.10);
+				border-color: #411b1d;
+			}
+			.procedure-arrow {
+				font-size: 2em;
+				color: #e0c3a3;
+				margin: 0 2px;
+				user-select: none;
+				font-weight: bold;
+			}
+			@media (max-width: 900px) {
+				.procedure-steps {
+					flex-wrap: wrap;
+					gap: 6px;
+				}
+				.procedure-step {
+					padding: 10px 18px;
+					font-size: 1em;
+				}
+				.procedure-arrow {
+					font-size: 1.5em;
+				}
+			}
+			@media (max-width: 600px) {
+				.procedure-steps {
+					flex-direction: column;
+					align-items: center;
+					gap: 0;
+				}
+				.procedure-step {
+					width: 90%;
+					text-align: center;
+					padding: 12px 0;
+					margin-bottom: 0;
+				}
+				.procedure-arrow {
+					font-size: 2em;
+					color: #e0c3a3;
+					margin: 0;
+					transform: rotate(90deg);
+					display: block;
+				}
+			}
+
+			.manpower-procedure-u {
+				width: 100%;
+				margin: 0 auto;
+				padding: 10px 0 0 0;
+			}
+			.manpower-procedure-u .title {
+				margin-bottom: 30px;
+			}
+			.u-procedure-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				position: relative;
+				min-height: 420px;
+			}
+			.u-procedure-col {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 380px;
+			}
+			.u-procedure-col-left {
+				align-items: flex-end;
+			}
+			.u-procedure-col-right {
+				align-items: flex-start;
+				justify-content: flex-end;
+			}
+			.u-step {
+				background: #f5f5f5;
+				color: #411b1d;
+				border-radius: 30px;
+				padding: 12px 28px;
+				font-size: 1.08em;
+				font-weight: 500;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+				transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+				cursor: pointer;
+				border: 2px solid #e0c3a3;
+				margin: 10px 0;
+				min-width: 200px;
+				text-align: center;
+				position: relative;
+				z-index: 1;
+			}
+			.u-step:hover {
+				background: #e0c3a3;
+				color: #fff;
+				box-shadow: 0 4px 16px rgba(65,27,29,0.10);
+				border-color: #411b1d;
+			}
+			.u-connector {
+				width: 80px;
+				height: 380px;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				position: relative;
+			}
+			.u-curve {
+				width: 80px;
+				height: 380px;
+				border-left: 4px solid #e0c3a3;
+				border-bottom: 4px solid #e0c3a3;
+				border-radius: 0 0 40px 40px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			.u-procedure-col-right .u-step {
+				margin-bottom: 0;
+			}
+			.u-procedure-col-left .u-step {
+				margin-top: 0;
+			}
+			@media (max-width: 900px) {
+				.u-step { min-width: 120px; font-size: 1em; padding: 10px 10px; }
+				.u-connector, .u-curve { width: 40px; height: 320px; }
+				.u-procedure-wrapper { min-height: 340px; }
+				.u-procedure-col { height: 320px; }
+			}
+			@media (max-width: 600px) {
+				.u-procedure-wrapper {
+					flex-direction: column;
+					align-items: center;
+					min-height: unset;
+				}
+				.u-procedure-col, .u-procedure-col-left, .u-procedure-col-right {
+					flex-direction: column;
+					align-items: center;
+					height: unset;
+					width: 100%;
+				}
+				.u-connector, .u-curve {
+					display: none;
+				}
+				.u-step { width: 90%; min-width: unset; margin: 10px 0; }
+			}
+			
+			.transition-synopsis {
+				width: 100%;
+				margin: 0 auto;
+				padding: 10px 0 0 0;
+			}
+			.transition-synopsis .title {
+				margin-bottom: 30px;
+			}
+			.ts-diagram-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 40px;
+				position: relative;
+				min-height: 420px;
+			}
+			.ts-image-container {
+				position: relative;
+				width: 320px;
+				height: 320px;
+				margin: 0 auto;
+			}
+			.ts-image {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+				border-radius: 18px;
+				background: #fff;
+			}
+			.ts-labels-container {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				padding: 20px;
+			}
+			.ts-label {
+				font-size: 1.08em;
+				font-weight: 500;
+				background: #fff;
+				padding: 12px 20px;
+				border-radius: 18px;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+				border: 1.5px solid #eee;
+				white-space: nowrap;
+				transition: all 0.3s ease;
+			}
+			.ts-label:hover {
+				transform: translateX(-10px);
+				box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			}
+			.ts-label-green { color: #4cae8a; border-color: #4cae8a; }
+			.ts-label-orange { color: #f6a13a; border-color: #f6a13a; }
+			.ts-label-blue { color: #2a6edb; border-color: #2a6edb; }
+
+			@media (max-width: 900px) {
+				.ts-diagram-wrapper {
+					flex-direction: column;
+					gap: 20px;
+				}
+				.ts-image-container {
+					width: 280px;
+					height: 280px;
+				}
+				.ts-labels-container {
+					width: 100%;
+					align-items: center;
+				}
+				.ts-label {
+					width: 90%;
+					text-align: center;
+					white-space: normal;
+				}
+			}
+			@media (max-width: 600px) {
+				.ts-image-container {
+					width: 98vw;
+					height: 98vw;
+					max-width: 280px;
+					max-height: 280px;
+				}
+				.ts-label {
+					font-size: 0.95em;
+					padding: 10px 15px;
+				}
+			}
+			
+			.ts-label-wrapper {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+			}
+
+			.ts-icon-circle {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				position: relative;
+				animation: cycle 3s linear infinite;
+			}
+
+			.ts-icon-circle::before {
+				content: '';
+				position: absolute;
+				top: -4px;
+				left: -4px;
+				right: -4px;
+				bottom: -4px;
+				border-radius: 50%;
+				border: 2px solid transparent;
+				animation: cycle 3s linear infinite;
+			}
+
+			.ts-icon-green {
+				background: #4cae8a;
+			}
+			.ts-icon-green::before {
+				border-color: #4cae8a;
+			}
+
+			.ts-icon-orange {
+				background: #f6a13a;
+			}
+			.ts-icon-orange::before {
+				border-color: #f6a13a;
+			}
+
+			.ts-icon-blue {
+				background: #2a6edb;
+			}
+			.ts-icon-blue::before {
+				border-color: #2a6edb;
+			}
+
+			@keyframes cycle {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
+			.ts-label {
+				margin: 0;
+				flex: 1;
+			}
+
+			@media (max-width: 900px) {
+				.ts-label-wrapper {
+					width: 100%;
+					justify-content: center;
+				}
+				.ts-label {
+					width: auto;
+				}
+			}
+			
+					
+						
 		</style>
 
 	</head>
@@ -684,14 +1435,14 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="section-container">
-							<section class="service-sec; background-color: #ffffff;" >
+							
 								<div class="container-fluid" style="padding: 0;">
 									<div class="row">
 										<div class="col-md-12 bg-color: #ffffff">
 											<h2 class="title t-center" style="color: #411b1d;">Linkage</h2>
 										</div>
 									</div>
-									
+
 									<!-- Diamond Layout -->
 									<div class="row">
 										<div class="col-md-12">
@@ -742,18 +1493,20 @@
 											</div>
 										</div>
 									</div>
-
+                                    <br><br><br>
 									<!-- Success Bar -->
 									<div class="row">
 										<div class="col-md-12">
 											<div class="success-bar">
 												<span class="success-text" style="color: #fff;">Success Ratio and Customer Satisfaction</span>
 												<span class="success-value" style="color: #fff;">99%</span>
+												
 											</div>
 										</div>
 									</div>
+									<br>
 								</div>
-							</section>
+							
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -826,13 +1579,123 @@
 					<!-- Section 3 -->
 					<div class="col-md-6">
 						<div class="section-container">
-							<!-- Space for third section -->
+							<div class="prime-strategy">
+								<div class="container-fluid" style="padding: 0;">
+									<div class="row">
+										<div class="col-md-12">
+											<h2 class="title t-center" style="color: #411b1d;">Prime Strategy</h2>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-6">
+											<div class="strategy-section">
+												<h3 class="strategy-subtitle">Core Value</h3>
+												<div class="value-grid">
+													<div class="value-item">
+														<div class="value-icon">
+															<i class="fa fa-bolt"></i>
+														</div>
+														<h4>QUICK</h4>
+													</div>
+													<div class="value-item">
+														<div class="value-icon">
+															<i class="fa fa-graduation-cap"></i>
+														</div>
+														<h4>LEARNING</h4>
+													</div>
+													<div class="value-item">
+														<div class="value-icon">
+															<i class="fa fa-shield"></i>
+														</div>
+														<h4>INTEGRITY</h4>
+													</div>
+													<div class="value-item">
+														<div class="value-icon">
+															<i class="fa fa-star"></i>
+														</div>
+														<h4>EXPERTISE</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="strategy-section">
+												<h3 class="strategy-subtitle">Work Value</h3>
+												<div class="value-grid">
+													<div class="value-item">
+														<div class="value-icon">
+															<i class="fa fa-tasks"></i>
+														</div>
+														<h4>PROCEDURAL</h4>
+													</div>
+													<div class="value-item">
+														<div class="value-icon">
+															<i class="fa fa-trophy"></i>
+														</div>
+														<h4>PROMINENT</h4>
+													</div>
+													<div class="value-item">
+														<div class="value-icon">
+															<i class="fa fa-check-circle"></i>
+														</div>
+														<h4>PROFICIENT</h4>
+													</div>
+													<div class="value-item">
+														<div class="value-icon">
+															<i class="fa fa-plus-circle"></i>
+														</div>
+														<h4>POSITIVE</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<!-- Section 4 -->
 					<div class="col-md-6">
 						<div class="section-container">
-							<!-- Space for fourth section -->
+							<div class="working-strategy-diagram">
+								<h2 class="title t-center" style="color: #411b1d;">Working Strategy</h2>
+								<div class="ws-row ws-row-financial">
+									<div class="ws-label ws-label-financial"><i class="fa fa-money"></i> FINANCIAL RESULT</div>
+									<div class="ws-box ws-box-financial">Reduce Costs</div>
+									<div class="ws-box ws-box-financial">Productivity Growth</div>
+									<div class="ws-box ws-box-financial">Financial Stability</div>
+								</div>
+								<div class="ws-arrow-row">
+									<div class="ws-arrow"></div>
+									<div class="ws-arrow"></div>
+									<div class="ws-arrow"></div>
+								</div>
+								<div class="ws-row ws-row-customer">
+									<div class="ws-label ws-label-customer"><i class="fa fa-users"></i> CUSTOMER RESULT</div>
+									<div class="ws-box ws-box-customer">Renewal Customers</div>
+									<div class="ws-box ws-box-customer">Service Attributes</div>
+									<div class="ws-box ws-box-customer">Quality</div>
+								</div>
+								<div class="ws-arrow-row">
+									<div class="ws-arrow"></div>
+									<div class="ws-arrow"></div>
+								</div>
+								<div class="ws-row ws-row-internal">
+									<div class="ws-label ws-label-internal"><i class="fa fa-cogs"></i> INTERNAL PROCESS</div>
+									<div class="ws-box ws-box-internal ws-box-wide">Improve Cost Control</div>
+									<div class="ws-box ws-box-internal ws-box-wide">Project Management</div>
+								</div>
+								<div class="ws-arrow-row">
+									<div class="ws-arrow"></div>
+								</div>
+								<div class="ws-row ws-row-people">
+									<div class="ws-label ws-label-people"><i class="fa fa-user"></i> PEOPLE & LEARNING</div>
+									<div class="ws-box ws-box-people">Hire Quality Employees</div>
+									<div class="ws-box ws-box-people">Employee Training</div>
+									<div class="ws-box ws-box-people">Teamwork</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -843,12 +1706,59 @@
 					<div class="col-md-6">
 						<div class="section-container">
 							<!-- Space for fifth section -->
+							<div class="col-md-6">
+								
+									<div class="transition-synopsis">
+										<h2 class="title t-center" style="color: #411b1d;">Transition Synopsis</h2>
+										<div class="ts-diagram-wrapper">
+											<div class="ts-image-container">
+												<img src="transition-synopsis.png" alt="Transition Diagram" class="ts-image">
+											</div>
+											<div class="ts-labels-container">
+												<div class="ts-label-wrapper">
+													<div class="ts-icon-circle ts-icon-green"></div>
+													<div class="ts-label ts-label-green">Engraving in Strategic Areas and Development</div>
+												</div>
+												<div class="ts-label-wrapper">
+													<div class="ts-icon-circle ts-icon-orange"></div>
+													<div class="ts-label ts-label-orange">Core Business Elements</div>
+												</div>
+												<div class="ts-label-wrapper">
+													<div class="ts-icon-circle ts-icon-blue"></div>
+													<div class="ts-label ts-label-blue">Work Process Architecture</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								
+							</div>
+					
+							
 						</div>
 					</div>
 					<!-- Section 6 -->
 					<div class="col-md-6">
 						<div class="section-container">
-							<!-- Space for sixth section -->
+							<div class="manpower-procedure-u">
+								<h2 class="title t-center" style="color: #411b1d;">Manpower Supply Procedure</h2>
+								<div class="u-procedure-wrapper">
+									<div class="u-procedure-col u-procedure-col-left">
+										<div class="u-step">Application Process</div>
+										<div class="u-step">Initial Screening</div>
+										<div class="u-step">Shortlisting Process</div>
+										<div class="u-step">Interview Analysis</div>
+									</div>
+									<div class="u-connector">
+										<div class="u-curve"></div>
+									</div>
+									<div class="u-procedure-col u-procedure-col-right">
+										<div class="u-step">Onboarding Process</div>
+										<div class="u-step">Visa & Ticketing Process</div>
+										<div class="u-step">Selection & Records</div>
+										<div class="u-step">Evaluations</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -905,7 +1815,11 @@
 					position: relative;
 					width: 250px;
 					height: 250px;
-					margin: 30px auto;
+					margin: 40px auto;
+					flex: 1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
 				}
 
 				.diamond-item {
@@ -993,16 +1907,20 @@
 				}
 
 				.service-boxes {
-					margin-top: 50px;
+					margin: 40px 0;
 				}
 
 				.service-box {
 					background: #fff;
-					padding: 20px;
+					padding: 25px;
 					text-align: center;
 					border-radius: 10px;
 					box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 					transition: all 0.3s ease;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
 				}
 
 				.service-box:hover {
@@ -1013,17 +1931,12 @@
 				.service-box h4 {
 					margin: 0;
 					font-weight: 600;
-					font-size: 0.9em;
+					font-size: 1.2rem;
 				}
 
 				.success-bar {
-					background: #411b1d;
-					padding: 15px 25px;
-					border-radius: 50px;
-					margin-top: 30px;
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
+					margin-top: auto;
+					padding: 20px 30px;
 				}
 
 				.success-text {
@@ -1069,7 +1982,462 @@
 						margin-top: 10px;
 					}
 				}
-			</style>
+
+				.prime-strategy {
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+				}
+
+				.strategy-content {
+					padding: 20px;
+					text-align: center;
+					flex: 1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				.strategy-image {
+					max-width: 100%;
+					height: auto;
+					border-radius: 10px;
+					box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+				}
+
+				.strategy-section {
+					padding: 10px;
+					height: 100%;
+				}
+
+				.strategy-subtitle {
+					color: #411b1d;
+					font-size: 1.8rem;
+					text-align: center;
+					margin-bottom: 30px;
+					font-weight: 600;
+				}
+
+				.value-grid {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 15px;
+					padding: 5px;
+				}
+
+				.value-item {
+					background: #f8f9fa;
+					border-radius: 10px;
+					padding: 15px;
+					text-align: center;
+					transition: all 0.3s ease;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					position: relative;
+					animation: floatSideways 3s ease-in-out infinite;
+				}
+
+				.value-item:nth-child(2n) {
+					animation-delay: 0.5s;
+				}
+
+				.value-item:nth-child(3n) {
+					animation-delay: 1s;
+				}
+
+				.value-item:nth-child(4n) {
+					animation-delay: 1.5s;
+				}
+
+				.value-item:hover {
+					animation-play-state: paused;
+					transform: translateY(-5px);
+					box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+					background: #e9ecef;
+				}
+
+				.value-icon {
+					width: 50px;
+					height: 50px;
+					background: #411b1d;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-bottom: 10px;
+					position: relative;
+					transition: all 0.3s ease;
+				}
+
+				.value-icon i {
+					color: white;
+					font-size: 20px;
+					transition: all 0.3s ease;
+				}
+
+				.value-item h4 {
+					color: #333;
+					font-size: 1.1rem;
+					font-weight: 600;
+					margin: 0;
+				}
+
+				@media (max-width: 768px) {
+					.value-grid {
+						grid-template-columns: 1fr;
+					}
+					
+					.value-item {
+						margin-bottom: 10px;
+					}
+				}
+
+				.working-strategy {
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+				}
+
+				.working-strategy .strategy-section {
+					padding: 10px;
+					height: 100%;
+				}
+
+				.working-strategy .value-grid {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 15px;
+					padding: 5px;
+				}
+
+				.working-strategy .value-item {
+					background: #f8f9fa;
+					border-radius: 10px;
+					padding: 15px;
+					text-align: center;
+					transition: all 0.3s ease;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					position: relative;
+					animation: floatSideways 3s ease-in-out infinite;
+				}
+
+				.working-strategy .value-item:nth-child(2n) {
+					animation-delay: 0.5s;
+				}
+
+				.working-strategy .value-item:nth-child(3n) {
+					animation-delay: 1s;
+				}
+
+				.working-strategy .value-item:nth-child(4n) {
+					animation-delay: 1.5s;
+				}
+
+				.working-strategy .value-item:hover {
+					animation-play-state: paused;
+					transform: translateY(-5px);
+					box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+					background: #e9ecef;
+				}
+
+				.working-strategy .value-icon {
+					width: 50px;
+					height: 50px;
+					background: #411b1d;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-bottom: 10px;
+					position: relative;
+					transition: all 0.3s ease;
+				}
+
+				.working-strategy .value-icon i {
+					color: white;
+					font-size: 20px;
+					transition: all 0.3s ease;
+				}
+
+				.working-strategy .value-item:hover .value-icon {
+					background: #e0c3a3;
+				}
+
+				.working-strategy-diagram {
+					width: 100%;
+					margin: 0 auto;
+					padding: 10px 0 0 0;
+				}
+				.working-strategy-diagram .title {
+					margin-bottom: 30px;
+				}
+				.ws-row {
+					display: flex;
+					align-items: center;
+					margin-bottom: 0;
+					gap: 10px;
+				}
+				.ws-label {
+					min-width: 170px;
+					font-weight: bold;
+					font-size: 1.1em;
+					display: flex;
+					align-items: center;
+					padding: 10px 15px;
+					border-radius: 8px;
+					margin-right: 10px;
+					background: #f5f5f5;
+				}
+				.ws-label-financial { background: #b6e2c6; color: #25603b; }
+				.ws-label-customer { background: #b6d8f2; color: #25608a; }
+				.ws-label-internal { background: #ffe1a8; color: #a67c00; }
+				.ws-label-people { background: #ffb6a8; color: #a63c00; }
+
+				.ws-box {
+					flex: 1;
+					text-align: center;
+					padding: 15px 10px;
+					border-radius: 8px;
+					font-weight: 500;
+					font-size: 1.05em;
+					margin: 5px 5px 5px 0;
+					min-width: 120px;
+				}
+				.ws-box-financial { background: #b6e2c6; color: #25603b; }
+				.ws-box-customer { background: #b6d8f2; color: #25608a; }
+				.ws-box-internal { background: #ffe1a8; color: #a67c00; }
+				.ws-box-people { background: #ffb6a8; color: #a63c00; }
+				.ws-box-wide { min-width: 200px; }
+
+				.ws-arrow-row {
+					display: flex;
+					align-items: center;
+					height: 20px;
+					margin-left: 180px;
+					margin-bottom: -10px;
+					gap: 10px;
+				}
+				.ws-arrow {
+					flex: 1;
+					height: 20px;
+					position: relative;
+				}
+				.ws-arrow:after {
+					content: '';
+					display: block;
+					margin: 0 auto;
+					width: 0;
+					height: 0;
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-top: 12px solid #bbb;
+					position: absolute;
+					left: 50%;
+					top: 0;
+					transform: translateX(-50%);
+				}
+				@media (max-width: 900px) {
+					.ws-label { min-width: 120px; font-size: 0.95em; }
+					.ws-box { min-width: 80px; font-size: 0.95em; }
+					.ws-box-wide { min-width: 120px; }
+					.ws-arrow-row { margin-left: 130px; }
+				}
+				@media (max-width: 600px) {
+					.working-strategy-diagram { padding: 0; }
+					.ws-row, .ws-arrow-row { flex-direction: column; align-items: flex-start; }
+					.ws-label { margin-bottom: 5px; }
+					.ws-arrow-row { margin-left: 0; }
+					.ws-arrow { width: 100%; height: 20px; }
+					.ws-arrow:after { left: 10px; top: 0; transform: none; }
+				}
+
+				.manpower-procedure {
+					width: 100%;
+					margin: 0 auto;
+					padding: 10px 0 0 0;
+				}
+				.manpower-procedure .title {
+					margin-bottom: 30px;
+				}
+				.procedure-steps {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 10px;
+					justify-content: center;
+					align-items: center;
+					margin-top: 20px;
+				}
+				.procedure-step {
+					background: #f5f5f5;
+					color: #411b1d;
+					border-radius: 30px;
+					padding: 12px 28px;
+					font-size: 1.08em;
+					font-weight: 500;
+					box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+					transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+					cursor: pointer;
+					border: 2px solid #e0c3a3;
+					margin-bottom: 5px;
+					position: relative;
+					z-index: 1;
+				}
+				.procedure-step:hover {
+					background: #e0c3a3;
+					color: #fff;
+					box-shadow: 0 4px 16px rgba(65,27,29,0.10);
+					border-color: #411b1d;
+				}
+				.procedure-arrow {
+					font-size: 2em;
+					color: #e0c3a3;
+					margin: 0 2px;
+					user-select: none;
+					font-weight: bold;
+				}
+				@media (max-width: 900px) {
+					.procedure-steps {
+						flex-wrap: wrap;
+						gap: 6px;
+					}
+					.procedure-step {
+						padding: 10px 18px;
+						font-size: 1em;
+					}
+					.procedure-arrow {
+						font-size: 1.5em;
+					}
+				}
+				@media (max-width: 600px) {
+					.procedure-steps {
+						flex-direction: column;
+						align-items: center;
+						gap: 0;
+					}
+					.procedure-step {
+						width: 90%;
+						text-align: center;
+						padding: 12px 0;
+						margin-bottom: 0;
+					}
+					.procedure-arrow {
+						font-size: 2em;
+						color: #e0c3a3;
+						margin: 0;
+						transform: rotate(90deg);
+						display: block;
+					}
+				}
+
+				.manpower-procedure-u {
+					width: 100%;
+					margin: 0 auto;
+					padding: 10px 0 0 0;
+				}
+				.manpower-procedure-u .title {
+					margin-bottom: 30px;
+				}
+				.u-procedure-wrapper {
+					display: flex;
+					justify-content: center;
+					align-items: flex-start;
+					position: relative;
+					min-height: 420px;
+				}
+				.u-procedure-col {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					height: 380px;
+				}
+				.u-procedure-col-left {
+					align-items: flex-end;
+				}
+				.u-procedure-col-right {
+					align-items: flex-start;
+					justify-content: flex-end;
+				}
+				.u-step {
+					background: #f5f5f5;
+					color: #411b1d;
+					border-radius: 30px;
+					padding: 12px 28px;
+					font-size: 1.08em;
+					font-weight: 500;
+					box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+					transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+					cursor: pointer;
+					border: 2px solid #e0c3a3;
+					margin: 10px 0;
+					min-width: 200px;
+					text-align: center;
+					position: relative;
+					z-index: 1;
+				}
+				.u-step:hover {
+					background: #e0c3a3;
+					color: #fff;
+					box-shadow: 0 4px 16px rgba(65,27,29,0.10);
+					border-color: #411b1d;
+				}
+				.u-connector {
+					width: 80px;
+					height: 380px;
+					display: flex;
+					align-items: flex-end;
+					justify-content: center;
+					position: relative;
+				}
+				.u-curve {
+					width: 80px;
+					height: 380px;
+					border-left: 4px solid #e0c3a3;
+					border-bottom: 4px solid #e0c3a3;
+					border-radius: 0 0 40px 40px;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+				}
+				.u-procedure-col-right .u-step {
+					margin-bottom: 0;
+				}
+				.u-procedure-col-left .u-step {
+					margin-top: 0;
+				}
+				@media (max-width: 900px) {
+					.u-step { min-width: 120px; font-size: 1em; padding: 10px 10px; }
+					.u-connector, .u-curve { width: 40px; height: 320px; }
+					.u-procedure-wrapper { min-height: 340px; }
+					.u-procedure-col { height: 320px; }
+				}
+				@media (max-width: 600px) {
+					.u-procedure-wrapper {
+						flex-direction: column;
+						align-items: center;
+						min-height: unset;
+					}
+					.u-procedure-col, .u-procedure-col-left, .u-procedure-col-right {
+						flex-direction: column;
+						align-items: center;
+						height: unset;
+						width: 100%;
+					}
+					.u-connector, .u-curve {
+						display: none;
+					}
+					.u-step { width: 90%; min-width: unset; margin: 10px 0; }
+				}
+				
+				
+				
+					
+						
+		</style>
 		</section>
 
 	<section class="pad80">
@@ -1592,6 +2960,8 @@
 		<a href="riax.pdf" class="download-float" download>
 			<i class="fa fa-download"></i>
 		</a>
+
+		
 
 	</body>
 
