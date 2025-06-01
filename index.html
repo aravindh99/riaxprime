@@ -1002,6 +1002,231 @@
 				}
 			}
 
+			/* Interactive Construction Elements */
+			.construction-element {
+				position: fixed;
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				z-index: 10;
+				opacity: 0.7;
+			}
+
+			.construction-element:hover {
+				transform: scale(1.2) rotate(15deg);
+				opacity: 1;
+			}
+
+			.construction-element.clicked {
+				animation: elementBounce 0.6s ease-out;
+			}
+
+			.bolt {
+				background: linear-gradient(135deg, #411b1d, #5a2328);
+				border-radius: 50%;
+				border: 3px solid #2d1214;
+				box-shadow: 0 2px 6px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.2);
+			}
+
+			.bolt::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 8px;
+				height: 2px;
+				background: #2d1214;
+				transform: translate(-50%, -50%);
+				border-radius: 1px;
+			}
+
+			.bolt::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 2px;
+				height: 8px;
+				background: #2d1214;
+				transform: translate(-50%, -50%);
+				border-radius: 1px;
+			}
+
+			.nut {
+				background: linear-gradient(135deg, #e0c3a3, #d4b896);
+				clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+				border: 2px solid #c5a885;
+				box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+			}
+
+			.nut::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 6px;
+				height: 6px;
+				background: #8b7355;
+				border-radius: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.screw {
+				background: linear-gradient(135deg, #c5a885, #b89971);
+				border-radius: 2px;
+				border: 1px solid #8b7355;
+				box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+				position: relative;
+			}
+
+			.screw::before {
+				content: '';
+				position: absolute;
+				top: 2px;
+				left: 50%;
+				width: 10px;
+				height: 1px;
+				background: #6b5943;
+				transform: translateX(-50%);
+				box-shadow: 
+					0 4px 0 #6b5943,
+					0 8px 0 #6b5943,
+					0 12px 0 #6b5943;
+			}
+
+			.screw::after {
+				content: '';
+				position: absolute;
+				top: 1px;
+				left: 50%;
+				width: 8px;
+				height: 1px;
+				background: #411b1d;
+				transform: translateX(-50%) rotate(45deg);
+			}
+
+			/* Click Effect Animations */
+			@keyframes elementBounce {
+				0% { transform: scale(1) rotate(0deg); }
+				25% { transform: scale(1.3) rotate(10deg); }
+				50% { transform: scale(0.9) rotate(-5deg); }
+				75% { transform: scale(1.1) rotate(3deg); }
+				100% { transform: scale(1) rotate(0deg); }
+			}
+
+			@keyframes sparkle {
+				0% { opacity: 0; transform: scale(0) rotate(0deg); }
+				50% { opacity: 1; transform: scale(1) rotate(180deg); }
+				100% { opacity: 0; transform: scale(0) rotate(360deg); }
+			}
+
+			@keyframes float {
+				0%, 100% { transform: translateY(0px) rotate(0deg); }
+				50% { transform: translateY(-10px) rotate(5deg); }
+			}
+
+			/* Sparkle effect */
+			.sparkle {
+				position: absolute;
+				width: 6px;
+				height: 6px;
+				background: #e0c3a3;
+				border-radius: 50%;
+				animation: sparkle 0.8s ease-out;
+				pointer-events: none;
+				z-index: 20;
+			}
+
+			.sparkle::before {
+				content: '';
+				position: absolute;
+				top: -2px;
+				left: -2px;
+				width: 10px;
+				height: 10px;
+				border: 1px solid #411b1d;
+				border-radius: 50%;
+				animation: sparkle 0.8s ease-out 0.1s;
+			}
+
+			/* Crane Interactive Effects */
+			.crane-container.interactive {
+				cursor: pointer;
+				transition: all 0.3s ease;
+			}
+
+			.crane-container.interactive:hover {
+				transform: scale(1.02);
+				box-shadow: 0 6px 20px rgba(65, 27, 29, 0.2);
+			}
+
+			.crane-container.crane-clicked {
+				animation: craneShake 0.8s ease-out;
+			}
+
+			@keyframes craneShake {
+				0%, 100% { transform: scale(1) rotate(0deg); }
+				10% { transform: scale(1.02) rotate(1deg); }
+				20% { transform: scale(0.98) rotate(-1deg); }
+				30% { transform: scale(1.01) rotate(0.5deg); }
+				40% { transform: scale(0.99) rotate(-0.5deg); }
+				50% { transform: scale(1.01) rotate(0.3deg); }
+				60% { transform: scale(0.99) rotate(-0.3deg); }
+				70% { transform: scale(1.005) rotate(0.1deg); }
+				80% { transform: scale(0.995) rotate(-0.1deg); }
+				90% { transform: scale(1.002) rotate(0.05deg); }
+			}
+
+			/* Random floating animation for construction elements */
+			.construction-element.floating {
+				animation: float 3s ease-in-out infinite;
+			}
+
+			.construction-element:nth-child(odd) {
+				animation-delay: 0.5s;
+			}
+
+			.construction-element:nth-child(even) {
+				animation-delay: 1.5s;
+			}
+
+			/* Tooltip for construction elements */
+			.construction-element::before {
+				content: attr(data-tooltip);
+				position: absolute;
+				bottom: 25px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: #411b1d;
+				color: #e0c3a3;
+				padding: 4px 8px;
+				border-radius: 4px;
+				font-size: 10px;
+				white-space: nowrap;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+				pointer-events: none;
+				z-index: 30;
+			}
+
+			.construction-element:hover::before {
+				opacity: 1;
+			}
+
+			/* Mobile responsiveness for interactive elements */
+			@media (max-width: 768px) {
+				.construction-element {
+					width: 16px;
+					height: 16px;
+				}
+				
+				.construction-element::before {
+					font-size: 8px;
+					padding: 2px 4px;
+				}
+			}
+
 			.manpower-procedure {
 				width: 100%;
 				margin: 0 auto;
@@ -1733,7 +1958,7 @@
 								unique and customized service packages that cater to the actual requirement.</p>
                         </div>
                         <div class="col-md-6">
-                            <div class="crane-container construction-site">
+                            <div class="crane-container construction-site interactive" id="craneAnimation">
 								<div class="clouds">
 									<div class="cloud cloud1"></div>
 									<div class="cloud cloud2"></div>
@@ -3498,19 +3723,211 @@
 
 			// Start the animation when the page loads
 			window.addEventListener('load', typeHeading);
-		</script>
 
-		<script>
-			let currentIndex = 0;
-			const slides = document.querySelectorAll('.slide');
+			// Interactive Construction Elements
+			class ConstructionElements {
+				constructor() {
+					this.elements = [];
+					this.elementTypes = ['bolt', 'nut', 'screw'];
+					this.tooltips = {
+						'bolt': 'Click me!',
+						'nut': 'I\'m a nut!',
+						'screw': 'Screw it!'
+					};
+					this.init();
+				}
 
-			function changeSlide() {
-				slides[currentIndex].classList.remove('fade');
-				currentIndex = (currentIndex + 1) % slides.length;
-				slides[currentIndex].classList.add('fade');
+				init() {
+					this.createElements();
+					this.setupCraneInteraction();
+					this.startFloatingAnimation();
+				}
+
+				createElements() {
+					const elementCount = window.innerWidth > 768 ? 12 : 8;
+					
+					for (let i = 0; i < elementCount; i++) {
+						const element = this.createElement();
+						document.body.appendChild(element);
+						this.elements.push(element);
+					}
+				}
+
+				createElement() {
+					const element = document.createElement('div');
+					const type = this.elementTypes[Math.floor(Math.random() * this.elementTypes.length)];
+					
+					element.className = `construction-element ${type} floating`;
+					element.setAttribute('data-tooltip', this.tooltips[type]);
+					
+					// Random positioning
+					const x = Math.random() * (window.innerWidth - 40) + 20;
+					const y = Math.random() * (window.innerHeight - 100) + 50;
+					
+					element.style.left = x + 'px';
+					element.style.top = y + 'px';
+					
+					// Add click event
+					element.addEventListener('click', (e) => this.handleElementClick(e, element));
+					
+					return element;
+				}
+
+				handleElementClick(e, element) {
+					e.preventDefault();
+					e.stopPropagation();
+					
+					// Add clicked animation
+					element.classList.add('clicked');
+					
+					// Create sparkle effect
+					this.createSparkle(e.clientX, e.clientY);
+					
+					// Move element to new position
+					setTimeout(() => {
+						this.moveElement(element);
+						element.classList.remove('clicked');
+					}, 300);
+					
+					// Play click sound effect (visual feedback)
+					this.createClickFeedback(element);
+				}
+
+				createSparkle(x, y) {
+					const sparkle = document.createElement('div');
+					sparkle.className = 'sparkle';
+					sparkle.style.left = x + 'px';
+					sparkle.style.top = y + 'px';
+					
+					document.body.appendChild(sparkle);
+					
+					setTimeout(() => {
+						document.body.removeChild(sparkle);
+					}, 800);
+				}
+
+				createClickFeedback(element) {
+					const rect = element.getBoundingClientRect();
+					const feedback = document.createElement('div');
+					feedback.textContent = '+1';
+					feedback.style.cssText = `
+						position: fixed;
+						left: ${rect.left + rect.width/2}px;
+						top: ${rect.top}px;
+						color: #411b1d;
+						font-weight: bold;
+						font-size: 14px;
+						pointer-events: none;
+						z-index: 1000;
+						animation: feedbackFade 1s ease-out forwards;
+					`;
+					
+					document.body.appendChild(feedback);
+					
+					setTimeout(() => {
+						if (document.body.contains(feedback)) {
+							document.body.removeChild(feedback);
+						}
+					}, 1000);
+				}
+
+				moveElement(element) {
+					const x = Math.random() * (window.innerWidth - 40) + 20;
+					const y = Math.random() * (window.innerHeight - 100) + 50;
+					
+					element.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+					element.style.left = x + 'px';
+					element.style.top = y + 'px';
+					
+					setTimeout(() => {
+						element.style.transition = 'all 0.3s ease';
+					}, 800);
+				}
+
+				setupCraneInteraction() {
+					const crane = document.getElementById('craneAnimation');
+					if (crane) {
+						crane.addEventListener('click', () => this.handleCraneClick(crane));
+					}
+				}
+
+				handleCraneClick(crane) {
+					crane.classList.add('crane-clicked');
+					
+					// Create multiple sparkles around the crane
+					const rect = crane.getBoundingClientRect();
+					for (let i = 0; i < 5; i++) {
+						setTimeout(() => {
+							const x = rect.left + Math.random() * rect.width;
+							const y = rect.top + Math.random() * rect.height;
+							this.createSparkle(x, y);
+						}, i * 100);
+					}
+					
+					// Move all construction elements
+					this.elements.forEach((element, index) => {
+						setTimeout(() => {
+							this.moveElement(element);
+						}, index * 100);
+					});
+					
+					setTimeout(() => {
+						crane.classList.remove('crane-clicked');
+					}, 800);
+				}
+
+				startFloatingAnimation() {
+					// Add random delays to floating animations
+					this.elements.forEach((element, index) => {
+						element.style.animationDelay = (Math.random() * 3) + 's';
+					});
+				}
+
+				// Responsive repositioning
+				handleResize() {
+					this.elements.forEach(element => {
+						const rect = element.getBoundingClientRect();
+						if (rect.right > window.innerWidth || rect.bottom > window.innerHeight) {
+							this.moveElement(element);
+						}
+					});
+				}
 			}
 
-			setInterval(changeSlide, 3000);
+			// Add feedback animation style
+			const style = document.createElement('style');
+			style.textContent = `
+				@keyframes feedbackFade {
+					0% { opacity: 1; transform: translateY(0px); }
+					100% { opacity: 0; transform: translateY(-30px); }
+				}
+			`;
+			document.head.appendChild(style);
+
+			// Initialize construction elements when page loads
+			let constructionElements;
+			window.addEventListener('load', () => {
+				constructionElements = new ConstructionElements();
+			});
+
+			// Handle window resize
+			window.addEventListener('resize', () => {
+				if (constructionElements) {
+					constructionElements.handleResize();
+				}
+			});
+
+			// Add some Easter eggs
+			let clickCount = 0;
+			document.addEventListener('click', () => {
+				clickCount++;
+				if (clickCount === 10) {
+					document.body.style.filter = 'hue-rotate(45deg)';
+					setTimeout(() => {
+						document.body.style.filter = 'none';
+					}, 3000);
+				}
+			});
 		</script>
 
 		<a href="https://wa.me/+971504305417" class="whatsapp-float" target="_blank">
@@ -3519,8 +3936,6 @@
 		<a href="riax.pdf" class="download-float" download>
 			<i class="fa fa-download"></i>
 		</a>
-
-		
 
 	</body>
 
