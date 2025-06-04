@@ -9,9 +9,9 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-		<meta name="author" content="riaxprime">
+		<meta name="author" content="riax prime">
 
-		<meta name="description" content="Are you looking for the best manpower supply in Dubai? Contact riaxprime, your most trusted partner serving qualified labor across various industries in the UAE.">
+		<meta name="description" content="Are you looking for the best manpower supply in Dubai? Contact riax prime, your most trusted partner serving qualified labor across various industries in the UAE.">
 <meta name="google-site-verification" content="OMVoW0jKpo8avcbhMTYL-gAiIgYdbsU-TxeEjczydUs" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5RPWJFNZL8"></script>
@@ -22,8 +22,8 @@
 
   gtag('config', 'G-5RPWJFNZL8');
 </script>
-<meta name="description" content="Are you looking for the best manpower supply in Dubai? Contact riaxprime, your most trusted partner serving qualified labor across various industries in the UAE.">
-		<title>Riaxprime</title>
+<meta name="description" content="Are you looking for the best manpower supply in Dubai? Contact riax prime, your most trusted partner serving qualified labor across various industries in the UAE.">
+		<title>Riax prime</title>
 
 		<!-- favicons -->
 
@@ -493,6 +493,91 @@
 				justify-content: center;
 			}
 
+			/* ----- DIAMOND ITEMS POSITIONING ----- */
+			.diamond-item {
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background: #411b1d;
+				transform: rotate(45deg);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all 0.3s ease;
+			}
+
+			.diamond-item:hover {
+				background: #e0c3a3;
+				transform: rotate(45deg) scale(1.1);
+			}
+
+			.diamond-item:hover .diamond-icon {
+				animation: rotate 5s linear infinite;
+			}
+
+			.diamond-icon {
+				transform: rotate(-45deg);
+				color: white;
+				font-size: 1.8em;
+				animation: rotate 10s linear infinite;
+			}
+
+			.diamond-item h4 {
+				position: absolute;
+				font-weight: bold;
+				white-space: nowrap;
+				transform: rotate(-45deg);
+				font-size: 0.9em;
+			}
+
+			.diamond-item.top {
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%) rotate(45deg);
+			}
+
+			.diamond-item.left {
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%) rotate(45deg);
+			}
+
+			.diamond-item.right {
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%) rotate(45deg);
+			}
+
+			.diamond-item.bottom {
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%) rotate(45deg);
+			}
+
+			.diamond-item.top h4 {
+				top: -70px;
+				left: 90%;
+				transform: translateX(-50%) rotate(-45deg);
+			}
+
+			.diamond-item.left h4 {
+				left: -80px;
+				top: 50%;
+				transform: translateY(-50%) rotate(-45deg);
+			}
+
+			.diamond-item.right h4 {
+				right: -120px;
+				top: 50%;
+				transform: translateY(-50%) rotate(-45deg);
+			}
+
+			.diamond-item.bottom h4 {
+				bottom: -70px;
+				left: 20%;
+				transform: translateX(-50%) rotate(-45deg);
+			}
+
 			.service-boxes {
 				margin: 40px 0;
 			}
@@ -502,6 +587,7 @@
 				padding: 25px;
 				text-align: center;
 				border-radius: 10px;
+				
 				box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 				transition: all 0.3s ease;
 				height: 100%;
@@ -1466,6 +1552,8 @@
 				border: 1.5px solid #eee;
 				white-space: nowrap;
 				transition: all 0.3s ease;
+				margin: 0;
+				flex: 1;
 			}
 			.ts-label:hover {
 				transform: translateX(-10px);
@@ -1474,38 +1562,6 @@
 			.ts-label-green { color: #4cae8a; border-color: #4cae8a; }
 			.ts-label-orange { color: #f6a13a; border-color: #f6a13a; }
 			.ts-label-blue { color: #2a6edb; border-color: #2a6edb; }
-
-			@media (max-width: 900px) {
-				.ts-diagram-wrapper {
-					flex-direction: column;
-					gap: 20px;
-				}
-				.ts-image-container {
-					width: 280px;
-					height: 280px;
-				}
-				.ts-labels-container {
-					width: 100%;
-					align-items: center;
-				}
-				.ts-label {
-					width: 90%;
-					text-align: center;
-					white-space: normal;
-				}
-			}
-			@media (max-width: 600px) {
-				.ts-image-container {
-					width: 98vw;
-					height: 98vw;
-					max-width: 280px;
-					max-height: 280px;
-				}
-				.ts-label {
-					font-size: 0.95em;
-					padding: 10px 15px;
-				}
-			}
 			
 			.ts-label-wrapper {
 				display: flex;
@@ -1874,7 +1930,7 @@
 								<div class="tp-ct">
 									<ul>
 										<li><a href="tel:+971504305417"><i class="fa fa-phone"></i></a>971 - 504 305 417 </li>
-										<li><a href="mailto:riaxprime@outlook.com"><i class="fa fa-envelope"></i></a>riaxprime@outlook.com</li>
+										<li><a href="mailto:riaxprime@gmail.com"><i class="fa fa-envelope"></i></a>riaxprime@gmail.com</li>
 									</ul>
 								</div>
 							</div>
@@ -1931,7 +1987,14 @@
 
 							<div class="col-md-12 sm-b-pad40">
 
-								<h1 style="color:#eeebeb; text-align:center; padding:0 20px;"><b><i>Since 2018</i></b><i>    ADD EXCELLENCE FOR LIFE</i></h1>
+								<div style="display: flex; justify-content: center; align-items: center; gap: 40px; padding: 0 20px; flex-wrap: wrap;">
+									<div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 25px 35px; border: 2px solid rgba(255,255,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+										<h2 style="color:#eeebeb; font-size: 1.8rem; font-weight: 600; margin: 0; text-align: center;"><b>Since 2018</b></h2>
+									</div>
+									<div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 25px 35px; border: 2px solid rgba(255,255,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+										<h1 style="color:#eeebeb; font-size: 2.2rem; font-weight: 700; font-style: italic; letter-spacing: 1px; margin: 0; text-align: center;"><i>"ADD EXCELLENCE FOR LIFE"</i></h1>
+									</div>
+								</div>
 
 							</div> <!-- /.col -->
 
@@ -1949,7 +2012,7 @@
                 <div class="container">
                     <div class="row" style="align-items: center;">
                         <div class="col-md-6">
-                            <h2 class="title t-left" style="font-size: 2.5em; line-height: 1.3; margin-bottom: 20px;">Welcome to <span>riaxprime</span></h2>
+                            <h2 class="title t-left" style="font-size: 2.5em; line-height: 1.3; margin-bottom: 20px;">Welcome to <span>riax prime</span></h2>
                             <p style="font-size: 1.2em; line-height: 1.6;">RIAX PRIME, a pioneer in the field of 'Technical Services' has brought the concept of
 								reputed services to the doorstep of every Client. Our excellent network and its
 								experts, association with leading and developed technologies worldwide and
@@ -1997,7 +2060,7 @@
 
 						<div class="col-md-12">	
 
-							<h3 class="title t-left">About Riaxprime</h3>
+							<h3 class="title t-left">About Riax prime</h3>
 
 							<p>RIAX PRIME is a leading Technical Service Concern and presumably the finest
 								B2C service firm. Established in 2018, our 4+ company owned and managed offices
@@ -2019,13 +2082,7 @@
 										rapport with our competent, knowledgeable & experienced consultants who offer high
 										quality & significant services.</p><p>	Whether you are a client looking for a wholesome technical services, you can be
 											assured that you are talking to the country's best.</p>
-<!-- <h3 class="title t-left">Construction Manpower Supply in Dubai</h3>
-<p>Timely completion of any construction project relies heavily on a trustworthy and dependable labor force. Delays or missed deadlines can harm a company's reputation. That's why both workforce provisioning and construction progress must align within the set timeline for seamless execution.</p>
-<p>At RiaxPrime, a leading construction manpower provider in Dubai, we supply skilled laborers based on your specific requirements. Our thorough recruitment and screening processes ensure that only well-experienced and dedicated professionals are selected. You can count on us for reliable and top-quality manpower support.</p>
-<p>Kick off your construction work with a capable team by your side. With trained and experienced workers, you can build faster and aim higher. Whether you need manpower for a short-term task or long-term project, we're here to support your growth with the right personnel.</p>
-<p>We are committed to delivering consistent and reliable construction labor solutions across the UAE. Our dedication to quality service has helped us become one of the trusted names in <strong>Dubai's construction workforce supply industry</strong>. Reach out to us today to discuss your upcoming project needs in the UAE.
 
-	.</p> -->
 <br><br>
 							
 						</div> <!-- /.col -->
@@ -2155,14 +2212,11 @@
 														Ensuring client satisfaction in all aspects regularly to reflect evolving the future business needs
 													</div>
 												</div>
-												<div class="policy-item">
-													<div class="policy-icon">
-														<i class="fa fa-cogs"></i>
-													</div>
-													<div class="policy-text">
-														Working methods with related to Client requirements and needs
-													</div>
-												</div>
+												<br>
+												<br>
+												<br>
+												<br>
+												<br>
 											</div>
 										</div>
 									</div>
@@ -2171,7 +2225,7 @@
 									<div class="row">
 										<div class="col-md-12">
 											<div class="success-bar">
-												<span class="success-text" style="color: #fff;">Success Ratio and Customer Satisfaction</span>
+												<span class="success-text" style="color: #fff;">Working methods with related to Client requirements and needs</span>
 												<span class="success-value" style="color: #fff;">99%</span>
 											</div>
 										</div>
@@ -2303,13 +2357,13 @@
 											<div class="zigzag-arrow"></div>
 											<div class="zigzag-step">Interview Analysis</div>
 											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Onboarding Process</div>
-											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Visa & Ticketing Process</div>
+											<div class="zigzag-step">Evalutions</div>
 											<div class="zigzag-arrow"></div>
 											<div class="zigzag-step">Selection & Records</div>
 											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Evaluations</div>
+											<div class="zigzag-step">Visa & Ticketing Process</div>
+											<div class="zigzag-arrow"></div>
+											<div class="zigzag-step">Onboarding process</div>
 										</div>
 									</div>
 								</div>
@@ -2338,7 +2392,7 @@
 									</div>
 								</div>
 								<div style="width: 200px; height: 200px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
-									<img src="assets/images/feature-imges/colour.png" style="max-width: 100%; max-height: 100%;">
+									<img src="assets/images/feature-imges/colour.png" style="max-width: 100%; max-height: 100%; margin-top: -120px;">
 								  </div>
 							</div>
 							
@@ -2379,843 +2433,7 @@
     transform: translateY(-12px);
   }
 }
-				.section-container {
-					background: #fff;
-					border-radius: 15px;
-					box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-					padding: 30px;
-					height: 100%;
-					min-height: 600px;
-					display: flex;
-					flex-direction: column;
-				}
-
-				.work-policy {
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-				}
-
-				.work-policy .container-fluid {
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-				}
-
-				.work-policy .row {
-					flex: 1;
-					display: flex;
-					flex-direction: column;
-				}
-
-				.policy-points {
-					flex: 1;
-					display: flex;
-					flex-direction: column;
-					justify-content: space-around;
-					padding: 20px 0;
-				}
-
-				.policy-item {
-					margin-bottom: 30px;
-				}
-
-				.policy-item:last-child {
-					margin-bottom: 0;
-				}
-
-				.diamond-layout {
-					background: #fff;
-					position: relative;
-					width: 250px;
-					height: 250px;
-					margin: 40px auto;
-					flex: 1;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-				}
-
-				.diamond-item {
-					position: absolute;
-					width: 100px;
-					height: 100px;
-					background: #411b1d;
-					transform: rotate(45deg);
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					transition: all 0.3s ease;
-				}
-
-				.diamond-item:hover {
-					background: #e0c3a3;
-					transform: rotate(45deg) scale(1.1);
-				}
-
-				.diamond-item:hover .diamond-icon {
-					animation: rotate 5s linear infinite;
-				}
-
-				.diamond-icon {
-					transform: rotate(-45deg);
-					color: white;
-					font-size: 1.8em;
-					animation: rotate 10s linear infinite;
-				}
-
-				.diamond-item h4 {
-					position: absolute;
-					font-weight: bold;
-					white-space: nowrap;
-					transform: rotate(-45deg);
-					font-size: 0.9em;
-				}
-
-				.diamond-item.top {
-					top: 0;
-					left: 50%;
-					transform: translateX(-50%) rotate(45deg);
-				}
-
-				.diamond-item.left {
-					left: 0;
-					top: 50%;
-					transform: translateY(-50%) rotate(45deg);
-				}
-
-				.diamond-item.right {
-					right: 0;
-					top: 50%;
-					transform: translateY(-50%) rotate(45deg);
-				}
-
-				.diamond-item.bottom {
-					bottom: 0;
-					left: 50%;
-					transform: translateX(-50%) rotate(45deg);
-				}
-
-				.diamond-item.top h4 {
-					top: -70px;
-					left: 90%;
-					transform: translateX(-50%) rotate(-45deg);
-				}
-
-				.diamond-item.left h4 {
-					left: -80px;
-					top: 50%;
-					transform: translateY(-50%) rotate(-45deg);
-				}
-
-				.diamond-item.right h4 {
-					right: -120px;
-					top: 50%;
-					transform: translateY(-50%) rotate(-45deg);
-				}
-
-				.diamond-item.bottom h4 {
-					bottom: -70px;
-					left: 20%;
-					transform: translateX(-50%) rotate(-45deg);
-				}
-
-				.service-boxes {
-					margin: 40px 0;
-				}
-
-				.service-box {
-					background: #fff;
-					padding: 25px;
-					text-align: center;
-					border-radius: 10px;
-					box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-					transition: all 0.3s ease;
-					height: 100%;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-				}
-
-				.service-box:hover {
-					transform: translateY(-5px);
-					box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-				}
-
-				.service-box h4 {
-					margin: 0;
-					font-weight: 600;
-					font-size: 1.2rem;
-				}
-
-				.success-bar {
-					margin-top: auto;
-					padding: 20px 30px;
-				}
-
-				.success-text {
-					font-size: 1em;
-					font-weight: 500;
-				}
-
-				.success-value {
-					font-size: 1.2em;
-					font-weight: bold;
-				}
-
-				@media (max-width: 768px) {
-					.section-container {
-						margin-bottom: 30px;
-					}
-					
-					.diamond-layout {
-						width: 200px;
-						height: 200px;
-					}
-
-					.diamond-item {
-						width: 80px;
-						height: 80px;
-					}
-
-					.diamond-icon {
-						font-size: 1.5em;
-					}
-
-					.service-box {
-						margin-bottom: 20px;
-					}
-
-					.success-bar {
-						flex-direction: column;
-						text-align: center;
-						padding: 15px;
-					}
-
-					.success-value {
-						margin-top: 10px;
-					}
-				}
-
-				.prime-strategy {
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-				}
-
-				.strategy-content {
-					padding: 20px;
-					text-align: center;
-					flex: 1;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-				}
-
-				.strategy-image {
-					max-width: 100%;
-					height: auto;
-					border-radius: 10px;
-					box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-				}
-
-				.strategy-section {
-					padding: 10px;
-					height: 100%;
-				}
-
-				.strategy-subtitle {
-					color: #411b1d;
-					font-size: 1.8rem;
-					text-align: center;
-					margin-bottom: 30px;
-					font-weight: 600;
-				}
-
-				.value-grid {
-					display: grid;
-					grid-template-columns: repeat(2, 1fr);
-					gap: 15px;
-					padding: 5px;
-				}
-
-				.value-item {
-					background: #f8f9fa;
-					border-radius: 10px;
-					padding: 15px;
-					text-align: center;
-					transition: all 0.3s ease;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					position: relative;
-					animation: floatSideways 3s ease-in-out infinite;
-				}
-
-				.value-item:nth-child(2n) {
-					animation-delay: 0.5s;
-				}
-
-				.value-item:nth-child(3n) {
-					animation-delay: 1s;
-				}
-
-				.value-item:nth-child(4n) {
-					animation-delay: 1.5s;
-				}
-
-				.value-item:hover {
-					animation-play-state: paused;
-					transform: translateY(-5px);
-					box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-					background: #e9ecef;
-				}
-
-				.value-icon {
-					width: 50px;
-					height: 50px;
-					background: #411b1d;
-					border-radius: 50%;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					margin-bottom: 10px;
-					position: relative;
-					transition: all 0.3s ease;
-				}
-
-				.value-icon i {
-					color: white;
-					font-size: 20px;
-					transition: all 0.3s ease;
-				}
-
-				.value-item h4 {
-					color: #333;
-					font-size: 1.1rem;
-					font-weight: 600;
-					margin: 0;
-				}
-
-				@media (max-width: 768px) {
-					.value-grid {
-						grid-template-columns: 1fr;
-					}
-					
-					.value-item {
-						margin-bottom: 10px;
-					}
-				}
-
-				
-				
-
-				.manpower-procedure {
-					width: 100%;
-					margin: 0 auto;
-					padding: 10px 0 0 0;
-				}
-				.manpower-procedure .title {
-					margin-bottom: 30px;
-				}
-				.procedure-steps {
-					display: flex;
-					flex-wrap: wrap;
-					gap: 10px;
-					justify-content: center;
-					align-items: center;
-					margin-top: 20px;
-				}
-				.procedure-step {
-					background: #f5f5f5;
-					color: #411b1d;
-					border-radius: 30px;
-					padding: 12px 28px;
-					font-size: 1.08em;
-					font-weight: 500;
-					box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-					transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-					cursor: pointer;
-					border: 2px solid #e0c3a3;
-					margin-bottom: 5px;
-					position: relative;
-					z-index: 1;
-				}
-				.procedure-step:hover {
-					background: #e0c3a3;
-					color: #fff;
-					box-shadow: 0 4px 16px rgba(65,27,29,0.10);
-					border-color: #411b1d;
-				}
-				.procedure-arrow {
-					font-size: 2em;
-					color: #e0c3a3;
-					margin: 0 2px;
-					user-select: none;
-					font-weight: bold;
-				}
-				@media (max-width: 900px) {
-					.procedure-steps {
-						flex-wrap: wrap;
-						gap: 6px;
-					}
-					.procedure-step {
-						padding: 10px 18px;
-						font-size: 1em;
-					}
-					.procedure-arrow {
-						font-size: 1.5em;
-					}
-				}
-				@media (max-width: 600px) {
-					.procedure-steps {
-						flex-direction: column;
-						align-items: center;
-						gap: 0;
-					}
-					.procedure-step {
-						width: 90%;
-						text-align: center;
-						padding: 12px 0;
-						margin-bottom: 0;
-					}
-					.procedure-arrow {
-						font-size: 2em;
-						color: #e0c3a3;
-						margin: 0;
-						transform: rotate(90deg);
-						display: block;
-					}
-				}
-
-				.manpower-procedure-u {
-					width: 100%;
-					margin: 0 auto;
-					padding: 10px 0 0 0;
-				}
-				.manpower-procedure-u .title {
-					margin-bottom: 30px;
-				}
-				.s-procedure-wrapper {
-					display: flex;
-					justify-content: center;
-					align-items: flex-start;
-					position: relative;
-					min-height: 420px;
-					padding: 20px 0;
-				}
-				.s-procedure-col {
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
-					height: 380px;
-					width: 45%;
-				}
-				.s-procedure-col-left {
-					align-items: flex-end;
-				}
-				.s-procedure-col-right {
-					align-items: flex-start;
-				}
-				.s-step {
-					background: #f5f5f5;
-					color: #411b1d;
-					border-radius: 30px;
-					padding: 12px 28px;
-					font-size: 1.08em;
-					font-weight: 500;
-					box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-					transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-					cursor: pointer;
-					border: 2px solid #e0c3a3;
-					margin: 10px 0;
-					min-width: 200px;
-					text-align: center;
-					position: relative;
-					z-index: 1;
-				}
-				.s-step:hover {
-					background: #e0c3a3;
-					color: #fff;
-					box-shadow: 0 4px 16px rgba(65,27,29,0.10);
-					border-color: #411b1d;
-				}
-				.s-connector {
-					width: 80px;
-					height: 380px;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					position: relative;
-				}
-				.s-curve {
-					width: 80px;
-					height: 380px;
-					border-left: 4px solid #e0c3a3;
-					border-right: 4px solid #e0c3a3;
-					border-radius: 40px;
-					position: absolute;
-					left: 0;
-					top: 0;
-				}
-				.s-procedure-col-right .s-step {
-					margin-bottom: 0;
-				}
-				.s-procedure-col-left .s-step {
-					margin-top: 0;
-				}
-				@media (max-width: 900px) {
-					.s-step { 
-						min-width: 120px; 
-						font-size: 1em; 
-						padding: 10px 10px; 
-					}
-					.s-connector, .s-curve { 
-						width: 40px; 
-						height: 320px; 
-					}
-					.s-procedure-wrapper { 
-						min-height: 340px; 
-					}
-					.s-procedure-col { 
-						height: 320px; 
-					}
-				}
-				@media (max-width: 600px) {
-					.s-procedure-wrapper {
-						flex-direction: column;
-						align-items: center;
-						min-height: unset;
-					}
-					.s-procedure-col, .s-procedure-col-left, .s-procedure-col-right {
-						flex-direction: column;
-						align-items: center;
-						height: unset;
-						width: 100%;
-					}
-					.s-connector, .s-curve {
-						display: none;
-					}
-					.s-step { 
-						width: 90%; 
-						min-width: unset; 
-						margin: 10px 0; 
-					}
-				}
-				
-				.transition-synopsis {
-					width: 100%;
-					margin: 0 auto;
-					padding: 10px 0 0 0;
-				}
-				.transition-synopsis .title {
-					margin-bottom: 30px;
-				}
-				.ts-diagram-wrapper {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					gap: 40px;
-					position: relative;
-					min-height: 420px;
-				}
-				.ts-image-container {
-					position: relative;
-					width: 320px;
-					height: 320px;
-					margin: 0 auto;
-				}
-				.ts-image {
-					width: 100%;
-					height: 100%;
-					object-fit: contain;
-					box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-					border-radius: 18px;
-					background: #fff;
-				}
-				.ts-labels-container {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					padding: 20px;
-				}
-				.ts-label {
-					font-size: 1.08em;
-					font-weight: 500;
-					background: #fff;
-					padding: 12px 20px;
-					border-radius: 18px;
-					box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-					border: 1.5px solid #eee;
-					white-space: nowrap;
-					transition: all 0.3s ease;
-				}
-				.ts-label:hover {
-					transform: translateX(-10px);
-					box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-				}
-				.ts-label-green { color: #4cae8a; border-color: #4cae8a; }
-				.ts-label-orange { color: #f6a13a; border-color: #f6a13a; }
-				.ts-label-blue { color: #2a6edb; border-color: #2a6edb; }
-
-				@media (max-width: 900px) {
-					.ts-diagram-wrapper {
-						flex-direction: column;
-						gap: 20px;
-					}
-					.ts-image-container {
-						width: 280px;
-						height: 280px;
-					}
-					.ts-labels-container {
-						width: 100%;
-						align-items: center;
-					}
-					.ts-label {
-						width: 90%;
-						text-align: center;
-						white-space: normal;
-					}
-				}
-				@media (max-width: 600px) {
-					.ts-image-container {
-						width: 98vw;
-						height: 98vw;
-						max-width: 280px;
-						max-height: 280px;
-					}
-					.ts-label {
-						font-size: 0.95em;
-						padding: 10px 15px;
-					}
-				}
-				
-				.ts-label-wrapper {
-					display: flex;
-					align-items: center;
-					gap: 15px;
-				}
-
-				.ts-icon-circle {
-					width: 20px;
-					height: 20px;
-					border-radius: 50%;
-					position: relative;
-					animation: cycle 3s linear infinite;
-				}
-
-				.ts-icon-circle::before {
-					content: '';
-					position: absolute;
-					top: -4px;
-					left: -4px;
-					right: -4px;
-					bottom: -4px;
-					border-radius: 50%;
-					border: 2px solid transparent;
-					animation: cycle 3s linear infinite;
-				}
-
-				.ts-icon-green {
-					background: #4cae8a;
-				}
-				.ts-icon-green::before {
-					border-color: #4cae8a;
-				}
-
-				.ts-icon-orange {
-					background: #f6a13a;
-				}
-				.ts-icon-orange::before {
-					border-color: #f6a13a;
-				}
-
-				.ts-icon-blue {
-					background: #2a6edb;
-				}
-				.ts-icon-blue::before {
-					border-color: #2a6edb;
-				}
-
-				@keyframes cycle {
-					0% {
-						transform: rotate(0deg);
-					}
-					100% {
-						transform: rotate(360deg);
-					}
-				}
-
-				.ts-label {
-					margin: 0;
-					flex: 1;
-				}
-
-				@media (max-width: 900px) {
-					.ts-label-wrapper {
-						width: 100%;
-						justify-content: center;
-					}
-					.ts-label {
-						width: auto;
-					}
-				}
-
-				/* Trade Section Grid Styles */
-				.trade-grid {
-					display: grid;
-					grid-template-columns: repeat(3, 1fr);
-					gap: 30px;
-					padding: 20px 0;
-				}
-
-				.trade-item {
-					background: #fff;
-					border-radius: 10px;
-					overflow: hidden;
-					box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-					transition: all 0.3s ease;
-				}
-
-				.trade-item:hover {
-					transform: translateY(-5px);
-					box-shadow: 0 5px 25px rgba(0,0,0,0.15);
-				}
-
-				.trade-img-container {
-					width: 100%;
-					aspect-ratio: 4/3;
-					overflow: hidden;
-					position: relative;
-				}
-
-				.trade-img-container img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-					object-position: center;
-					transition: transform 0.3s ease;
-				}
-
-				.trade-item:hover .trade-img-container img {
-					transform: scale(1.05);
-				}
-
-				.trade-content {
-					padding: 20px;
-					text-align: center;
-				}
-
-				.trade-content h4 {
-					margin: 0;
-					font-size: 1.3rem;
-					font-weight: 600;
-					color: #333;
-				}
-
-				.trade-content h4 a {
-					color: #333;
-					text-decoration: none;
-					transition: color 0.3s ease;
-				}
-
-				.trade-content h4 a:hover {
-					color: #411b1d;
-				}
-
-				@media (max-width: 992px) {
-					.trade-grid {
-						grid-template-columns: repeat(2, 1fr);
-						gap: 20px;
-					}
-				}
-
-				@media (max-width: 768px) {
-					.trade-grid {
-						grid-template-columns: 1fr;
-						gap: 20px;
-					}
-				}
-
-				/* Works Section Grid Styles */
-				.works-grid {
-					display: grid;
-					grid-template-columns: repeat(3, 1fr);
-					gap: 30px;
-					padding: 20px 0;
-				}
-
-				.works-item {
-					background: #fff;
-					border-radius: 10px;
-					overflow: hidden;
-					box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-					transition: all 0.3s ease;
-				}
-
-				.works-item:hover {
-					transform: translateY(-5px);
-					box-shadow: 0 5px 25px rgba(0,0,0,0.15);
-				}
-
-				.works-img-container {
-					width: 100%;
-					aspect-ratio: 4/3;
-					overflow: hidden;
-					position: relative;
-				}
-
-				.works-img-container img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-					object-position: center;
-					transition: transform 0.3s ease;
-				}
-
-				.works-item:hover .works-img-container img {
-					transform: scale(1.05);
-				}
-
-				.works-content {
-					padding: 20px;
-					text-align: center;
-				}
-
-				.works-content h4 {
-					margin: 0;
-					font-size: 1.3rem;
-					font-weight: 600;
-					color: #333;
-				}
-
-				.works-content h4 a {
-					color: #333;
-					text-decoration: none;
-					transition: color 0.3s ease;
-				}
-
-				.works-content h4 a:hover {
-					color: #411b1d;
-				}
-
-				@media (max-width: 992px) {
-					.works-grid {
-						grid-template-columns: repeat(2, 1fr);
-						gap: 20px;
-					}
-				}
-
-				@media (max-width: 768px) {
-					.works-grid {
-						grid-template-columns: 1fr;
-						gap: 20px;
-					}
-				}
-				
-						
-			</style>
+		</style>
 		</section>
 
 	<section class="pad80">
@@ -3389,7 +2607,7 @@
 								<img src="assets/images/feature-imges/labour.webp" alt="Labour">
 							</div>
 							<div class="trade-content">
-								<h4><a href="index.html#">Labour</a></h4>
+								<h4><a href="index.html#">general technicians and helpers</a></h4>
 							</div>
 						</div>
 
@@ -3410,7 +2628,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<ul class="our-client">
-								<li><img src="assets/images/clients/i_1.png"></li>
+								<li><img src="assets/images/clients/i_25.jpeg"></li>
 								<li><img src="assets/images/clients/i_2.jpeg"></li>
 								<li><img src="assets/images/clients/i_3.jpeg"></li>
 								<li><img src="assets/images/clients/i_4.jpeg"></li>
@@ -3434,7 +2652,7 @@
 								<li><img src="assets/images/clients/i_22.jpeg"></li>
 								<li><img src="assets/images/clients/i_23.jpeg"></li>
 								<li><img src="assets/images/clients/i_24.png"></li>
-								<li><img src="assets/images/clients/i_25.jpeg"></li>
+								
 								
 
 							</ul>
@@ -3531,7 +2749,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="title">Why Choose riaxprime?</h2>
+				<h2 class="title">Why Choose riax prime?</h2>
 				<ul>
 					<li style="margin-bottom: 20px;"><b>Solution for all your Technical Needs.</b></li>
 					<li style="margin-bottom: 20px;"><b>7+ years of Ethical, Quality and Trust Service.</b></li>
@@ -3552,32 +2770,6 @@
 	</div>
 </section>
 
-			<!-- testimonial & client start -->
-
-			
-			
-			<!-- <section class="pad80 get-tch">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<h3 class="title" style="margin-bottom:25px;">Get in Touch</h3>
-				Contact RiaxPrimes, a trusted <strong>Dubai manpower supply company</strong>, to discuss your staffing requirements and explore how we can help you achieve your specific goals. Whether you need an electrician, painter, mechanic, plumber, helper, or <strong>electrician manpower supply in Dubai</strong>, we are here to provide top-quality labor for your needs. With our services, you can count on reliable manpower solutions that lead to successful outcomes for your business.
-			</div>
-			<div class="col-md-6">
-				<a href="https://wa.me/+971504305417" class="whatsapp-float" target="_blank">
-					<i class="fa fa-whatsapp"></i>
-				</a>
-			</div>
-		</div>
-		
-	</div>
-</section> -->
-
-			<!-- testimonial & client end -->
-
-			<!-- bottom end -->
-
-			<!-- footer start -->
 
 			<footer>
 
@@ -3593,7 +2785,7 @@
 
 								<h3 class="f-title">About us</h3>								
 
-								<p>We established this company with a strong commitment to fulfilling the needs of our clients.</p>
+								<p>RIAX PRIME, a pioneer in the field of 'Technical Services' has brought the concept of reputed services to the doorstep of every Client. Our excellent network and its experts, association with leading and developed technologies worldwide and impeccable reputation helps us to deliver top quality services. We provide quality, reliability and on time services to commercial and residential properties with our unique and customized service packages that cater to the actual requirement.</p>
 
 							</div> <!-- /.col -->
 
@@ -3615,11 +2807,31 @@
 
                                 <li><a href="contact.html">Contact us</a></li>
 
-									</ul>
+									</ul><br><br><br>
+
+									<!-- Social Media Icons -->
+									<div style="margin-top: 25px;">
+										<h4 style="color: #fff; font-size: 16px; margin-bottom: 15px;"><br><br>Follow Us</h4>
+										<div style="display: flex; gap: 15px; flex-wrap: wrap;">
+											<a href="#" target="_blank" style="color: #fff; font-size: 20px; transition: color 0.3s ease;" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#fff'">
+												<i class="fa fa-facebook"></i>
+											</a>
+											<a href="#" target="_blank" style="color: #fff; font-size: 20px; transition: color 0.3s ease;" onmouseover="this.style.color='#0077b5'" onmouseout="this.style.color='#fff'">
+												<i class="fa fa-linkedin"></i>
+											</a>
+											<a href="#" target="_blank" style="color: #fff; font-size: 20px; transition: color 0.3s ease;" onmouseover="this.style.color='#e4405f'" onmouseout="this.style.color='#fff'">
+												<i class="fa fa-instagram"></i>
+											</a>
+											<a href="#" target="_blank" style="color: #fff; font-size: 20px; transition: color 0.3s ease;" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#fff'">
+												<i class="fa fa-youtube"></i>
+											</a>
+											<a href="#" target="_blank" style="color: #fff; font-size: 20px; transition: color 0.3s ease;" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#fff'">
+												<i class="fa fa-twitter"></i>
+											</a>
+										</div>
+									</div>
 
 								</div>
-
-                                
 
 							</div> <!-- /.col -->
 
@@ -3658,7 +2870,7 @@
 
 								<div class="t-center">
 
-									<p>Copyright &copy; <script type="text/javascript"> document.write(new Date().getFullYear());</script> riaxprime LLC All Rights Reserved</p>
+									<p>Copyright &copy; <script type="text/javascript"> document.write(new Date().getFullYear());</script> riax prime LLC All Rights Reserved</p>
 
 								</div>
 
@@ -3696,8 +2908,8 @@
 
 		<script>
 			// Typing animation
-			const heading = "Welcome to RiaxPrime";
-			const subtext = "Your Trusted Partner in Manpower Solutions";
+			const heading = "Welcome to Riax Prime";
+			const subtext = "Your Trusted Partner in technical services, human capital provision and talent supply";
 			let headingIndex = 0;
 			let subtextIndex = 0;
 			const headingElement = document.getElementById('typing-heading');
@@ -3933,9 +3145,7 @@
 		<a href="https://wa.me/+971504305417" class="whatsapp-float" target="_blank">
 			<i class="fa fa-whatsapp"></i>
 		</a>
-		<a href="riax.pdf" class="download-float" download>
-			<i class="fa fa-download"></i>
-		</a>
+		
 
 	</body>
 
