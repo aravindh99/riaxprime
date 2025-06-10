@@ -48,7 +48,9 @@
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
 		<!-- fontawesome and flaticon font -->
-
+		<!-- Font Awesome CDN -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Local Font Awesome fallback -->
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
 		<!-- owl carousel css -->
@@ -60,9 +62,30 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 
 		<style>
-			body {
-				font-family: 'Mangal', sans-serif;
-			}
+
+html, body {
+	overflow-x: hidden;
+    overflow-y: auto; /* Adjust based on your needs */
+    margin: 0;
+    padding: 0;
+	font-family: 'Mangal', sans-serif;
+}
+
+/* Ensure no elements extend beyond viewport */
+* {
+	box-sizing: border-box;
+}
+
+.container, .container-fluid {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 			/* Video overlay styles */
 			.video-background {
 				position: relative;
@@ -424,21 +447,24 @@
 				box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 				padding: 30px;
 				height: 100%;
-				min-height: 600px;
+				min-height: 500px;
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
 			}
 
 			.work-policy {
 				height: 100%;
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
 			}
 
 			.work-policy .container-fluid {
 				height: 100%;
 				display: flex;
 				flex-direction: column;
+				flex: 1;
 			}
 
 			.work-policy .row {
@@ -451,12 +477,12 @@
 				flex: 1;
 				display: flex;
 				flex-direction: column;
-				justify-content: space-around;
+				justify-content: space-evenly;
 				padding: 20px 0;
 			}
 
 			.policy-item {
-				margin-bottom: 30px;
+				margin-bottom: 20px;
 			}
 
 			.policy-item:last-child {
@@ -467,12 +493,14 @@
 				height: 100%;
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
 			}
 
 			.service-sec .container-fluid {
 				height: 100%;
 				display: flex;
 				flex-direction: column;
+				flex: 1;
 			}
 
 			.service-sec .row {
@@ -486,7 +514,7 @@
 				position: relative;
 				width: 250px;
 				height: 250px;
-				margin: 40px auto;
+				margin: 20px auto;
 				flex: 1;
 				display: flex;
 				align-items: center;
@@ -579,38 +607,44 @@
 			}
 
 			.service-boxes {
-				margin: 40px 0;
+				margin: 20px 0;
 			}
 
 			.service-box {
 				background: #fff;
-				padding: 25px;
+				padding: 20px;
 				text-align: center;
 				border-radius: 10px;
-				
 				box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 				transition: all 0.3s ease;
 				height: 100%;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				min-height: 80px;
 			}
 
 			.service-box h4 {
 				margin: 0;
 				font-weight: 600;
-				font-size: 1.2rem;
+				font-size: 1.1rem;
 			}
 
 			.success-bar {
 				margin-top: auto;
-				padding: 20px 30px;
+				padding: 15px 25px;
+				background: #411b1d;
+				border-radius: 50px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 			}
 
 			.prime-strategy {
 				height: 100%;
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
 			}
 
 			.strategy-content {
@@ -633,18 +667,21 @@
 				height: 100%;
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
 			}
 
 			.strategy-section {
 				padding: 10px;
 				height: 100%;
+				display: flex;
+				flex-direction: column;
 			}
 
 			.strategy-subtitle {
 				color: #411b1d;
-				font-size: 1.8rem;
+				font-size: 1.5rem;
 				text-align: center;
-				margin-bottom: 30px;
+				margin-bottom: 20px;
 				font-weight: 600;
 			}
 
@@ -653,859 +690,168 @@
 				grid-template-columns: repeat(2, 1fr);
 				gap: 15px;
 				padding: 5px;
+				flex: 1;
 			}
 
-			@keyframes floatSideways {
-				0% {
-					transform: translateX(0);
-				}
-				50% {
-					transform: translateX(10px);
-				}
-				100% {
-					transform: translateX(0);
-				}
-			}
-
-			.value-item {
-				background: #f8f9fa;
-				border-radius: 10px;
-				padding: 15px;
-				text-align: center;
-				transition: all 0.3s ease;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				position: relative;
-				animation: floatSideways 3s ease-in-out infinite;
-			}
-
-			.value-item:nth-child(2n) {
-				animation-delay: 0.5s;
-			}
-
-			.value-item:nth-child(3n) {
-				animation-delay: 1s;
-			}
-
-			.value-item:nth-child(4n) {
-				animation-delay: 1.5s;
-			}
-
-			.value-item:hover {
-				animation-play-state: paused;
-				transform: translateY(-5px);
-				box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-				background: #e9ecef;
-			}
-
-			.value-icon {
-				width: 50px;
-				height: 50px;
-				background: #411b1d;
-				border-radius: 50%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				margin-bottom: 10px;
-				position: relative;
-				transition: all 0.3s ease;
-			}
-
-			.value-icon i {
-				color: white;
-				font-size: 20px;
-				transition: all 0.3s ease;
-			}
-
-			.value-item h4 {
-				color: #333;
-				font-size: 1.1rem;
-				font-weight: 600;
-				margin: 0;
-			}
-
-			@media (max-width: 768px) {
-				.value-grid {
-					grid-template-columns: 1fr;
-				}
-				
-				.value-item {
-					margin-bottom: 10px;
-				}
-			}
-
-			@keyframes bounce {
-				0%, 100% {
-					transform: scale(1);
-				}
-				50% {
-					transform: scale(1.1);
-				}
-			}
-
-			@keyframes glow {
-				0% {
-					box-shadow: 0 0 5px rgba(65, 27, 29, 0.2);
-				}
-				50% {
-					box-shadow: 0 0 20px rgba(65, 27, 29, 0.4);
-				}
-				100% {
-					box-shadow: 0 0 5px rgba(65, 27, 29, 0.2);
-				}
-			}
-
-			@keyframes slideIn {
-				0% {
-					transform: translateX(-100%);
-					opacity: 0;
-				}
-				100% {
-					transform: translateX(0);
-					opacity: 1;
-				}
-			}
-
-			.value-item:hover .value-icon {
-				background: #e0c3a3;
-			}
-
-			.value-item:hover .value-icon i {
-				animation: bounce 1s ease infinite;
-			}
-
-			.value-item::after {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(
-					45deg,
-					transparent,
-					rgba(255, 255, 255, 0.1),
-					transparent
-				);
-				transform: translateX(-100%);
-				transition: 0.5s;
-			}
-
-			.value-item:hover::after {
-				transform: translateX(100%);
-			}
-
-			/* Construction Crane Animation Styles */
-			.crane-container {
-				position: relative;
-				width: 100%;
-				height: 400px;
-				overflow: hidden;
-				background: linear-gradient(to bottom, #f5f1eb 0%, #f5f1eb 65%, #e0c3a3 65%, #e0c3a3 80%, #d4b896 80%, #d4b896 100%);
-				border-radius: 10px;
-				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-			}
-
-			.crane {
-				position: absolute;
-				bottom: 80px;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-
-			.crane-base {
-				width: 20px;
-				height: 60px;
-				background: #411b1d;
-				margin: 0 auto;
-				border-radius: 3px;
-				box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-			}
-
-			.crane-tower {
-				width: 8px;
-				height: 180px;
-				background: linear-gradient(to right, #5a2328, #411b1d);
-				margin: 0 auto;
-				position: relative;
-				border-radius: 2px;
-				box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-			}
-
-			.crane-jib {
-				position: absolute;
-				top: 20px;
-				left: -80px;
-				width: 160px;
-				height: 6px;
-				background: linear-gradient(to right, #411b1d, #5a2328);
-				border-radius: 3px;
-				transform-origin: 80px 3px;
-				animation: craneRotation 8s ease-in-out infinite;
-				box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-			}
-
-			.crane-counter-jib {
-				position: absolute;
-				top: 20px;
-				right: 160px;
-				width: 40px;
-				height: 6px;
-				background: linear-gradient(to left, #411b1d, #5a2328);
-				border-radius: 3px;
-				box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-			}
-
-			.crane-cable {
-				position: absolute;
-				top: 26px;
-				left: 60px;
-				width: 2px;
-				height: 80px;
-				background: #2d1214;
-				animation: cableLift 8s ease-in-out infinite;
-				box-shadow: 1px 0 2px rgba(0,0,0,0.3);
-			}
-
-			.crane-hook {
-				position: absolute;
-				bottom: -10px;
-				left: -3px;
-				width: 8px;
-				height: 8px;
-				background: #411b1d;
-				border-radius: 50%;
-				box-shadow: 0 1px 2px rgba(0,0,0,0.3);
-			}
-
-			.construction-block {
-				position: absolute;
-				bottom: -25px;
-				left: -8px;
-				width: 18px;
-				height: 15px;
-				background: linear-gradient(135deg, #e0c3a3, #d4b896);
-				border: 1px solid #c5a885;
-				border-radius: 2px;
-				animation: blockLift 8s ease-in-out infinite;
-				box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-			}
-
-			.building-foundation {
-				position: absolute;
-				bottom: 20px;
-				right: 60px;
-				width: 80px;
-				height: 40px;
-				background: linear-gradient(to bottom, #8b7355, #6b5943);
-				border-radius: 2px;
-				box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-			}
-
-			.building-floors {
-				position: absolute;
-				bottom: 60px;
-				right: 70px;
-				width: 60px;
-				animation: buildingGrowth 8s ease-in-out infinite;
-			}
-
-			.floor {
-				width: 100%;
-				height: 15px;
-				background: linear-gradient(to right, #e0c3a3, #d4b896);
-				border: 1px solid #c5a885;
-				margin-bottom: 2px;
-				opacity: 0;
-				animation: floorAppear 8s ease-in-out infinite;
-				box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-			}
-
-			.floor:nth-child(1) { animation-delay: 2s; }
-			.floor:nth-child(2) { animation-delay: 4s; }
-			.floor:nth-child(3) { animation-delay: 6s; }
-
-			.clouds {
-				position: absolute;
-				top: 20px;
-				width: 100%;
-				height: 60px;
-			}
-
-			.cloud {
-				position: absolute;
-				background: rgba(255, 255, 255, 0.9);
-				border-radius: 50px;
-				opacity: 0.7;
-				animation: cloudMove 15s linear infinite;
-				box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-			}
-
-			.cloud:before {
-				content: '';
-				position: absolute;
-				background: rgba(255, 255, 255, 0.9);
-				border-radius: 50px;
-			}
-
-			.cloud:after {
-				content: '';
-				position: absolute;
-				background: rgba(255, 255, 255, 0.9);
-				border-radius: 50px;
-			}
-
-			.cloud1 {
-				width: 50px;
-				height: 20px;
-				top: 10px;
-				left: -50px;
-				animation-delay: 0s;
-			}
-
-			.cloud1:before {
-				width: 20px;
-				height: 20px;
-				top: -10px;
-				left: 10px;
-			}
-
-			.cloud1:after {
-				width: 30px;
-				height: 15px;
-				top: -5px;
-				right: 10px;
-			}
-
-			.cloud2 {
-				width: 40px;
-				height: 15px;
-				top: 30px;
-				left: -40px;
-				animation-delay: 7s;
-			}
-
-			.cloud2:before {
-				width: 15px;
-				height: 15px;
-				top: -8px;
-				left: 8px;
-			}
-
-			.cloud2:after {
-				width: 25px;
-				height: 12px;
-				top: -4px;
-				right: 8px;
-			}
-
-			/* Add some construction site details */
-			.construction-site::before {
-				content: '';
-				position: absolute;
-				bottom: 15px;
-				left: 20px;
-				width: 30px;
-				height: 8px;
-				background: #c5a885;
-				border-radius: 2px;
-				box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-			}
-
-			.construction-site::after {
-				content: '';
-				position: absolute;
-				bottom: 25px;
-				left: 25px;
-				width: 20px;
-				height: 6px;
-				background: #e0c3a3;
-				border-radius: 1px;
-				box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-			}
-
-			@keyframes craneRotation {
-				0%, 20% { transform: rotate(0deg); }
-				40%, 60% { transform: rotate(15deg); }
-				80%, 100% { transform: rotate(0deg); }
-			}
-
-			@keyframes cableLift {
-				0%, 20% { height: 80px; }
-				30%, 70% { height: 40px; }
-				80%, 100% { height: 80px; }
-			}
-
-			@keyframes blockLift {
-				0%, 20% { transform: translateY(0); }
-				30%, 70% { transform: translateY(-40px); }
-				80%, 100% { transform: translateY(0); }
-			}
-
-			@keyframes buildingGrowth {
-				0%, 100% { transform: scale(1); }
-				50% { transform: scale(1.05); }
-			}
-
-			@keyframes floorAppear {
-				0%, 20% { opacity: 0; transform: translateY(10px); }
-				30%, 100% { opacity: 1; transform: translateY(0); }
-			}
-
-			@keyframes cloudMove {
-				0% { left: -60px; }
-				100% { left: calc(100% + 60px); }
-			}
-
-			/* Responsive design for crane animation */
-			@media (max-width: 768px) {
-				.crane-container {
-					height: 300px;
-				}
-				
-				.crane-jib {
-					width: 120px;
-					left: -60px;
-					transform-origin: 60px 3px;
-				}
-				
-				.crane-counter-jib {
-					right: 120px;
-					width: 30px;
-				}
-				
-				.building-foundation {
-					width: 60px;
-					height: 30px;
-					right: 40px;
-				}
-				
-				.building-floors {
-					width: 45px;
-					right: 47px;
-				}
-			}
-
-			/* Interactive Construction Elements */
-			.construction-element {
-				position: fixed;
-				width: 20px;
-				height: 20px;
-				cursor: pointer;
-				transition: all 0.3s ease;
-				z-index: 10;
-				opacity: 0.7;
-			}
-
-			.construction-element:hover {
-				transform: scale(1.2) rotate(15deg);
-				opacity: 1;
-			}
-
-			.construction-element.clicked {
-				animation: elementBounce 0.6s ease-out;
-			}
-
-			.bolt {
-				background: linear-gradient(135deg, #411b1d, #5a2328);
-				border-radius: 50%;
-				border: 3px solid #2d1214;
-				box-shadow: 0 2px 6px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.2);
-			}
-
-			.bolt::before {
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 8px;
-				height: 2px;
-				background: #2d1214;
-				transform: translate(-50%, -50%);
-				border-radius: 1px;
-			}
-
-			.bolt::after {
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 2px;
-				height: 8px;
-				background: #2d1214;
-				transform: translate(-50%, -50%);
-				border-radius: 1px;
-			}
-
-			.nut {
-				background: linear-gradient(135deg, #e0c3a3, #d4b896);
-				clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-				border: 2px solid #c5a885;
-				box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-			}
-
-			.nut::before {
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 6px;
-				height: 6px;
-				background: #8b7355;
-				border-radius: 50%;
-				transform: translate(-50%, -50%);
-			}
-
-			.screw {
-				background: linear-gradient(135deg, #c5a885, #b89971);
-				border-radius: 2px;
-				border: 1px solid #8b7355;
-				box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-				position: relative;
-			}
-
-			.screw::before {
-				content: '';
-				position: absolute;
-				top: 2px;
-				left: 50%;
-				width: 10px;
-				height: 1px;
-				background: #6b5943;
-				transform: translateX(-50%);
-				box-shadow: 
-					0 4px 0 #6b5943,
-					0 8px 0 #6b5943,
-					0 12px 0 #6b5943;
-			}
-
-			.screw::after {
-				content: '';
-				position: absolute;
-				top: 1px;
-				left: 50%;
-				width: 8px;
-				height: 1px;
-				background: #411b1d;
-				transform: translateX(-50%) rotate(45deg);
-			}
-
-			/* Click Effect Animations */
-			@keyframes elementBounce {
-				0% { transform: scale(1) rotate(0deg); }
-				25% { transform: scale(1.3) rotate(10deg); }
-				50% { transform: scale(0.9) rotate(-5deg); }
-				75% { transform: scale(1.1) rotate(3deg); }
-				100% { transform: scale(1) rotate(0deg); }
-			}
-
-			@keyframes sparkle {
-				0% { opacity: 0; transform: scale(0) rotate(0deg); }
-				50% { opacity: 1; transform: scale(1) rotate(180deg); }
-				100% { opacity: 0; transform: scale(0) rotate(360deg); }
-			}
-
-			@keyframes float {
-				0%, 100% { transform: translateY(0px) rotate(0deg); }
-				50% { transform: translateY(-10px) rotate(5deg); }
-			}
-
-			/* Sparkle effect */
-			.sparkle {
-				position: absolute;
-				width: 6px;
-				height: 6px;
-				background: #e0c3a3;
-				border-radius: 50%;
-				animation: sparkle 0.8s ease-out;
-				pointer-events: none;
-				z-index: 20;
-			}
-
-			.sparkle::before {
-				content: '';
-				position: absolute;
-				top: -2px;
-				left: -2px;
-				width: 10px;
-				height: 10px;
-				border: 1px solid #411b1d;
-				border-radius: 50%;
-				animation: sparkle 0.8s ease-out 0.1s;
-			}
-
-			/* Crane Interactive Effects */
-			.crane-container.interactive {
-				cursor: pointer;
-				transition: all 0.3s ease;
-			}
-
-			.crane-container.interactive:hover {
-				transform: scale(1.02);
-				box-shadow: 0 6px 20px rgba(65, 27, 29, 0.2);
-			}
-
-			.crane-container.crane-clicked {
-				animation: craneShake 0.8s ease-out;
-			}
-
-			@keyframes craneShake {
-				0%, 100% { transform: scale(1) rotate(0deg); }
-				10% { transform: scale(1.02) rotate(1deg); }
-				20% { transform: scale(0.98) rotate(-1deg); }
-				30% { transform: scale(1.01) rotate(0.5deg); }
-				40% { transform: scale(0.99) rotate(-0.5deg); }
-				50% { transform: scale(1.01) rotate(0.3deg); }
-				60% { transform: scale(0.99) rotate(-0.3deg); }
-				70% { transform: scale(1.005) rotate(0.1deg); }
-				80% { transform: scale(0.995) rotate(-0.1deg); }
-				90% { transform: scale(1.002) rotate(0.05deg); }
-			}
-
-			/* Random floating animation for construction elements */
-			.construction-element.floating {
-				animation: float 3s ease-in-out infinite;
-			}
-
-			.construction-element:nth-child(odd) {
-				animation-delay: 0.5s;
-			}
-
-			.construction-element:nth-child(even) {
-				animation-delay: 1.5s;
-			}
-
-			/* Tooltip for construction elements */
-			.construction-element::before {
-				content: attr(data-tooltip);
-				position: absolute;
-				bottom: 25px;
-				left: 50%;
-				transform: translateX(-50%);
-				background: #411b1d;
-				color: #e0c3a3;
-				padding: 4px 8px;
-				border-radius: 4px;
-				font-size: 10px;
-				white-space: nowrap;
-				opacity: 0;
-				transition: opacity 0.3s ease;
-				pointer-events: none;
-				z-index: 30;
-			}
-
-			.construction-element:hover::before {
-				opacity: 1;
-			}
-
-			/* Mobile responsiveness for interactive elements */
-			@media (max-width: 768px) {
-				.construction-element {
-					width: 16px;
-					height: 16px;
-				}
-				
-				.construction-element::before {
-					font-size: 8px;
-					padding: 2px 4px;
-				}
-			}
-
-			.manpower-procedure {
-				width: 100%;
-				margin: 0 auto;
-				padding: 10px 0 0 0;
-			}
-			.manpower-procedure .title {
-				margin-bottom: 30px;
-			}
-			.procedure-steps {
+			/* Ensure equal heights for all sections */
+			.equal-height-row {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 10px;
-				justify-content: center;
-				align-items: center;
-				margin-top: 20px;
-			}
-			.procedure-step {
-				background: #f5f5f5;
-				color: #411b1d;
-				border-radius: 30px;
-				padding: 12px 28px;
-				font-size: 1.08em;
-				font-weight: 500;
-				box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-				transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-				cursor: pointer;
-				border: 2px solid #e0c3a3;
-				margin-bottom: 5px;
-				position: relative;
-				z-index: 1;
-			}
-			.procedure-step:hover {
-				background: #e0c3a3;
-				color: #fff;
-				box-shadow: 0 4px 16px rgba(65,27,29,0.10);
-				border-color: #411b1d;
-			}
-			.procedure-arrow {
-				font-size: 2em;
-				color: #e0c3a3;
-				margin: 0 2px;
-				user-select: none;
-				font-weight: bold;
-			}
-			@media (max-width: 900px) {
-				.procedure-steps {
-					flex-wrap: wrap;
-					gap: 6px;
-				}
-				.procedure-step {
-					padding: 10px 18px;
-					font-size: 1em;
-				}
-				.procedure-arrow {
-					font-size: 1.5em;
-				}
-			}
-			@media (max-width: 600px) {
-				.procedure-steps {
-					flex-direction: column;
-					align-items: center;
-					gap: 0;
-				}
-				.procedure-step {
-					width: 90%;
-					text-align: center;
-					padding: 12px 0;
-					margin-bottom: 0;
-				}
-				.procedure-arrow {
-					font-size: 2em;
-					color: #e0c3a3;
-					margin: 0;
-					transform: rotate(90deg);
-					display: block;
-				}
 			}
 
-			.manpower-procedure-u {
-				width: 100%;
-				margin: 0 auto;
-				padding: 10px 0 0 0;
-			}
-			.manpower-procedure-u .title {
-				margin-bottom: 30px;
-			}
-			.s-procedure-wrapper {
+			.equal-height-col {
 				display: flex;
-				justify-content: center;
-				align-items: flex-start;
-				position: relative;
-				min-height: 420px;
-				padding: 20px 0;
+				flex-direction: column;
 			}
-			.s-procedure-col {
+
+			/* Working Strategy specific styles */
+			.working-strategy-container {
+				height: 100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
-				height: 380px;
-				width: 45%;
 			}
-			.s-procedure-col-left {
-				align-items: flex-end;
-			}
-			.s-procedure-col-right {
-				align-items: flex-start;
-			}
-			.s-step {
-				background: #f5f5f5;
-				color: #411b1d;
-				border-radius: 30px;
-				padding: 12px 28px;
-				font-size: 1.08em;
-				font-weight: 500;
-				box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-				transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-				cursor: pointer;
-				border: 2px solid #e0c3a3;
-				margin: 10px 0;
-				min-width: 200px;
-				text-align: center;
-				position: relative;
-				z-index: 1;
-			}
-			.s-step:hover {
-				background: #e0c3a3;
-				color: #fff;
-				box-shadow: 0 4px 16px rgba(65,27,29,0.10);
-				border-color: #411b1d;
-			}
-			.s-connector {
-				width: 80px;
-				height: 380px;
+
+			.img-container {
+				flex: 1;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				position: relative;
+				padding: 20px;
 			}
-			.s-curve {
-				width: 80px;
-				height: 380px;
-				border-left: 4px solid #e0c3a3;
-				border-right: 4px solid #e0c3a3;
-				border-radius: 40px;
-				position: absolute;
-				left: 0;
-				top: 0;
+
+			/* Manpower Supply Procedure styles */
+			.manpower-procedure-container {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
 			}
-			.s-procedure-col-right .s-step {
-				margin-bottom: 0;
+
+			/* Transition Synopsis styles */
+			.transition-synopsis-container {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
 			}
-			.s-procedure-col-left .s-step {
-				margin-top: 0;
+
+			.ts-diagram-wrapper {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 20px 0;
 			}
-			@media (max-width: 900px) {
-				.s-step { 
-					min-width: 120px; 
-					font-size: 1em; 
-					padding: 10px 10px; 
+
+			.ts-labels-container {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				padding: 20px;
+				width: 100%;
+			}
+
+			/* Responsive adjustments */
+			@media (max-width: 768px) {
+				.section-container {
+					min-height: 400px;
+					padding: 20px;
 				}
-				.s-connector, .s-curve { 
-					width: 40px; 
-					height: 320px; 
+				
+				.diamond-layout {
+					width: 200px;
+					height: 200px;
+					margin: 15px auto;
 				}
-				.s-procedure-wrapper { 
-					min-height: 340px; 
+				
+				.diamond-item {
+					width: 80px;
+					height: 80px;
 				}
-				.s-procedure-col { 
-					height: 320px; 
+				
+				.value-grid {
+					grid-template-columns: 1fr;
+					gap: 10px;
 				}
-			}
-			@media (max-width: 600px) {
-				.s-procedure-wrapper {
+				
+				.strategy-subtitle {
+					font-size: 1.3rem;
+					margin-bottom: 15px;
+				}
+				
+				.service-box {
+					min-height: 60px;
+					padding: 15px;
+				}
+				
+				.policy-item {
 					flex-direction: column;
-					align-items: center;
-					min-height: unset;
+					text-align: center;
+					margin-bottom: 15px;
 				}
-				.s-procedure-col, .s-procedure-col-left, .s-procedure-col-right {
+				
+				.policy-icon {
+					margin: 0 auto 10px;
+				}
+				
+				.success-bar {
 					flex-direction: column;
-					align-items: center;
-					height: unset;
-					width: 100%;
+					text-align: center;
+					padding: 15px;
 				}
-				.s-connector, .s-curve {
-					display: none;
+				
+				.success-value {
+					margin-top: 5px;
 				}
-				.s-step { 
-					width: 90%; 
-					min-width: unset; 
-					margin: 10px 0; 
+				
+				/* Fix container padding on mobile */
+				.container-fluid {
+					padding: 0 20px !important;
+					max-width: calc(100% - 40px) !important;
 				}
 			}
-			
+
+			@media (max-width: 480px) {
+				.section-container {
+					min-height: 350px;
+					padding: 15px;
+				}
+				
+				.diamond-layout {
+					width: 150px;
+					height: 150px;
+				}
+				
+				.diamond-item {
+					width: 60px;
+					height: 60px;
+				}
+				
+				.diamond-icon {
+					font-size: 1.2em;
+				}
+				
+				.strategy-subtitle {
+					font-size: 1.1rem;
+				}
+				
+				.service-box h4 {
+					font-size: 1rem;
+				}
+				
+				/* More aggressive mobile fixes */
+				.container-fluid {
+					padding: 0 15px !important;
+					max-width: calc(100% - 30px) !important;
+				}
+				
+				.pad80 {
+					padding: 40px 0 !important;
+				}
+			}
+
 			.transition-synopsis {
 				width: 100%;
 				margin: 0 auto;
@@ -1903,10 +1249,1099 @@
         width: 100%;
     }
 }
+
+.value-item {
+	background: #f8f9fa;
+	border-radius: 10px;
+	padding: 15px;
+	text-align: center;
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	animation: floatSideways 3s ease-in-out infinite;
+}
+
+.value-item:nth-child(2n) {
+	animation-delay: 0.5s;
+}
+
+.value-item:nth-child(3n) {
+	animation-delay: 1s;
+}
+
+.value-item:nth-child(4n) {
+	animation-delay: 1.5s;
+}
+
+.value-item:hover {
+	animation-play-state: paused;
+	transform: translateY(-5px);
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	background: #e9ecef;
+}
+
+.value-icon {
+	width: 50px;
+	height: 50px;
+	background: #411b1d;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.value-icon i {
+	color: white;
+	font-size: 20px;
+	transition: all 0.3s ease;
+}
+
+.value-item h4 {
+	color: #333;
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin: 0;
+}
+
+@keyframes bounce {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+.value-item:hover .value-icon {
+	background: #e0c3a3;
+}
+
+.value-item:hover .value-icon i {
+	animation: bounce 1s ease infinite;
+}
+
+.value-item::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		45deg,
+		transparent,
+		rgba(255, 255, 255, 0.1),
+		transparent
+	);
+	transform: translateX(-100%);
+	transition: 0.5s;
+}
+
+.value-item:hover::after {
+	transform: translateX(100%);
+}
+
+/* Construction Crane Animation Styles */
+.crane-container {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	background: linear-gradient(to bottom, #f5f1eb 0%, #f5f1eb 65%, #e0c3a3 65%, #e0c3a3 80%, #d4b896 80%, #d4b896 100%);
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.crane {
+	position: absolute;
+	bottom: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.crane-base {
+	width: 20px;
+	height: 60px;
+	background: #411b1d;
+	margin: 0 auto;
+	border-radius: 3px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.crane-tower {
+	width: 8px;
+	height: 180px;
+	background: linear-gradient(to right, #5a2328, #411b1d);
+	margin: 0 auto;
+	position: relative;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.crane-jib {
+	position: absolute;
+	top: 20px;
+	left: -80px;
+	width: 160px;
+	height: 6px;
+	background: linear-gradient(to right, #411b1d, #5a2328);
+	border-radius: 3px;
+	transform-origin: 80px 3px;
+	animation: craneRotation 8s ease-in-out infinite;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.crane-counter-jib {
+	position: absolute;
+	top: 20px;
+	right: 160px;
+	width: 40px;
+	height: 6px;
+	background: linear-gradient(to left, #411b1d, #5a2328);
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.crane-cable {
+	position: absolute;
+	top: 26px;
+	left: 60px;
+	width: 2px;
+	height: 80px;
+	background: #2d1214;
+	animation: cableLift 8s ease-in-out infinite;
+	box-shadow: 1px 0 2px rgba(0,0,0,0.3);
+}
+
+.crane-hook {
+	position: absolute;
+	bottom: -10px;
+	left: -3px;
+	width: 8px;
+	height: 8px;
+	background: #411b1d;
+	border-radius: 50%;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.construction-block {
+	position: absolute;
+	bottom: -25px;
+	left: -8px;
+	width: 18px;
+	height: 15px;
+	background: linear-gradient(135deg, #e0c3a3, #d4b896);
+	border: 1px solid #c5a885;
+	border-radius: 2px;
+	animation: blockLift 8s ease-in-out infinite;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.building-foundation {
+	position: absolute;
+	bottom: 20px;
+	right: 60px;
+	width: 80px;
+	height: 40px;
+	background: linear-gradient(to bottom, #8b7355, #6b5943);
+	border-radius: 2px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.building-floors {
+	position: absolute;
+	bottom: 60px;
+	right: 70px;
+	width: 60px;
+	animation: buildingGrowth 8s ease-in-out infinite;
+}
+
+.floor {
+	width: 100%;
+	height: 15px;
+	background: linear-gradient(to right, #e0c3a3, #d4b896);
+	border: 1px solid #c5a885;
+	margin-bottom: 2px;
+	opacity: 0;
+	animation: floorAppear 8s ease-in-out infinite;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.floor:nth-child(1) { animation-delay: 2s; }
+.floor:nth-child(2) { animation-delay: 4s; }
+.floor:nth-child(3) { animation-delay: 6s; }
+
+.clouds {
+	position: absolute;
+	top: 20px;
+	width: 100%;
+	height: 60px;
+}
+
+.cloud {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 50px;
+	opacity: 0.7;
+	animation: cloudMove 15s linear infinite;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cloud:before {
+	content: '';
+	position: absolute;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 50px;
+}
+
+.cloud:after {
+	content: '';
+	position: absolute;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 50px;
+}
+
+.cloud1 {
+	width: 50px;
+	height: 20px;
+	top: 10px;
+	left: -50px;
+	animation-delay: 0s;
+}
+
+.cloud1:before {
+	width: 20px;
+	height: 20px;
+	top: -10px;
+	left: 10px;
+}
+
+.cloud1:after {
+	width: 30px;
+	height: 15px;
+	top: -5px;
+	right: 10px;
+}
+
+.cloud2 {
+	width: 40px;
+	height: 15px;
+	top: 30px;
+	left: -40px;
+	animation-delay: 7s;
+}
+
+.cloud2:before {
+	width: 15px;
+	height: 15px;
+	top: -8px;
+	left: 8px;
+}
+
+.cloud2:after {
+	width: 25px;
+	height: 12px;
+	top: -4px;
+	right: 8px;
+}
+
+@keyframes craneRotation {
+	0%, 20% { transform: rotate(0deg); }
+	40%, 60% { transform: rotate(15deg); }
+	80%, 100% { transform: rotate(0deg); }
+}
+
+@keyframes cableLift {
+	0%, 20% { height: 80px; }
+	30%, 70% { height: 40px; }
+	80%, 100% { height: 80px; }
+}
+
+@keyframes blockLift {
+	0%, 20% { transform: translateY(0); }
+	30%, 70% { transform: translateY(-40px); }
+	80%, 100% { transform: translateY(0); }
+}
+
+@keyframes buildingGrowth {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.05); }
+}
+
+@keyframes floorAppear {
+	0%, 20% { opacity: 0; transform: translateY(10px); }
+	30%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cloudMove {
+	0% { left: -60px; }
+	100% { left: calc(100% + 60px); }
+}
+
+/* Responsive design for crane animation */
+@media (max-width: 768px) {
+	.crane-container {
+		height: 300px;
+	}
+	
+	.crane-jib {
+		width: 120px;
+		left: -60px;
+		transform-origin: 60px 3px;
+	}
+	
+	.crane-counter-jib {
+		right: 120px;
+		width: 30px;
+	}
+	
+	.building-foundation {
+		width: 60px;
+		height: 30px;
+		right: 40px;
+	}
+	
+	.building-floors {
+		width: 45px;
+		right: 47px;
+	}
+}
+
+.manpower-procedure {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 0 0 0;
+}
+.manpower-procedure .title {
+	margin-bottom: 30px;
+}
+.procedure-steps {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+.procedure-step {
+	background: #f5f5f5;
+	color: #411b1d;
+	border-radius: 30px;
+	padding: 12px 28px;
+	font-size: 1.08em;
+	font-weight: 500;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+	cursor: pointer;
+	border: 2px solid #e0c3a3;
+	margin-bottom: 5px;
+	position: relative;
+	z-index: 1;
+}
+.procedure-step:hover {
+	background: #e0c3a3;
+	color: #fff;
+	box-shadow: 0 4px 16px rgba(65,27,29,0.10);
+	border-color: #411b1d;
+}
+.procedure-arrow {
+	font-size: 2em;
+	color: #e0c3a3;
+	margin: 0 2px;
+	user-select: none;
+	font-weight: bold;
+}
+@media (max-width: 900px) {
+	.procedure-steps {
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+	.procedure-step {
+		padding: 10px 18px;
+		font-size: 1em;
+	}
+	.procedure-arrow {
+		font-size: 1.5em;
+	}
+}
+@media (max-width: 600px) {
+	.procedure-steps {
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
+	}
+	.procedure-step {
+		width: 90%;
+		text-align: center;
+		padding: 12px 0;
+		margin-bottom: 0;
+	}
+	.procedure-arrow {
+		font-size: 2em;
+		color: #e0c3a3;
+		margin: 0;
+		transform: rotate(90deg);
+		display: block;
+	}
+}
+
+.manpower-procedure-u {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 0 0 0;
+}
+.manpower-procedure-u .title {
+	margin-bottom: 30px;
+}
+.s-procedure-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+	min-height: 420px;
+	padding: 20px 0;
+}
+.s-procedure-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 380px;
+	width: 45%;
+}
+.s-procedure-col-left {
+	align-items: flex-end;
+}
+.s-procedure-col-right {
+	align-items: flex-start;
+}
+.s-step {
+	background: #f5f5f5;
+	color: #411b1d;
+	border-radius: 30px;
+	padding: 12px 28px;
+	font-size: 1.08em;
+	font-weight: 500;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+	cursor: pointer;
+	border: 2px solid #e0c3a3;
+	margin: 10px 0;
+	min-width: 200px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+.s-step:hover {
+	background: #e0c3a3;
+	color: #fff;
+	box-shadow: 0 4px 16px rgba(65,27,29,0.10);
+	border-color: #411b1d;
+}
+.s-connector {
+	width: 80px;
+	height: 380px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.s-curve {
+	width: 80px;
+	height: 380px;
+	border-left: 4px solid #e0c3a3;
+	border-right: 4px solid #e0c3a3;
+	border-radius: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.s-procedure-col-right .s-step {
+	margin-bottom: 0;
+}
+.s-procedure-col-left .s-step {
+	margin-top: 0;
+}
+@media (max-width: 900px) {
+	.s-step { 
+		min-width: 120px; 
+		font-size: 1em; 
+		padding: 10px 10px; 
+	}
+	.s-connector, .s-curve { 
+		width: 40px; 
+		height: 320px; 
+	}
+	.s-procedure-wrapper { 
+		min-height: 340px; 
+	}
+	.s-procedure-col { 
+		height: 320px; 
+	}
+}
+@media (max-width: 600px) {
+	.s-procedure-wrapper {
+		flex-direction: column;
+		align-items: center;
+		min-height: unset;
+	}
+	.s-procedure-col, .s-procedure-col-left, .s-procedure-col-right {
+		flex-direction: column;
+		align-items: center;
+		height: unset;
+		width: 100%;
+	}
+	.s-connector, .s-curve {
+		display: none;
+	}
+	.s-step { 
+		width: 90%; 
+		min-width: unset; 
+		margin: 10px 0; 
+	}
+}
+
+.transition-synopsis {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 0 0 0;
+}
+.transition-synopsis .title {
+	margin-bottom: 30px;
+}
+.ts-diagram-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	position: relative;
+	min-height: 420px;
+}
+.ts-image-container {
+	position: relative;
+	width: 320px;
+	height: 320px;
+	margin: 0 auto;
+}
+.ts-image {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+	border-radius: 18px;
+	background: #fff;
+}
+.ts-labels-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px;
+}
+.ts-label {
+	font-size: 1.08em;
+	font-weight: 500;
+	background: #fff;
+	padding: 12px 20px;
+	border-radius: 18px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	border: 1.5px solid #eee;
+	white-space: nowrap;
+	transition: all 0.3s ease;
+	margin: 0;
+	flex: 1;
+}
+.ts-label:hover {
+	transform: translateX(-10px);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.ts-label-green { color: #4cae8a; border-color: #4cae8a; }
+.ts-label-orange { color: #f6a13a; border-color: #f6a13a; }
+.ts-label-blue { color: #2a6edb; border-color: #2a6edb; }
+	
+.ts-label-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.ts-icon-circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: relative;
+	animation: cycle 3s linear infinite;
+}
+
+.ts-icon-circle::before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	right: -4px;
+	bottom: -4px;
+	border-radius: 50%;
+	border: 2px solid transparent;
+	animation: cycle 3s linear infinite;
+}
+
+.ts-icon-green {
+	background: #4cae8a;
+}
+.ts-icon-green::before {
+	border-color: #4cae8a;
+}
+
+.ts-icon-orange {
+	background: #f6a13a;
+}
+.ts-icon-orange::before {
+	border-color: #f6a13a;
+}
+
+.ts-icon-blue {
+	background: #2a6edb;
+}
+.ts-icon-blue::before {
+	border-color: #2a6edb;
+}
+
+@keyframes cycle {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.ts-label {
+	margin: 0;
+	flex: 1;
+}
+
+@media (max-width: 900px) {
+	.ts-label-wrapper {
+		width: 100%;
+		justify-content: center;
+	}
+	.ts-label {
+		width: auto;
+	}
+}
+
+/* Trade Section Grid Styles */
+.trade-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	padding: 20px 0;
+}
+
+.trade-item {
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+	transition: all 0.3s ease;
+}
+
+.trade-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.trade-img-container {
+	width: 100%;
+	aspect-ratio: 4/3;
+	overflow: hidden;
+	position: relative;
+}
+
+.trade-img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.3s ease;
+}
+
+.trade-item:hover .trade-img-container img {
+	transform: scale(1.05);
+}
+
+.trade-content {
+	padding: 20px;
+	text-align: center;
+}
+
+.trade-content h4 {
+	margin: 0;
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #333;
+}
+
+.trade-content h4 a {
+	color: #333;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.trade-content h4 a:hover {
+	color: #411b1d;
+}
+
+@media (max-width: 992px) {
+	.trade-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.trade-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}
+
+/* Works Section Grid Styles */
+.works-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	padding: 20px 0;
+}
+
+.works-item {
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+	transition: all 0.3s ease;
+}
+
+.works-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.works-img-container {
+	width: 100%;
+	aspect-ratio: 4/3;
+	overflow: hidden;
+	position: relative;
+}
+
+.works-img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.3s ease;
+}
+
+.works-item:hover .works-img-container img {
+	transform: scale(1.05);
+}
+
+.works-content {
+	padding: 20px;
+	text-align: center;
+}
+
+.works-content h4 {
+	margin: 0;
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #333;
+}
+
+.works-content h4 a {
+	color: #333;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.works-content h4 a:hover {
+	color: #411b1d;
+}
+
+@media (max-width: 992px) {
+	.works-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.works-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}
+			
+					
 		</style>
 
 	</head>
 	<body>
+		<script src="assets/js/jquery-2.2.2.min.js"></script>
+
+		<!-- load bootstrap -->
+
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<script src="assets/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- odometer js -->
+
+		<script src="assets/js/jquery.appear.js"></script>
+
+		<script src="assets/js/owl.carousel.min.js"></script>
+
+		<script src="assets/js/itl_script.js"></script>
+
+		<script>
+			// Typing animation
+			const heading = "Welcome to Riax Prime";
+			const subtext = "Your Trusted Partner in technical services, human capital provision and talent supply";
+			let headingIndex = 0;
+			let subtextIndex = 0;
+			const headingElement = document.getElementById('typing-heading');
+			const subtextElement = document.getElementById('typing-subtext');
+
+			function typeHeading() {
+				if (headingIndex < heading.length) {
+					headingElement.textContent += heading.charAt(headingIndex);
+					headingIndex++;
+					setTimeout(typeHeading, 100);
+				} else {
+					setTimeout(typeSubtext, 500);
+				}
+			}
+
+			function typeSubtext() {
+				if (subtextIndex < subtext.length) {
+					subtextElement.textContent += subtext.charAt(subtextIndex);
+					subtextIndex++;
+					setTimeout(typeSubtext, 100);
+				}
+			}
+
+			// Start the animation when the page loads
+			window.addEventListener('load', typeHeading);
+
+			// Interactive Construction Elements
+			class ConstructionElements {
+				constructor() {
+					this.elements = [];
+					this.elementTypes = ['bolt', 'nut', 'screw'];
+					this.tooltips = {
+						'bolt': 'Click me!',
+						'nut': 'I\'m a nut!',
+						'screw': 'Screw it!'
+					};
+					this.init();
+				}
+
+				init() {
+					this.createElements();
+					this.setupCraneInteraction();
+					this.startFloatingAnimation();
+				}
+
+				createElements() {
+					const elementCount = window.innerWidth > 768 ? 12 : 8;
+					
+					for (let i = 0; i < elementCount; i++) {
+						const element = this.createElement();
+						document.body.appendChild(element);
+						this.elements.push(element);
+					}
+				}
+
+				createElement() {
+					const element = document.createElement('div');
+					const type = this.elementTypes[Math.floor(Math.random() * this.elementTypes.length)];
+					
+					element.className = `construction-element ${type} floating`;
+					element.setAttribute('data-tooltip', this.tooltips[type]);
+					
+					// Random positioning
+					const x = Math.random() * (window.innerWidth - 40) + 20;
+					const y = Math.random() * (window.innerHeight - 100) + 50;
+					
+					element.style.left = x + 'px';
+					element.style.top = y + 'px';
+					
+					// Add click event
+					element.addEventListener('click', (e) => this.handleElementClick(e, element));
+					
+					return element;
+				}
+
+				handleElementClick(e, element) {
+					e.preventDefault();
+					e.stopPropagation();
+					
+					// Add clicked animation
+					element.classList.add('clicked');
+					
+					// Create sparkle effect
+					this.createSparkle(e.clientX, e.clientY);
+					
+					// Move element to new position
+					setTimeout(() => {
+						this.moveElement(element);
+						element.classList.remove('clicked');
+					}, 300);
+					
+					// Play click sound effect (visual feedback)
+					this.createClickFeedback(element);
+				}
+
+				createSparkle(x, y) {
+					const sparkle = document.createElement('div');
+					sparkle.className = 'sparkle';
+					sparkle.style.left = x + 'px';
+					sparkle.style.top = y + 'px';
+					
+					document.body.appendChild(sparkle);
+					
+					setTimeout(() => {
+						document.body.removeChild(sparkle);
+					}, 800);
+				}
+
+				createClickFeedback(element) {
+					const rect = element.getBoundingClientRect();
+					const feedback = document.createElement('div');
+					feedback.textContent = '+1';
+					feedback.style.cssText = `
+						position: fixed;
+						left: ${rect.left + rect.width/2}px;
+						top: ${rect.top}px;
+						color: #411b1d;
+						font-weight: bold;
+						font-size: 14px;
+						pointer-events: none;
+						z-index: 1000;
+						animation: feedbackFade 1s ease-out forwards;
+					`;
+					
+					document.body.appendChild(feedback);
+					
+					setTimeout(() => {
+						if (document.body.contains(feedback)) {
+							document.body.removeChild(feedback);
+						}
+					}, 1000);
+				}
+
+				moveElement(element) {
+					const x = Math.random() * (window.innerWidth - 40) + 20;
+					const y = Math.random() * (window.innerHeight - 100) + 50;
+					
+					element.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+					element.style.left = x + 'px';
+					element.style.top = y + 'px';
+					
+					setTimeout(() => {
+						element.style.transition = 'all 0.3s ease';
+					}, 800);
+				}
+
+				setupCraneInteraction() {
+					const crane = document.getElementById('craneAnimation');
+					if (crane) {
+						crane.addEventListener('click', () => this.handleCraneClick(crane));
+					}
+				}
+
+				handleCraneClick(crane) {
+					crane.classList.add('crane-clicked');
+					
+					// Create multiple sparkles around the crane
+					const rect = crane.getBoundingClientRect();
+					for (let i = 0; i < 5; i++) {
+						setTimeout(() => {
+							const x = rect.left + Math.random() * rect.width;
+							const y = rect.top + Math.random() * rect.height;
+							this.createSparkle(x, y);
+						}, i * 100);
+					}
+					
+					// Move all construction elements
+					this.elements.forEach((element, index) => {
+						setTimeout(() => {
+							this.moveElement(element);
+						}, index * 100);
+					});
+					
+					setTimeout(() => {
+						crane.classList.remove('crane-clicked');
+					}, 800);
+				}
+
+				startFloatingAnimation() {
+					// Add random delays to floating animations
+					this.elements.forEach((element, index) => {
+						element.style.animationDelay = (Math.random() * 3) + 's';
+					});
+				}
+
+				// Responsive repositioning
+				handleResize() {
+					this.elements.forEach(element => {
+						const rect = element.getBoundingClientRect();
+						if (rect.right > window.innerWidth || rect.bottom > window.innerHeight) {
+							this.moveElement(element);
+						}
+					});
+				}
+			}
+
+			// Add feedback animation style
+			const style = document.createElement('style');
+			style.textContent = `
+				@keyframes feedbackFade {
+					0% { opacity: 1; transform: translateY(0px); }
+					100% { opacity: 0; transform: translateY(-30px); }
+				}
+			`;
+			document.head.appendChild(style);
+
+			// Initialize construction elements when page loads
+			let constructionElements;
+			window.addEventListener('load', () => {
+				constructionElements = new ConstructionElements();
+			});
+
+			// Handle window resize
+			window.addEventListener('resize', () => {
+				if (constructionElements) {
+					constructionElements.handleResize();
+				}
+			});
+
+			// Add some Easter eggs
+			let clickCount = 0;
+			document.addEventListener('click', () => {
+				clickCount++;
+				if (clickCount === 10) {
+					document.body.style.filter = 'hue-rotate(45deg)';
+					setTimeout(() => {
+						document.body.style.filter = 'none';
+					}, 3000);
+				}
+			});
+		</script>
 		<div class="main-container">
 
 			<!-- header start -->
@@ -1930,7 +2365,7 @@
 								<div class="tp-ct">
 									<ul>
 										<li><a href="tel:+971504305417"><i class="fa fa-phone"></i></a>971 - 504 305 417 </li>
-										<li><a href="mailto:riaxprime@gmail.com"><i class="fa fa-envelope"></i></a>riaxprime@gmail.com</li>
+										<li><a href="mailto:admin@riaxprime.xyz"><i class="fa fa-envelope"></i></a>admin@riaxprime.xyz</li>
 									</ul>
 								</div>
 							</div>
@@ -2096,7 +2531,7 @@
 </section>
 	
 		<section class="pad80" style="background-color: #9b9494;">
-			<div class="container-fluid" style="max-width: 100%; padding: 0 50px;">
+			<div class="container-fluid" style="max-width: calc(100% - 100px); padding: 0 50px; margin: 0 auto;">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="section-container">
@@ -2212,11 +2647,6 @@
 														Ensuring client satisfaction in all aspects regularly to reflect evolving the future business needs
 													</div>
 												</div>
-												<br>
-												<br>
-												<br>
-												<br>
-												<br>
 											</div>
 										</div>
 									</div>
@@ -2320,16 +2750,18 @@
 					<!-- Section 4 -->
 					<div class="col-md-6">
 						<div class="section-container">
-							<div class="container-fluid" style="padding: 0;">
-								<div class="row">
-									<div class="col-md-12">
-										<h2 class="title t-center" style="color: #411b1d;">Working Strategy</h2>
+							<div class="working-strategy-container">
+								<div class="container-fluid" style="padding: 0;">
+									<div class="row">
+										<div class="col-md-12">
+											<h2 class="title t-center" style="color: #411b1d;">Working Strategy</h2>
+										</div>
 									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="img-container" style="text-align: center; padding: 20px;">
-											<img src="assets/ws.png" alt="Working Strategy" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="img-container">
+												<img src="assets/ws.png" alt="Working Strategy" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+											</div>
 										</div>
 									</div>
 								</div>
@@ -2343,27 +2775,28 @@
 					<!-- Section 5 -->
 					<div class="col-md-6">
 						<div class="section-container">
-							<!-- Space for fifth section -->
-							<div class="col-md-12">
-								<div class="manpower-procedure-u">
-									<h2 class="title t-center" style="color: #411b1d;">Manpower Supply Procedure</h2>
-									<div class="zigzag-wrapper">
-										<div class="zigzag-steps">
-											<div class="zigzag-step">Application Process</div>
-											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Initial Screening</div>
-											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Shortlisting Process</div>
-											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Interview Analysis</div>
-											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Evalutions</div>
-											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Selection & Records</div>
-											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Visa & Ticketing Process</div>
-											<div class="zigzag-arrow"></div>
-											<div class="zigzag-step">Onboarding process</div>
+							<div class="manpower-procedure-container">
+								<div class="col-md-12">
+									<div class="manpower-procedure-u">
+										<h2 class="title t-center" style="color: #411b1d;">Manpower Supply Procedure</h2>
+										<div class="zigzag-wrapper">
+											<div class="zigzag-steps">
+												<div class="zigzag-step">Application Process</div>
+												<div class="zigzag-arrow"></div>
+												<div class="zigzag-step">Initial Screening</div>
+												<div class="zigzag-arrow"></div>
+												<div class="zigzag-step">Shortlisting Process</div>
+												<div class="zigzag-arrow"></div>
+												<div class="zigzag-step">Interview Analysis</div>
+												<div class="zigzag-arrow"></div>
+												<div class="zigzag-step">Evalutions</div>
+												<div class="zigzag-arrow"></div>
+												<div class="zigzag-step">Selection & Records</div>
+												<div class="zigzag-arrow"></div>
+												<div class="zigzag-step">Visa & Ticketing Process</div>
+												<div class="zigzag-arrow"></div>
+												<div class="zigzag-step">Onboarding process</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -2373,30 +2806,30 @@
 					<!-- Section 6 -->
 					<div class="col-md-6">
 						<div class="section-container">
-							<div class="transition-synopsis">
-								<h2 class="title t-center" style="color: #411b1d;">Transition Synopsis</h2>
-								<div class="ts-diagram-wrapper">
-									<div class="ts-labels-container">
-										<div class="ts-label-wrapper">
-											<div class="ts-icon-circle ts-icon-green"></div>
-											<div class="ts-label ts-label-green">Engraving in Strategic Areas and Development</div>
-										</div>
-										<div class="ts-label-wrapper">
-											<div class="ts-icon-circle ts-icon-orange"></div>
-											<div class="ts-label ts-label-orange">Core Business Elements</div>
-										</div>
-										<div class="ts-label-wrapper">
-											<div class="ts-icon-circle ts-icon-blue"></div>
-											<div class="ts-label ts-label-blue">Work Process Architecture</div>
+							<div class="transition-synopsis-container">
+								<div class="transition-synopsis">
+									<h2 class="title t-center" style="color: #411b1d;">Transition Synopsis</h2>
+									<div class="ts-diagram-wrapper">
+										<div class="ts-labels-container">
+											<div class="ts-label-wrapper">
+												<div class="ts-icon-circle ts-icon-green"></div>
+												<div class="ts-label ts-label-green">Engraving in Strategic Areas and Development</div>
+											</div>
+											<div class="ts-label-wrapper">
+												<div class="ts-icon-circle ts-icon-orange"></div>
+												<div class="ts-label ts-label-orange">Core Business Elements</div>
+											</div>
+											<div class="ts-label-wrapper">
+												<div class="ts-icon-circle ts-icon-blue"></div>
+												<div class="ts-label ts-label-blue">Work Process Architecture</div>
+											</div>
 										</div>
 									</div>
+									<div style="width: 200px; height: 200px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+										<img src="assets/images/feature-imges/colour.png" style="max-width: 100%; max-height: 100%; margin-top: -120px;">
+									</div>
 								</div>
-								<div style="width: 200px; height: 200px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
-									<img src="assets/images/feature-imges/colour.png" style="max-width: 100%; max-height: 100%; margin-top: -120px;">
-								  </div>
 							</div>
-							
-							
 						</div>
 					</div>
 				</div>
@@ -2827,9 +3260,10 @@
 										<br> &nbsp; &nbsp; Sheikh Zayed Road,<br>&nbsp; &nbsp; Financial Centre Metro Station,
 										<br> &nbsp; &nbsp; Opposite to Burj Khalifa,<br>&nbsp; 	&nbsp; Dubai,UAE.</p>
 
-																<p><i class="fa fa-envelope"></i>riaxprime@gmail.com</p>
+																<p><i class="fa fa-envelope"></i>admin@riaxprime.xyz</p>
 
-									<p><i class="fa fa-phone"></i>971 - 504 305 417</p>
+																<p><i class="fa fa-phone"></i>971 - 504 305 417</p>
+																<p><i class="fa fa-phone"></i> 971 - 524 966 817</p>
 
 								</div>
 								<div style="margin-top: 25px; margin-left: 30px;">
@@ -2891,257 +3325,7 @@
 
 	<!-- load jquery -->
 
-		<script src="assets/js/jquery-2.2.2.min.js"></script>
-
-		<!-- load bootstrap -->
-
-		<script src="assets/js/bootstrap.min.js"></script>
-
-		<script src="assets/js/jquery.themepunch.revolution.min.js"></script>
-
-		<!-- odometer js -->
-
-		<script src="assets/js/jquery.appear.js"></script>
-
-		<script src="assets/js/owl.carousel.min.js"></script>
-
-		<script src="assets/js/itl_script.js"></script>
-
-		<script>
-			// Typing animation
-			const heading = "Welcome to Riax Prime";
-			const subtext = "Your Trusted Partner in technical services, human capital provision and talent supply";
-			let headingIndex = 0;
-			let subtextIndex = 0;
-			const headingElement = document.getElementById('typing-heading');
-			const subtextElement = document.getElementById('typing-subtext');
-
-			function typeHeading() {
-				if (headingIndex < heading.length) {
-					headingElement.textContent += heading.charAt(headingIndex);
-					headingIndex++;
-					setTimeout(typeHeading, 100);
-				} else {
-					setTimeout(typeSubtext, 500);
-				}
-			}
-
-			function typeSubtext() {
-				if (subtextIndex < subtext.length) {
-					subtextElement.textContent += subtext.charAt(subtextIndex);
-					subtextIndex++;
-					setTimeout(typeSubtext, 100);
-				}
-			}
-
-			// Start the animation when the page loads
-			window.addEventListener('load', typeHeading);
-
-			// Interactive Construction Elements
-			class ConstructionElements {
-				constructor() {
-					this.elements = [];
-					this.elementTypes = ['bolt', 'nut', 'screw'];
-					this.tooltips = {
-						'bolt': 'Click me!',
-						'nut': 'I\'m a nut!',
-						'screw': 'Screw it!'
-					};
-					this.init();
-				}
-
-				init() {
-					this.createElements();
-					this.setupCraneInteraction();
-					this.startFloatingAnimation();
-				}
-
-				createElements() {
-					const elementCount = window.innerWidth > 768 ? 12 : 8;
-					
-					for (let i = 0; i < elementCount; i++) {
-						const element = this.createElement();
-						document.body.appendChild(element);
-						this.elements.push(element);
-					}
-				}
-
-				createElement() {
-					const element = document.createElement('div');
-					const type = this.elementTypes[Math.floor(Math.random() * this.elementTypes.length)];
-					
-					element.className = `construction-element ${type} floating`;
-					element.setAttribute('data-tooltip', this.tooltips[type]);
-					
-					// Random positioning
-					const x = Math.random() * (window.innerWidth - 40) + 20;
-					const y = Math.random() * (window.innerHeight - 100) + 50;
-					
-					element.style.left = x + 'px';
-					element.style.top = y + 'px';
-					
-					// Add click event
-					element.addEventListener('click', (e) => this.handleElementClick(e, element));
-					
-					return element;
-				}
-
-				handleElementClick(e, element) {
-					e.preventDefault();
-					e.stopPropagation();
-					
-					// Add clicked animation
-					element.classList.add('clicked');
-					
-					// Create sparkle effect
-					this.createSparkle(e.clientX, e.clientY);
-					
-					// Move element to new position
-					setTimeout(() => {
-						this.moveElement(element);
-						element.classList.remove('clicked');
-					}, 300);
-					
-					// Play click sound effect (visual feedback)
-					this.createClickFeedback(element);
-				}
-
-				createSparkle(x, y) {
-					const sparkle = document.createElement('div');
-					sparkle.className = 'sparkle';
-					sparkle.style.left = x + 'px';
-					sparkle.style.top = y + 'px';
-					
-					document.body.appendChild(sparkle);
-					
-					setTimeout(() => {
-						document.body.removeChild(sparkle);
-					}, 800);
-				}
-
-				createClickFeedback(element) {
-					const rect = element.getBoundingClientRect();
-					const feedback = document.createElement('div');
-					feedback.textContent = '+1';
-					feedback.style.cssText = `
-						position: fixed;
-						left: ${rect.left + rect.width/2}px;
-						top: ${rect.top}px;
-						color: #411b1d;
-						font-weight: bold;
-						font-size: 14px;
-						pointer-events: none;
-						z-index: 1000;
-						animation: feedbackFade 1s ease-out forwards;
-					`;
-					
-					document.body.appendChild(feedback);
-					
-					setTimeout(() => {
-						if (document.body.contains(feedback)) {
-							document.body.removeChild(feedback);
-						}
-					}, 1000);
-				}
-
-				moveElement(element) {
-					const x = Math.random() * (window.innerWidth - 40) + 20;
-					const y = Math.random() * (window.innerHeight - 100) + 50;
-					
-					element.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-					element.style.left = x + 'px';
-					element.style.top = y + 'px';
-					
-					setTimeout(() => {
-						element.style.transition = 'all 0.3s ease';
-					}, 800);
-				}
-
-				setupCraneInteraction() {
-					const crane = document.getElementById('craneAnimation');
-					if (crane) {
-						crane.addEventListener('click', () => this.handleCraneClick(crane));
-					}
-				}
-
-				handleCraneClick(crane) {
-					crane.classList.add('crane-clicked');
-					
-					// Create multiple sparkles around the crane
-					const rect = crane.getBoundingClientRect();
-					for (let i = 0; i < 5; i++) {
-						setTimeout(() => {
-							const x = rect.left + Math.random() * rect.width;
-							const y = rect.top + Math.random() * rect.height;
-							this.createSparkle(x, y);
-						}, i * 100);
-					}
-					
-					// Move all construction elements
-					this.elements.forEach((element, index) => {
-						setTimeout(() => {
-							this.moveElement(element);
-						}, index * 100);
-					});
-					
-					setTimeout(() => {
-						crane.classList.remove('crane-clicked');
-					}, 800);
-				}
-
-				startFloatingAnimation() {
-					// Add random delays to floating animations
-					this.elements.forEach((element, index) => {
-						element.style.animationDelay = (Math.random() * 3) + 's';
-					});
-				}
-
-				// Responsive repositioning
-				handleResize() {
-					this.elements.forEach(element => {
-						const rect = element.getBoundingClientRect();
-						if (rect.right > window.innerWidth || rect.bottom > window.innerHeight) {
-							this.moveElement(element);
-						}
-					});
-				}
-			}
-
-			// Add feedback animation style
-			const style = document.createElement('style');
-			style.textContent = `
-				@keyframes feedbackFade {
-					0% { opacity: 1; transform: translateY(0px); }
-					100% { opacity: 0; transform: translateY(-30px); }
-				}
-			`;
-			document.head.appendChild(style);
-
-			// Initialize construction elements when page loads
-			let constructionElements;
-			window.addEventListener('load', () => {
-				constructionElements = new ConstructionElements();
-			});
-
-			// Handle window resize
-			window.addEventListener('resize', () => {
-				if (constructionElements) {
-					constructionElements.handleResize();
-				}
-			});
-
-			// Add some Easter eggs
-			let clickCount = 0;
-			document.addEventListener('click', () => {
-				clickCount++;
-				if (clickCount === 10) {
-					document.body.style.filter = 'hue-rotate(45deg)';
-					setTimeout(() => {
-						document.body.style.filter = 'none';
-					}, 3000);
-				}
-			});
-		</script>
+		
 
 		<a href="https://wa.me/+971504305417" class="whatsapp-float" target="_blank">
 			<i class="fa fa-whatsapp"></i>
