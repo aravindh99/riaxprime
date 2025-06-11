@@ -774,6 +774,7 @@ html, body {
 				.section-container {
 					min-height: auto;
 					padding: 20px;
+					margin-bottom: 20px;
 				}
 				
 				.equal-height-row {
@@ -782,6 +783,8 @@ html, body {
 				
 				.equal-height-col {
 					margin-bottom: 30px;
+					width: 100% !important;
+					flex: none;
 				}
 				
 				.equal-height-col:last-child {
@@ -799,6 +802,33 @@ html, body {
 					height: 80px;
 				}
 				
+				.diamond-item h4 {
+					font-size: 0.8rem;
+					white-space: normal;
+					width: 100px;
+					text-align: center;
+				}
+				
+				.diamond-item.top h4 {
+					top: -60px;
+					left: -10px;
+				}
+				
+				.diamond-item.left h4 {
+					left: -60px;
+					top: 50%;
+				}
+				
+				.diamond-item.right h4 {
+					right: -80px;
+					top: 50%;
+				}
+				
+				.diamond-item.bottom h4 {
+					bottom: -60px;
+					left: -10px;
+				}
+				
 				.value-grid {
 					grid-template-columns: 1fr;
 					gap: 10px;
@@ -814,14 +844,23 @@ html, body {
 					padding: 15px;
 				}
 				
+				.service-box h4 {
+					font-size: 1rem;
+				}
+				
 				.policy-item {
 					flex-direction: column;
 					text-align: center;
 					margin-bottom: 15px;
+					padding: 15px;
 				}
 				
 				.policy-icon {
 					margin: 0 auto 10px;
+				}
+				
+				.policy-text {
+					font-size: 1.1rem;
 				}
 				
 				.success-bar {
@@ -839,12 +878,73 @@ html, body {
 					padding: 0 20px !important;
 					max-width: calc(100% - 40px) !important;
 				}
+				
+				/* Fix section specific mobile issues */
+				.ts-diagram-wrapper {
+					flex-direction: column;
+					gap: 20px;
+					min-height: auto;
+					padding: 15px 0;
+				}
+				
+				.ts-image-container {
+					width: 250px;
+					height: 250px;
+				}
+				
+				.ts-labels-container {
+					padding: 10px;
+					gap: 15px;
+				}
+				
+				.zigzag-wrapper {
+					padding: 15px;
+				}
+				
+				.zigzag-step {
+					font-size: 1rem;
+					padding: 12px 15px;
+				}
+				
+				/* Work Policy mobile fixes */
+				.work-policy {
+					height: auto;
+				}
+				
+				.policy-points {
+					padding: 10px 0;
+				}
+				
+				/* Prime Strategy mobile fixes */
+				.prime-strategy {
+					height: auto;
+				}
+				
+				.strategy-section {
+					padding: 15px 10px;
+				}
+				
+				/* Working Strategy mobile fixes */
+				.working-strategy-container {
+					height: auto;
+				}
+				
+				.img-container {
+					padding: 15px;
+				}
+				
+				/* Manpower Procedure mobile fixes */
+				.manpower-procedure-container,
+				.transition-synopsis-container {
+					height: auto;
+				}
 			}
 
 			@media (max-width: 480px) {
 				.section-container {
 					min-height: auto;
 					padding: 15px;
+					margin-bottom: 15px;
 				}
 				
 				.diamond-layout {
@@ -861,11 +961,20 @@ html, body {
 					font-size: 1.2em;
 				}
 				
+				.diamond-item h4 {
+					font-size: 0.7rem;
+					width: 80px;
+				}
+				
 				.strategy-subtitle {
 					font-size: 1.1rem;
 				}
 				
 				.service-box h4 {
+					font-size: 1rem;
+				}
+				
+				.policy-text {
 					font-size: 1rem;
 				}
 				
@@ -877,6 +986,105 @@ html, body {
 				
 				.pad80 {
 					padding: 40px 0 !important;
+				}
+				
+				/* Very small screen adjustments */
+				.ts-image-container {
+					width: 200px;
+					height: 200px;
+				}
+				
+				.zigzag-step {
+					font-size: 0.9rem;
+					padding: 10px 12px;
+				}
+				
+				.policy-item {
+					padding: 12px;
+					margin-bottom: 12px;
+				}
+				
+				.value-item {
+					padding: 12px;
+				}
+				
+				.value-icon {
+					width: 40px;
+					height: 40px;
+				}
+				
+				.value-icon i {
+					font-size: 16px;
+				}
+				
+				.value-item h4 {
+					font-size: 1rem;
+				}
+				
+				/* Background section mobile padding */
+				section[style*="background-color: #9b9494"] .container-fluid {
+					padding: 0 10px !important;
+					max-width: calc(100% - 20px) !important;
+				}
+			}
+
+			/* Additional mobile-specific fixes for the main container sections */
+			@media (max-width: 768px) {
+				/* Fix the main container section with gray background */
+				section[style*="background-color: #9b9494"] {
+					padding: 40px 0 !important;
+				}
+				
+				section[style*="background-color: #9b9494"] .container-fluid {
+					padding: 0 15px !important;
+					max-width: calc(100% - 30px) !important;
+				}
+				
+				/* Ensure all rows stack properly */
+				section[style*="background-color: #9b9494"] .row {
+					margin: 0 0 30px 0 !important;
+				}
+				
+				section[style*="background-color: #9b9494"] .row:last-child {
+					margin-bottom: 0 !important;
+				}
+				
+				/* Fix column spacing */
+				section[style*="background-color: #9b9494"] .col-md-6 {
+					margin-bottom: 20px;
+					padding: 0 10px;
+				}
+				
+				/* Title adjustments */
+				.title {
+					font-size: 1.5rem !important;
+					margin-bottom: 20px !important;
+				}
+			}
+
+			@media (max-width: 576px) {
+				/* Extra small devices */
+				.section-container {
+					padding: 12px;
+					border-radius: 10px;
+				}
+				
+				.title {
+					font-size: 1.3rem !important;
+					margin-bottom: 15px !important;
+				}
+				
+				.success-bar {
+					padding: 12px;
+					border-radius: 30px;
+				}
+				
+				.success-text {
+					font-size: 0.9rem;
+				}
+				
+				.success-value {
+					font-size: 1.1rem;
 				}
 			}
 
@@ -2135,241 +2343,7 @@ html, body {
 
 		<script src="assets/js/itl_script.js"></script>
 
-		<script>
-			// Typing animation
-			const heading = "Welcome to Riax Prime";
-			const subtext = "Your Trusted Partner in technical services, human capital provision and talent supply";
-			let headingIndex = 0;
-			let subtextIndex = 0;
-			const headingElement = document.getElementById('typing-heading');
-			const subtextElement = document.getElementById('typing-subtext');
-
-			function typeHeading() {
-				if (headingIndex < heading.length) {
-					headingElement.textContent += heading.charAt(headingIndex);
-					headingIndex++;
-					setTimeout(typeHeading, 100);
-				} else {
-					setTimeout(typeSubtext, 500);
-				}
-			}
-
-			function typeSubtext() {
-				if (subtextIndex < subtext.length) {
-					subtextElement.textContent += subtext.charAt(subtextIndex);
-					subtextIndex++;
-					setTimeout(typeSubtext, 100);
-				}
-			}
-
-			// Start the animation when the page loads
-			window.addEventListener('load', typeHeading);
-
-			// Interactive Construction Elements
-			class ConstructionElements {
-				constructor() {
-					this.elements = [];
-					this.elementTypes = ['bolt', 'nut', 'screw'];
-					this.tooltips = {
-						'bolt': 'Click me!',
-						'nut': 'I\'m a nut!',
-						'screw': 'Screw it!'
-					};
-					this.init();
-				}
-
-				init() {
-					this.createElements();
-					this.setupCraneInteraction();
-					this.startFloatingAnimation();
-				}
-
-				createElements() {
-					const elementCount = window.innerWidth > 768 ? 12 : 8;
-					
-					for (let i = 0; i < elementCount; i++) {
-						const element = this.createElement();
-						document.body.appendChild(element);
-						this.elements.push(element);
-					}
-				}
-
-				createElement() {
-					const element = document.createElement('div');
-					const type = this.elementTypes[Math.floor(Math.random() * this.elementTypes.length)];
-					
-					element.className = `construction-element ${type} floating`;
-					element.setAttribute('data-tooltip', this.tooltips[type]);
-					
-					// Random positioning
-					const x = Math.random() * (window.innerWidth - 40) + 20;
-					const y = Math.random() * (window.innerHeight - 100) + 50;
-					
-					element.style.left = x + 'px';
-					element.style.top = y + 'px';
-					
-					// Add click event
-					element.addEventListener('click', (e) => this.handleElementClick(e, element));
-					
-					return element;
-				}
-
-				handleElementClick(e, element) {
-					e.preventDefault();
-					e.stopPropagation();
-					
-					// Add clicked animation
-					element.classList.add('clicked');
-					
-					// Create sparkle effect
-					this.createSparkle(e.clientX, e.clientY);
-					
-					// Move element to new position
-					setTimeout(() => {
-						this.moveElement(element);
-						element.classList.remove('clicked');
-					}, 300);
-					
-					// Play click sound effect (visual feedback)
-					this.createClickFeedback(element);
-				}
-
-				createSparkle(x, y) {
-					const sparkle = document.createElement('div');
-					sparkle.className = 'sparkle';
-					sparkle.style.left = x + 'px';
-					sparkle.style.top = y + 'px';
-					
-					document.body.appendChild(sparkle);
-					
-					setTimeout(() => {
-						document.body.removeChild(sparkle);
-					}, 800);
-				}
-
-				createClickFeedback(element) {
-					const rect = element.getBoundingClientRect();
-					const feedback = document.createElement('div');
-					feedback.textContent = '+1';
-					feedback.style.cssText = `
-						position: fixed;
-						left: ${rect.left + rect.width/2}px;
-						top: ${rect.top}px;
-						color: #411b1d;
-						font-weight: bold;
-						font-size: 14px;
-						pointer-events: none;
-						z-index: 1000;
-						animation: feedbackFade 1s ease-out forwards;
-					`;
-					
-					document.body.appendChild(feedback);
-					
-					setTimeout(() => {
-						if (document.body.contains(feedback)) {
-							document.body.removeChild(feedback);
-						}
-					}, 1000);
-				}
-
-				moveElement(element) {
-					const x = Math.random() * (window.innerWidth - 40) + 20;
-					const y = Math.random() * (window.innerHeight - 100) + 50;
-					
-					element.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-					element.style.left = x + 'px';
-					element.style.top = y + 'px';
-					
-					setTimeout(() => {
-						element.style.transition = 'all 0.3s ease';
-					}, 800);
-				}
-
-				setupCraneInteraction() {
-					const crane = document.getElementById('craneAnimation');
-					if (crane) {
-						crane.addEventListener('click', () => this.handleCraneClick(crane));
-					}
-				}
-
-				handleCraneClick(crane) {
-					crane.classList.add('crane-clicked');
-					
-					// Create multiple sparkles around the crane
-					const rect = crane.getBoundingClientRect();
-					for (let i = 0; i < 5; i++) {
-						setTimeout(() => {
-							const x = rect.left + Math.random() * rect.width;
-							const y = rect.top + Math.random() * rect.height;
-							this.createSparkle(x, y);
-						}, i * 100);
-					}
-					
-					// Move all construction elements
-					this.elements.forEach((element, index) => {
-						setTimeout(() => {
-							this.moveElement(element);
-						}, index * 100);
-					});
-					
-					setTimeout(() => {
-						crane.classList.remove('crane-clicked');
-					}, 800);
-				}
-
-				startFloatingAnimation() {
-					// Add random delays to floating animations
-					this.elements.forEach((element, index) => {
-						element.style.animationDelay = (Math.random() * 3) + 's';
-					});
-				}
-
-				// Responsive repositioning
-				handleResize() {
-					this.elements.forEach(element => {
-						const rect = element.getBoundingClientRect();
-						if (rect.right > window.innerWidth || rect.bottom > window.innerHeight) {
-							this.moveElement(element);
-						}
-					});
-				}
-			}
-
-			// Add feedback animation style
-			const style = document.createElement('style');
-			style.textContent = `
-				@keyframes feedbackFade {
-					0% { opacity: 1; transform: translateY(0px); }
-					100% { opacity: 0; transform: translateY(-30px); }
-				}
-			`;
-			document.head.appendChild(style);
-
-			// Initialize construction elements when page loads
-			let constructionElements;
-			window.addEventListener('load', () => {
-				constructionElements = new ConstructionElements();
-			});
-
-			// Handle window resize
-			window.addEventListener('resize', () => {
-				if (constructionElements) {
-					constructionElements.handleResize();
-				}
-			});
-
-			// Add some Easter eggs
-			let clickCount = 0;
-			document.addEventListener('click', () => {
-				clickCount++;
-				if (clickCount === 10) {
-					document.body.style.filter = 'hue-rotate(45deg)';
-					setTimeout(() => {
-						document.body.style.filter = 'none';
-					}, 3000);
-				}
-			});
-		</script>
+		
 		<div class="main-container">
 
 			<!-- header start -->
@@ -3353,7 +3327,241 @@ html, body {
 
 	<!-- load jquery -->
 
-		
+	<script>
+		// Typing animation
+		const heading = "Welcome to Riax Prime";
+		const subtext = "Your Trusted Partner in technical services, human capital provision and talent supply";
+		let headingIndex = 0;
+		let subtextIndex = 0;
+		const headingElement = document.getElementById('typing-heading');
+		const subtextElement = document.getElementById('typing-subtext');
+
+		function typeHeading() {
+			if (headingIndex < heading.length) {
+				headingElement.textContent += heading.charAt(headingIndex);
+				headingIndex++;
+				setTimeout(typeHeading, 100);
+			} else {
+				setTimeout(typeSubtext, 500);
+			}
+		}
+
+		function typeSubtext() {
+			if (subtextIndex < subtext.length) {
+				subtextElement.textContent += subtext.charAt(subtextIndex);
+				subtextIndex++;
+				setTimeout(typeSubtext, 100);
+			}
+		}
+
+		// Start the animation when the page loads
+		window.addEventListener('load', typeHeading);
+
+		// Interactive Construction Elements
+		class ConstructionElements {
+			constructor() {
+				this.elements = [];
+				this.elementTypes = ['bolt', 'nut', 'screw'];
+				this.tooltips = {
+					'bolt': 'Click me!',
+					'nut': 'I\'m a nut!',
+					'screw': 'Screw it!'
+				};
+				this.init();
+			}
+
+			init() {
+				this.createElements();
+				this.setupCraneInteraction();
+				this.startFloatingAnimation();
+			}
+
+			createElements() {
+				const elementCount = window.innerWidth > 768 ? 12 : 8;
+				
+				for (let i = 0; i < elementCount; i++) {
+					const element = this.createElement();
+					document.body.appendChild(element);
+					this.elements.push(element);
+				}
+			}
+
+			createElement() {
+				const element = document.createElement('div');
+				const type = this.elementTypes[Math.floor(Math.random() * this.elementTypes.length)];
+				
+				element.className = `construction-element ${type} floating`;
+				element.setAttribute('data-tooltip', this.tooltips[type]);
+				
+				// Random positioning
+				const x = Math.random() * (window.innerWidth - 40) + 20;
+				const y = Math.random() * (window.innerHeight - 100) + 50;
+				
+				element.style.left = x + 'px';
+				element.style.top = y + 'px';
+				
+				// Add click event
+				element.addEventListener('click', (e) => this.handleElementClick(e, element));
+				
+				return element;
+			}
+
+			handleElementClick(e, element) {
+				e.preventDefault();
+				e.stopPropagation();
+				
+				// Add clicked animation
+				element.classList.add('clicked');
+				
+				// Create sparkle effect
+				this.createSparkle(e.clientX, e.clientY);
+				
+				// Move element to new position
+				setTimeout(() => {
+					this.moveElement(element);
+					element.classList.remove('clicked');
+				}, 300);
+				
+				// Play click sound effect (visual feedback)
+				this.createClickFeedback(element);
+			}
+
+			createSparkle(x, y) {
+				const sparkle = document.createElement('div');
+				sparkle.className = 'sparkle';
+				sparkle.style.left = x + 'px';
+				sparkle.style.top = y + 'px';
+				
+				document.body.appendChild(sparkle);
+				
+				setTimeout(() => {
+					document.body.removeChild(sparkle);
+				}, 800);
+			}
+
+			createClickFeedback(element) {
+				const rect = element.getBoundingClientRect();
+				const feedback = document.createElement('div');
+				feedback.textContent = '+1';
+				feedback.style.cssText = `
+					position: fixed;
+					left: ${rect.left + rect.width/2}px;
+					top: ${rect.top}px;
+					color: #411b1d;
+					font-weight: bold;
+					font-size: 14px;
+					pointer-events: none;
+					z-index: 1000;
+					animation: feedbackFade 1s ease-out forwards;
+				`;
+				
+				document.body.appendChild(feedback);
+				
+				setTimeout(() => {
+					if (document.body.contains(feedback)) {
+						document.body.removeChild(feedback);
+					}
+				}, 1000);
+			}
+
+			moveElement(element) {
+				const x = Math.random() * (window.innerWidth - 40) + 20;
+				const y = Math.random() * (window.innerHeight - 100) + 50;
+				
+				element.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+				element.style.left = x + 'px';
+				element.style.top = y + 'px';
+				
+				setTimeout(() => {
+					element.style.transition = 'all 0.3s ease';
+				}, 800);
+			}
+
+			setupCraneInteraction() {
+				const crane = document.getElementById('craneAnimation');
+				if (crane) {
+					crane.addEventListener('click', () => this.handleCraneClick(crane));
+				}
+			}
+
+			handleCraneClick(crane) {
+				crane.classList.add('crane-clicked');
+				
+				// Create multiple sparkles around the crane
+				const rect = crane.getBoundingClientRect();
+				for (let i = 0; i < 5; i++) {
+					setTimeout(() => {
+						const x = rect.left + Math.random() * rect.width;
+						const y = rect.top + Math.random() * rect.height;
+						this.createSparkle(x, y);
+					}, i * 100);
+				}
+				
+				// Move all construction elements
+				this.elements.forEach((element, index) => {
+					setTimeout(() => {
+						this.moveElement(element);
+					}, index * 100);
+				});
+				
+				setTimeout(() => {
+					crane.classList.remove('crane-clicked');
+				}, 800);
+			}
+
+			startFloatingAnimation() {
+				// Add random delays to floating animations
+				this.elements.forEach((element, index) => {
+					element.style.animationDelay = (Math.random() * 3) + 's';
+				});
+			}
+
+			// Responsive repositioning
+			handleResize() {
+				this.elements.forEach(element => {
+					const rect = element.getBoundingClientRect();
+					if (rect.right > window.innerWidth || rect.bottom > window.innerHeight) {
+						this.moveElement(element);
+					}
+				});
+			}
+		}
+
+		// Add feedback animation style
+		const style = document.createElement('style');
+		style.textContent = `
+			@keyframes feedbackFade {
+				0% { opacity: 1; transform: translateY(0px); }
+				100% { opacity: 0; transform: translateY(-30px); }
+			}
+		`;
+		document.head.appendChild(style);
+
+		// Initialize construction elements when page loads
+		let constructionElements;
+		window.addEventListener('load', () => {
+			constructionElements = new ConstructionElements();
+		});
+
+		// Handle window resize
+		window.addEventListener('resize', () => {
+			if (constructionElements) {
+				constructionElements.handleResize();
+			}
+		});
+
+		// Add some Easter eggs
+		let clickCount = 0;
+		document.addEventListener('click', () => {
+			clickCount++;
+			if (clickCount === 10) {
+				document.body.style.filter = 'hue-rotate(45deg)';
+				setTimeout(() => {
+					document.body.style.filter = 'none';
+				}, 3000);
+			}
+		});
+	</script>
 
 		<a href="https://wa.me/+971504305417" class="whatsapp-float" target="_blank">
 			<i class="fa fa-whatsapp"></i>
